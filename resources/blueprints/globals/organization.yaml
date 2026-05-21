@@ -39,9 +39,10 @@ tabs:
           -
             handle: logo_url
             field:
-              type: text
-              display: Logo URL
-              instructions: 'Path to the organization logo (e.g., /assets/images/logo.png)'
+              type: assets
+              display: Logo
+              container: assets
+              max_files: 1
           -
             handle: description
             field:
