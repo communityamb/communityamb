@@ -1,0 +1,19 @@
+{{#
+    Reusable form input partial — renders label + input element.
+    Caller wraps in a <div> and appends Statamic error display.
+
+    Parameters:
+      type         — text | email | tel | date  (default: text)
+      name         — field name and id
+      label        — visible label text
+      required     — "true" to add required attr + asterisk
+      placeholder  — input placeholder text
+      pattern      — HTML pattern attribute
+      title        — HTML title attribute
+      label_class  — override label classes
+      input_class  — override input classes
+#}}
+{{ label_class ?= "block text-base font-medium text-text-secondary mb-2 font-display" }}
+{{ input_class ?= "w-full rounded border border-border-medium px-4 py-3 text-base font-body bg-white focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none" }}
+<label for="{{ name }}" class="{{ label_class }}">{{ label }}{{ if required == "true" }} <span class="text-red-500">*</span>{{ /if }}</label>
+<input type="{{ type ?? 'text' }}" name="{{ name }}" id="{{ name }}"{{ if required == "true" }} required{{ /if }}{{ if placeholder }} placeholder="{{ placeholder }}"{{ /if }}{{ if pattern }} pattern="{{ pattern }}"{{ /if }}{{ if title }} title="{{ title }}"{{ /if }} class="{{ input_class }}">
