@@ -12,6 +12,7 @@ tabs:
               display: 'First Name'
               validate:
                 - required
+                - 'max:500'
           -
             handle: last_name
             field:
@@ -19,6 +20,7 @@ tabs:
               display: 'Last Name'
               validate:
                 - required
+                - 'max:500'
           -
             handle: email
             field:
@@ -28,6 +30,7 @@ tabs:
               validate:
                 - required
                 - email
+                - 'max:500'
           -
             handle: date_of_birth
             field:
@@ -42,6 +45,7 @@ tabs:
               display: 'Phone Number'
               validate:
                 - required
+                - 'max:500'
           -
             handle: town
             field:
