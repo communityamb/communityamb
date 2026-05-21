@@ -60,7 +60,7 @@ tabs:
             handle: hs_emt_interest
             field:
               type: radio
-              display: 'HS EMT Interest'
+              display: 'High School EMT Program Interest'
               options:
                 'yes': 'Yes'
                 'no': 'No'

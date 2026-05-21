@@ -14,14 +14,24 @@ tabs:
           -
             handle: content
             field:
-              type: markdown
+              type: bard
               display: Content
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - anchor
+                - image
               container: assets
           -
             handle: template
             field:
               type: select
               display: Template
+              instructions: 'Choose the page layout. Most pages use Default. Specific pages (forms, gallery, team, etc.) have dedicated templates.'
               options:
                 default: Default
                 home: Home
@@ -60,6 +70,13 @@ tabs:
     sections:
       -
         fields:
+          -
+            handle: meta_title
+            field:
+              type: text
+              display: Meta Title
+              instructions: 'Override the page title shown in browser tabs and search results. Leave blank to use the page title.'
+              character_limit: 70
           -
             handle: meta_description
             field:
