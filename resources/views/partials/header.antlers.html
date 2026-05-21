@@ -39,10 +39,10 @@
             </a>
 
             <!-- Desktop nav -->
-            <nav class="hidden lg:flex items-center gap-1" x-data="{ openDropdown: null }">
+            <nav class="hidden lg:flex items-center gap-1" x-data="{ openDropdown: null }" @keydown.escape="openDropdown = null">
                 {{ nav:main max_depth="2" }}
                     {{ if children }}
-                    <div class="relative" @mouseenter="openDropdown = '{{ title }}'" @mouseleave="openDropdown = null">
+                    <div class="relative" @mouseenter="openDropdown = '{{ title }}'" @mouseleave="openDropdown = null" @focusin="openDropdown = '{{ title }}'" @focusout.debounce.150ms="if(!$el.contains(document.activeElement)) openDropdown = null">
                         <a href="{{ url }}" class="px-3 py-2 text-sm font-medium uppercase tracking-wide text-text-secondary hover:text-brand-green transition flex items-center gap-1 {{ if is_current || is_parent }} text-brand-green {{ /if }}">
                             {{ title }}
                             {{ partial:icon name="chevron-down" class="w-3 h-3" }}
@@ -60,7 +60,7 @@
             </nav>
 
             <!-- Mobile hamburger -->
-            <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden p-2 text-text-secondary hover:text-brand-green" aria-label="Toggle menu">
+            <button @click="mobileMenuOpen = !mobileMenuOpen" x-ref="hamburger" class="lg:hidden p-2 text-text-secondary hover:text-brand-green" aria-label="Toggle menu">
                 <span x-show="!mobileMenuOpen">{{ partial:icon name="hamburger" class="w-6 h-6" }}</span>
                 <span x-show="mobileMenuOpen" x-cloak>{{ partial:icon name="close" class="w-6 h-6" }}</span>
             </button>

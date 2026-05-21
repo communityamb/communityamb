@@ -1,5 +1,13 @@
 {{ partial:partials/page-header }}
 
+{{ unless programs }}
+<section class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+        <p class="text-center text-text-muted py-12">No programs available yet.</p>
+    </div>
+</section>
+{{ /unless }}
+
 {{ programs }}
 
 {{ if type == "full_width_program" }}
