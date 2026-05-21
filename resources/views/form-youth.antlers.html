@@ -164,7 +164,7 @@
             </div>
 
             {{# Interest form #}}
-            <div class="flex-1 bg-white rounded-[5px] p-[40px] max-md:p-[20px] flex flex-col justify-center">
+            <div class="flex-1 bg-white rounded-[5px] p-[40px] max-md:p-[20px] flex flex-col justify-center" x-data="{ submitting: false }" @submit="submitting = true">
                 {{ form:youth_squad }}
                 <div class="space-y-5">
                     <div class="grid grid-cols-2 max-md:grid-cols-1 gap-4">
@@ -221,8 +221,9 @@
                             {{ if error:hs_emt_interest }}<p class="text-red-600 text-xs mt-1">{{ error:hs_emt_interest }}</p>{{ /if }}
                         </div>
                     </div>
-                    <button type="submit" class="w-full bg-brand-green hover:bg-brand-navy text-white font-semibold text-lg px-8 py-4 rounded transition font-display">
-                        Submit Application
+                    <button type="submit" :disabled="submitting" :class="{ 'opacity-50 cursor-not-allowed': submitting }" class="w-full bg-brand-green hover:bg-brand-navy text-white font-semibold text-lg px-8 py-4 rounded transition font-display">
+                        <span x-show="!submitting">Submit Application</span>
+                        <span x-show="submitting" x-cloak>Sending...</span>
                     </button>
                 </div>
                 {{ if success }}
@@ -241,9 +242,21 @@
 {{# ── Modal: Applications Closed ───────────────────────────────── #}}
 <div x-data="{ open: true }"
      x-show="open"
-     class="fixed inset-0 z-[99999] flex items-center justify-center p-5 bg-black/60">
-    <div class="bg-white border-[3px] border-status-error rounded-xl max-w-[520px] w-full px-[35px] py-[40px] text-center shadow-modal relative">
-        <h2 class="text-status-error font-display text-[28px] font-bold mb-4 leading-[1.3]">
+     @keydown.escape.window="open = false"
+     role="dialog"
+     aria-modal="true"
+     aria-labelledby="modal-title"
+     class="fixed inset-0 z-[99999] flex items-center justify-center p-5 bg-black/60"
+     x-effect="if(open) { $nextTick(() => $el.querySelector('button')?.focus()) }">
+    <div class="bg-white border-[3px] border-status-error rounded-xl max-w-[520px] w-full px-[35px] py-[40px] text-center shadow-modal relative"
+         @keydown.tab="
+            const focusable = [...$el.querySelectorAll('a[href], button')];
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if ($event.shiftKey && document.activeElement === first) { $event.preventDefault(); last.focus(); }
+            else if (!$event.shiftKey && document.activeElement === last) { $event.preventDefault(); first.focus(); }
+         ">
+        <h2 id="modal-title" class="text-status-error font-display text-[28px] font-bold mb-4 leading-[1.3]">
             Youth Squad Applications Are Currently Closed
         </h2>
         <p class="text-text-primary text-[16px] leading-[1.6] mb-3 font-body">

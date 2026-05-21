@@ -7,7 +7,7 @@
     --color-brand-green: #3D7F31;
     --color-brand-green-light: #76A56D;
     --color-brand-green-dark: #2d6024;
-    --color-brand-green-accent: #008000;
+    --color-brand-green-accent: #006700;
     --color-brand-navy: #143D62;
     --color-brand-navy-light: #253551;
     --color-brand-peach: #FFC077;
@@ -20,7 +20,7 @@
 
     --color-text-primary: #1e293b;
     --color-text-secondary: #334155;
-    --color-text-muted: #94a3b8;
+    --color-text-muted: #64748b;
     --color-text-inverse: #FFFFFF;
 
     --color-border-light: #e2e8f0;
@@ -173,11 +173,30 @@
     select:focus,
     textarea:focus {
         border-color: var(--color-brand-green);
-        outline: none;
+        outline: 2px solid var(--color-brand-green);
+        outline-offset: 2px;
         box-shadow: 0 0 0 1px var(--color-brand-green);
     }
 }
 
+/* ── Focus indicators (WCAG 2.4.7) ─────────────────────────── */
+
+@layer base {
+    :focus-visible {
+        outline: 2px solid var(--color-brand-green);
+        outline-offset: 2px;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    [role="button"]:focus-visible,
+    select:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+        outline: 2px solid var(--color-brand-green);
+        outline-offset: 2px;
+    }
+}
 
 /* ── Scroll-to-top ───────────────────────────────────────────── */
 

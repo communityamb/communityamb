@@ -39,9 +39,9 @@
     prev() { this.current = (this.current - 1 + this.slides.length) % this.slides.length; this.preload((this.current - 1 + this.slides.length) % this.slides.length) },
     next() { this.current = (this.current + 1) % this.slides.length; this.preload((this.current + 1) % this.slides.length) },
     init() { this.preload(1 % this.slides.length); setInterval(() => this.next(), 5000) }
-}" x-cloak>
+}" x-cloak role="region" aria-roledescription="carousel" aria-label="Photo carousel">
     <div class="relative max-w-[70%] max-md:max-w-full mx-auto">
-        <div class="relative overflow-hidden">
+        <div class="relative overflow-hidden" aria-live="polite">
             <template x-for="(slide, i) in slides" :key="i">
                 <img :src="loaded.includes(i) ? slide.src : ''" :alt="slide.alt"
                      class="w-full h-auto transition-all duration-500"
