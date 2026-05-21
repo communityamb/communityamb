@@ -3,6 +3,7 @@ title: Home
 id: home
 template: home
 blueprint: page
+meta_description: 'Community Ambulance Company is a volunteer 501(c)(3) providing emergency medical services to Sayville, West Sayville, Oakdale, Bayport, and Bohemia since 1950.'
 ---
 ## Welcome to
 

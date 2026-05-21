@@ -1,0 +1,52 @@
+<link rel="icon" href="/favicon.ico" sizes="any">
+
+<link rel="canonical" href="{{ permalink }}">
+
+{{ if meta_description }}
+<meta name="description" content="{{ meta_description }}">
+{{ elseif excerpt }}
+<meta name="description" content="{{ excerpt }}">
+{{ else }}
+<meta name="description" content="{{ organization:description }}">
+{{ /if }}
+
+<meta property="og:title" content="{{ title }} — {{ organization:org_name }}">
+{{ if meta_description }}
+<meta property="og:description" content="{{ meta_description }}">
+{{ elseif excerpt }}
+<meta property="og:description" content="{{ excerpt }}">
+{{ else }}
+<meta property="og:description" content="{{ organization:description }}">
+{{ /if }}
+<meta property="og:url" content="{{ permalink }}">
+<meta property="og:site_name" content="{{ organization:org_name }}">
+<meta property="og:type" content="{{ if collection:handle == 'blog' }}article{{ else }}website{{ /if }}">
+<meta property="og:locale" content="{{ site:locale }}">
+{{ if og_image }}
+<meta property="og:image" content="{{ config:app:url }}{{ og_image }}">
+{{ elseif featured_image }}
+<meta property="og:image" content="{{ config:app:url }}{{ featured_image }}">
+{{ elseif hero_image }}
+<meta property="og:image" content="{{ config:app:url }}{{ hero_image }}">
+{{ elseif organization:default_og_image }}
+<meta property="og:image" content="{{ config:app:url }}{{ organization:default_og_image }}">
+{{ /if }}
+
+<meta name="twitter:card" content="{{ if og_image || featured_image || hero_image || organization:default_og_image }}summary_large_image{{ else }}summary{{ /if }}">
+<meta name="twitter:title" content="{{ title }} — {{ organization:org_name }}">
+{{ if meta_description }}
+<meta name="twitter:description" content="{{ meta_description }}">
+{{ elseif excerpt }}
+<meta name="twitter:description" content="{{ excerpt }}">
+{{ else }}
+<meta name="twitter:description" content="{{ organization:description }}">
+{{ /if }}
+{{ if og_image }}
+<meta name="twitter:image" content="{{ config:app:url }}{{ og_image }}">
+{{ elseif featured_image }}
+<meta name="twitter:image" content="{{ config:app:url }}{{ featured_image }}">
+{{ elseif hero_image }}
+<meta name="twitter:image" content="{{ config:app:url }}{{ hero_image }}">
+{{ elseif organization:default_og_image }}
+<meta name="twitter:image" content="{{ config:app:url }}{{ organization:default_og_image }}">
+{{ /if }}
