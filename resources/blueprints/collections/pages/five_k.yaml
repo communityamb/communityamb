@@ -38,8 +38,10 @@ tabs:
           -
             handle: event_image
             field:
-              type: text
-              display: Event Image Path
+              type: assets
+              display: Event Image
+              container: assets
+              max_files: 1
           -
             handle: event_paragraphs
             field:
@@ -65,9 +67,10 @@ tabs:
           -
             handle: sponsor_pdf
             field:
-              type: text
-              display: Sponsorship Application Path
-              instructions: 'Path to the PDF file.'
+              type: assets
+              display: Sponsorship Application
+              container: assets
+              max_files: 1
           -
             handle: race_date
             field:

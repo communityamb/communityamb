@@ -44,9 +44,10 @@ tabs:
           -
             handle: chief_photo
             field:
-              type: text
-              display: Chief Photo Path
-              instructions: 'Path to the chief photo image.'
+              type: assets
+              display: Chief Photo
+              container: assets
+              max_files: 1
           -
             handle: chief_photo_alt
             field:
