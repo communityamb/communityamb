@@ -14,17 +14,8 @@ tabs:
           -
             handle: content
             field:
-              type: bard
+              type: markdown
               display: Content
-              buttons:
-                - h2
-                - h3
-                - bold
-                - italic
-                - unorderedlist
-                - orderedlist
-                - anchor
-                - image
               container: assets
           -
             handle: featured_image
