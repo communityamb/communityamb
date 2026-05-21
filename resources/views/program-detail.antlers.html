@@ -1,12 +1,12 @@
 {{ partial:partials/page-header }}
 
 {{ if program_image }}
-<section class="py-[50px] max-md:py-[20px] bg-white">
-    <div class="max-w-[1400px] mx-auto px-4 grid md:grid-cols-2 gap-[10px] items-stretch max-lg:grid-cols-1">
+<section class="py-section max-md:py-[20px] bg-white">
+    <div class="max-w-container mx-auto px-4 grid md:grid-cols-2 gap-[10px] items-stretch max-lg:grid-cols-1">
         {{ if image_side == "left" }}
         <!-- Image column (left) -->
-        <div class="overflow-hidden rounded-[5px] group max-lg:px-[10px] max-md:px-[10px]">
-            <div class="relative min-h-[550px] max-md:min-h-[300px] h-full overflow-hidden rounded-[5px]">
+        <div class="overflow-hidden rounded-btn group max-lg:px-[10px] max-md:px-[10px]">
+            <div class="relative min-h-[550px] max-md:min-h-[300px] h-full overflow-hidden rounded-btn">
                 <img src="{{ program_image }}" alt="{{ title }}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110" loading="lazy">
             </div>
         </div>
@@ -14,10 +14,10 @@
         <div class="flex flex-col justify-center md:pl-[30px] max-lg:px-[10px] max-md:text-center max-md:px-[10px]">
             <div class="prose prose-lg max-w-none font-display
                 prose-headings:font-display prose-headings:uppercase prose-headings:tracking-wide
-                prose-h2:text-brand-green-accent prose-h2:text-[28px] prose-h2:leading-tight prose-h2:font-semibold prose-h2:mb-4 prose-h2:mt-8
+                prose-h2:text-brand-green-accent prose-h2:text-heading prose-h2:leading-tight prose-h2:font-semibold prose-h2:mb-4 prose-h2:mt-8
                 prose-h3:text-brand-green-accent prose-h3:text-xl prose-h3:font-semibold prose-h3:mb-3 prose-h3:mt-6
-                prose-p:text-text-secondary prose-p:text-[18px] prose-p:leading-[30px] prose-p:font-normal prose-p:mb-4 max-md:prose-p:text-[16px] max-md:prose-p:leading-[26px]
-                prose-li:text-text-secondary prose-li:text-[18px] prose-li:leading-[30px] max-md:prose-li:text-[16px]
+                prose-p:text-text-secondary prose-p:text-lg prose-p:leading-[30px] prose-p:font-normal prose-p:mb-4 max-md:prose-p:text-base max-md:prose-p:leading-[26px]
+                prose-li:text-text-secondary prose-li:text-lg prose-li:leading-[30px] max-md:prose-li:text-base
                 prose-a:text-link hover:prose-a:text-link-hover prose-a:font-semibold prose-a:underline
                 prose-strong:text-brand-green-accent prose-strong:font-semibold">
                 {{ content }}
@@ -28,18 +28,18 @@
         <div class="flex flex-col justify-center max-lg:px-[10px] max-md:text-center max-md:px-[10px]">
             <div class="prose prose-lg max-w-none font-display
                 prose-headings:font-display prose-headings:uppercase prose-headings:tracking-wide
-                prose-h2:text-brand-green-accent prose-h2:text-[28px] prose-h2:leading-tight prose-h2:font-semibold prose-h2:mb-4 prose-h2:mt-8
+                prose-h2:text-brand-green-accent prose-h2:text-heading prose-h2:leading-tight prose-h2:font-semibold prose-h2:mb-4 prose-h2:mt-8
                 prose-h3:text-brand-green-accent prose-h3:text-xl prose-h3:font-semibold prose-h3:mb-3 prose-h3:mt-6
-                prose-p:text-text-secondary prose-p:text-[18px] prose-p:leading-[30px] prose-p:font-normal prose-p:mb-4 max-md:prose-p:text-[16px] max-md:prose-p:leading-[26px]
-                prose-li:text-text-secondary prose-li:text-[18px] prose-li:leading-[30px] max-md:prose-li:text-[16px]
+                prose-p:text-text-secondary prose-p:text-lg prose-p:leading-[30px] prose-p:font-normal prose-p:mb-4 max-md:prose-p:text-base max-md:prose-p:leading-[26px]
+                prose-li:text-text-secondary prose-li:text-lg prose-li:leading-[30px] max-md:prose-li:text-base
                 prose-a:text-link hover:prose-a:text-link-hover prose-a:font-semibold prose-a:underline
                 prose-strong:text-brand-green-accent prose-strong:font-semibold">
                 {{ content }}
             </div>
         </div>
         <!-- Image column (right) -->
-        <div class="overflow-hidden rounded-[5px] group max-lg:px-[10px] max-md:px-[10px]">
-            <div class="relative min-h-[550px] max-md:min-h-[300px] h-full overflow-hidden rounded-[5px]">
+        <div class="overflow-hidden rounded-btn group max-lg:px-[10px] max-md:px-[10px]">
+            <div class="relative min-h-[550px] max-md:min-h-[300px] h-full overflow-hidden rounded-btn">
                 <img src="{{ program_image }}" alt="{{ title }}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110" loading="lazy">
             </div>
         </div>

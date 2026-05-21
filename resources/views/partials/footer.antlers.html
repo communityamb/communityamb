@@ -4,7 +4,7 @@
             <!-- About -->
             <div>
                 <img src="{{ organization:logo_url }}" alt="{{ organization:org_name }}" class="h-12 w-auto mb-4 brightness-0 invert" loading="lazy" width="500" height="500">
-                <p class="text-sm text-gray-300">{{ organization:description }}</p>
+                <p class="text-sm text-footer-text">{{ organization:description }}</p>
             </div>
 
             <!-- Important Links -->
@@ -12,7 +12,7 @@
                 <h3 class="font-heading text-lg font-semibold mb-4 uppercase">Important Links</h3>
                 <ul class="space-y-2">
                     {{ nav:footer }}
-                    <li><a href="{{ url }}" {{ if url | contains:'://' }}target="_blank" rel="noopener"{{ /if }} class="text-sm text-gray-300 hover:text-white transition">{{ title }}</a></li>
+                    <li><a href="{{ url }}" {{ if url | contains:'://' }}target="_blank" rel="noopener"{{ /if }} class="text-sm text-footer-text hover:text-white transition">{{ title }}</a></li>
                     {{ /nav:footer }}
                 </ul>
             </div>
@@ -22,7 +22,7 @@
                 <h3 class="font-heading text-lg font-semibold mb-4 uppercase">Quick Links</h3>
                 <ul class="space-y-2">
                     {{ nav:main max_depth="1" }}
-                    <li><a href="{{ url }}" class="text-sm text-gray-300 hover:text-white transition">{{ title }}</a></li>
+                    <li><a href="{{ url }}" class="text-sm text-footer-text hover:text-white transition">{{ title }}</a></li>
                     {{ /nav:main }}
                 </ul>
             </div>
@@ -30,7 +30,7 @@
             <!-- Contact Info -->
             <div>
                 <h3 class="font-heading text-lg font-semibold mb-4 uppercase">Contact Us</h3>
-                <ul class="space-y-3 text-sm text-gray-300">
+                <ul class="space-y-3 text-sm text-footer-text">
                     <li class="flex items-start gap-2">
                         {{ partial:icon name="phone" class="w-4 h-4 mt-0.5 flex-shrink-0" }}
                         <a href="tel:{{ organization:phone }}" class="hover:text-white">{{ organization:phone }}</a>
@@ -56,25 +56,11 @@
     <div class="border-t border-white/10 py-4">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-                <p class="text-xs text-gray-400">
+                <p class="text-xs text-footer-muted">
                     Copyright &copy; {{ now format="Y" }} {{ organization:org_name }} &ndash; Sayville, NY
                 </p>
                 <div class="flex items-center gap-3">
-                    <a href="mailto:{{ organization:email }}" class="w-8 h-8 rounded-full border border-white/50 flex items-center justify-center text-white hover:bg-white/10 transition" aria-label="Email">
-                        {{ partial:icon name="email" class="w-4 h-4" }}
-                    </a>
-                    {{ social_links }}
-                    {{ if facebook_url }}
-                    <a href="{{ facebook_url }}" target="_blank" rel="noopener" class="w-8 h-8 rounded-full border border-white/50 flex items-center justify-center text-white hover:bg-white/10 transition" aria-label="Facebook">
-                        {{ partial:icon name="facebook" class="w-4 h-4" }}
-                    </a>
-                    {{ /if }}
-                    {{ if instagram_url }}
-                    <a href="{{ instagram_url }}" target="_blank" rel="noopener" class="w-8 h-8 rounded-full border border-white/50 flex items-center justify-center text-white hover:bg-white/10 transition" aria-label="Instagram">
-                        {{ partial:icon name="instagram" class="w-4 h-4" }}
-                    </a>
-                    {{ /if }}
-                    {{ /social_links }}
+                    {{ partial:social-links link_class="w-8 h-8 rounded-full border border-white/50 flex items-center justify-center text-white hover:bg-white/10 transition" }}
                 </div>
             </div>
         </div>

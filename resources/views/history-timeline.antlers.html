@@ -2,8 +2,8 @@
 
 <!-- Subtitle Section -->
 <section class="bg-white py-6">
-    <div class="max-w-[980px] mx-auto px-4">
-        <h2 class="font-display text-[28px] max-lg:text-[24px] max-md:text-[20px] font-semibold capitalize leading-[44px] max-lg:leading-[34px] max-md:leading-[30px] text-center text-brand-green-accent">
+    <div class="max-w-narrow mx-auto px-4">
+        <h2 class="font-display text-heading max-lg:text-2xl max-md:text-xl font-semibold capitalize leading-[44px] max-lg:leading-[34px] max-md:leading-[30px] text-center text-brand-green-accent">
             {{ timeline_subtitle }}
         </h2>
     </div>
@@ -11,7 +11,7 @@
 
 <!-- Timeline Section -->
 <section class="bg-white pb-16">
-    <div class="max-w-[980px] mx-auto px-4 max-md:pr-[10px]">
+    <div class="max-w-narrow mx-auto px-4 max-md:pr-[10px]">
         <div class="relative">
 
             {{ timeline_entries }}
@@ -31,22 +31,22 @@
                     <div class="relative bg-white rounded p-4 lg:p-[1.6em] shadow-card">
                         <div class="hidden lg:block absolute top-[35px] right-full w-0 h-0 border-y-[15px] border-y-transparent border-r-[15px] border-r-white"></div>
                         <div class="lg:hidden absolute top-[16px] right-full w-0 h-0 border-y-[7px] border-y-transparent border-r-[7px] border-r-white"></div>
-                        <p class="font-display text-[18px] max-md:text-[16px] font-medium leading-[1.6] text-text-primary m-0">{{ description }}</p>
+                        <p class="font-display text-lg max-md:text-base font-medium leading-[1.6] text-text-primary m-0">{{ description }}</p>
                     </div>
                 </div>
-                <div class="hidden lg:block absolute top-0 right-[calc(50%+85px)] font-display text-[32px] font-semibold text-text-secondary text-right">{{ year }}</div>
-                <div class="lg:hidden ml-[60px] mt-2 font-display text-[22px] font-semibold text-text-secondary opacity-70">{{ year }}</div>
+                <div class="hidden lg:block absolute top-0 right-[calc(50%+85px)] font-display text-display font-semibold text-text-secondary text-right">{{ year }}</div>
+                <div class="lg:hidden ml-[60px] mt-2 font-display text-sub font-semibold text-text-secondary opacity-70">{{ year }}</div>
                 {{ else }}
                 {{# Even entries: left card, right date #}}
                 <div class="ml-[60px] lg:ml-0 lg:w-[45%] lg:pr-[40px]">
                     <div class="relative bg-white rounded p-4 lg:p-[1.6em] shadow-card">
                         <div class="hidden lg:block absolute top-[35px] left-full w-0 h-0 border-y-[15px] border-y-transparent border-l-[15px] border-l-white"></div>
                         <div class="lg:hidden absolute top-[16px] right-full w-0 h-0 border-y-[7px] border-y-transparent border-r-[7px] border-r-white"></div>
-                        <p class="font-display text-[18px] max-md:text-[16px] font-medium leading-[1.6] text-text-primary m-0">{{ description }}</p>
+                        <p class="font-display text-lg max-md:text-base font-medium leading-[1.6] text-text-primary m-0">{{ description }}</p>
                     </div>
                 </div>
-                <div class="hidden lg:block absolute top-0 left-[calc(50%+85px)] font-display text-[32px] font-semibold text-text-secondary">{{ year }}</div>
-                <div class="lg:hidden ml-[60px] mt-2 font-display text-[22px] font-semibold text-text-secondary opacity-70">{{ year }}</div>
+                <div class="hidden lg:block absolute top-0 left-[calc(50%+85px)] font-display text-display font-semibold text-text-secondary">{{ year }}</div>
+                <div class="lg:hidden ml-[60px] mt-2 font-display text-sub font-semibold text-text-secondary opacity-70">{{ year }}</div>
                 {{ /if }}
 
                 <div class="clear-both"></div>

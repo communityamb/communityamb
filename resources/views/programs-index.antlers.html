@@ -12,12 +12,12 @@
 
 {{ if type == "full_width_program" }}
 <!-- Full-Width Program Section -->
-<section class="py-[50px] max-md:py-[20px] bg-white">
-    <div class="max-w-[1400px] mx-auto px-4 grid md:grid-cols-2 gap-[10px] items-stretch max-lg:grid-cols-1">
+<section class="py-section max-md:py-[20px] bg-white">
+    <div class="max-w-container mx-auto px-4 grid md:grid-cols-2 gap-[10px] items-stretch max-lg:grid-cols-1">
         {{ if image_position == "left" }}
         <!-- Image column (left) -->
-        <div class="overflow-hidden rounded-[5px] group max-lg:px-[10px] max-md:px-[10px]">
-            <div class="relative min-h-[550px] max-md:min-h-[300px] h-full overflow-hidden rounded-[5px]">
+        <div class="overflow-hidden rounded-btn group max-lg:px-[10px] max-md:px-[10px]">
+            <div class="relative min-h-[550px] max-md:min-h-[300px] h-full overflow-hidden rounded-btn">
                 <img src="{{ program_image }}" alt="{{ program_image_alt }}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110" loading="lazy">
             </div>
         </div>
@@ -27,19 +27,19 @@
         <!-- Text column (left) -->
         <div class="flex flex-col justify-center max-lg:px-[10px] max-md:text-center max-md:px-[10px]">
         {{ /if }}
-            <h2 class="font-display text-[34px] max-lg:text-[34px] max-md:text-[24px] font-semibold uppercase leading-[44px] max-lg:leading-[50px] max-md:leading-[36px] text-brand-green-accent mb-4">{{ program_title }}</h2>
-            <p class="font-display text-[18px] max-md:text-[16px] font-normal leading-[30px] max-md:leading-[26px] text-text-secondary mb-4">{{ program_description }}</p>
+            <h2 class="font-display text-display max-lg:text-display max-md:text-2xl font-semibold uppercase leading-[44px] max-lg:leading-[50px] max-md:leading-[36px] text-brand-green-accent mb-4">{{ program_title }}</h2>
+            <p class="font-display text-lg max-md:text-base font-normal leading-[30px] max-md:leading-[26px] text-text-secondary mb-4">{{ program_description }}</p>
             {{ if program_schedule }}
-            <p class="font-display text-[20px] max-lg:text-[20px] max-md:text-[16px] font-medium capitalize leading-[28px] max-md:leading-[26px] text-brand-green-accent mb-2">Last Event: {{ program_schedule }}</p>
+            <p class="font-display text-xl max-lg:text-xl max-md:text-base font-medium capitalize leading-[28px] max-md:leading-[26px] text-brand-green-accent mb-2">Last Event: {{ program_schedule }}</p>
             {{ /if }}
             {{ if program_note }}
-            <p class="font-display text-[18px] max-lg:text-[20px] max-md:text-[16px] font-medium capitalize leading-[28px] max-md:leading-[26px] text-text-secondary">{{ program_note }}</p>
+            <p class="font-display text-lg max-lg:text-xl max-md:text-base font-medium capitalize leading-[28px] max-md:leading-[26px] text-text-secondary">{{ program_note }}</p>
             {{ /if }}
         </div>
         {{ if image_position != "left" }}
         <!-- Image column (right) -->
-        <div class="overflow-hidden rounded-[5px] group max-lg:px-[10px] max-md:px-[10px]">
-            <div class="relative min-h-[550px] max-md:min-h-[300px] h-full overflow-hidden rounded-[5px]">
+        <div class="overflow-hidden rounded-btn group max-lg:px-[10px] max-md:px-[10px]">
+            <div class="relative min-h-[550px] max-md:min-h-[300px] h-full overflow-hidden rounded-btn">
                 <img src="{{ program_image }}" alt="{{ program_image_alt }}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110" loading="lazy">
             </div>
         </div>
@@ -50,23 +50,23 @@
 
 {{ if type == "program_card_row" }}
 <!-- Program Card Row -->
-<section class="py-[50px] max-md:py-[30px] bg-surface-offwhite">
-    <div class="max-w-[1400px] mx-auto px-4">
+<section class="py-section max-md:py-section-sm bg-surface-offwhite">
+    <div class="max-w-container mx-auto px-4">
         <div class="grid md:grid-cols-3 max-lg:grid-cols-1 gap-6 max-md:px-[20px]">
             {{ cards }}
-            <div class="bg-white rounded-[10px] shadow-card p-5 flex flex-col">
-                <div class="overflow-hidden rounded-[5px] group mb-4">
-                    <div class="relative {{ if card_image_height == 'tall' }}min-h-[300px] max-md:min-h-[190px]{{ else }}min-h-[190px] max-md:min-h-[190px]{{ /if }} overflow-hidden rounded-[5px]">
+            <div class="bg-white rounded-card shadow-card p-5 flex flex-col">
+                <div class="overflow-hidden rounded-btn group mb-4">
+                    <div class="relative {{ if card_image_height == 'tall' }}min-h-[300px] max-md:min-h-[190px]{{ else }}min-h-[190px] max-md:min-h-[190px]{{ /if }} overflow-hidden rounded-btn">
                         <img src="{{ card_image }}" alt="{{ card_image_alt }}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110" loading="lazy">
                     </div>
                 </div>
-                <h2 class="font-display text-[26px] max-md:text-[18px] font-semibold leading-[34px] max-lg:leading-[30px] max-md:leading-[30px] text-brand-green-accent mb-2 max-lg:text-center">{{ card_title }}</h2>
-                <p class="font-display text-[17px] max-md:text-[16px] font-normal leading-[28px] max-md:leading-[26px] text-text-secondary mb-3 max-lg:text-center">{{ card_description }}</p>
+                <h2 class="font-display text-mid max-md:text-lg font-semibold leading-[34px] max-lg:leading-[30px] max-md:leading-[30px] text-brand-green-accent mb-2 max-lg:text-center">{{ card_title }}</h2>
+                <p class="font-display text-base max-md:text-base font-normal leading-[28px] max-md:leading-[26px] text-text-secondary mb-3 max-lg:text-center">{{ card_description }}</p>
                 {{ if card_schedule }}
-                <p class="font-display text-[20px] max-md:text-[16px] font-medium capitalize leading-[28px] max-md:leading-[26px] text-brand-green-accent max-lg:text-center">Event Held: {{ card_schedule }}</p>
+                <p class="font-display text-xl max-md:text-base font-medium capitalize leading-[28px] max-md:leading-[26px] text-brand-green-accent max-lg:text-center">Event Held: {{ card_schedule }}</p>
                 {{ /if }}
                 {{ if card_contact }}
-                <p class="font-display text-[18px] max-md:text-[16px] font-medium capitalize leading-[28px] max-md:leading-[26px] text-brand-green-accent max-lg:text-center">{{ card_contact }}</p>
+                <p class="font-display text-lg max-md:text-base font-medium capitalize leading-[28px] max-md:leading-[26px] text-brand-green-accent max-lg:text-center">{{ card_contact }}</p>
                 {{ /if }}
             </div>
             {{ /cards }}

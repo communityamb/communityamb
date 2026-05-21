@@ -2,23 +2,23 @@
 
 <section class="py-8 max-md:py-4 max-md:mt-0">
     <div class="max-w-7xl mx-auto px-4">
-        <h2 class="font-display text-[42px] max-lg:text-[34px] max-md:text-[24px] font-semibold capitalize leading-[44px] max-lg:leading-[50px] max-md:leading-[36px] text-brand-green-accent text-center">{{ event_date_display }}</h2>
+        <h2 class="font-display text-hero max-lg:text-display max-md:text-2xl font-semibold capitalize leading-[44px] max-lg:leading-[50px] max-md:leading-[36px] text-brand-green-accent text-center">{{ event_date_display }}</h2>
     </div>
 </section>
 
-<section class="py-[30px] max-md:py-[10px]">
+<section class="py-section-sm max-md:py-[10px]">
     <div class="max-w-7xl mx-auto px-4 flex flex-row max-md:flex-col gap-6 items-stretch">
         <div class="w-1/2 max-md:w-full flex flex-col justify-center">
-            <h2 class="font-display text-[42px] max-lg:text-[34px] max-md:text-[24px] font-semibold capitalize leading-[44px] max-lg:leading-[50px] max-md:leading-[36px] text-brand-green-accent text-center mb-6">{{ event_heading }}</h2>
+            <h2 class="font-display text-hero max-lg:text-display max-md:text-2xl font-semibold capitalize leading-[44px] max-lg:leading-[50px] max-md:leading-[36px] text-brand-green-accent text-center mb-6">{{ event_heading }}</h2>
             <img src="{{ event_image }}" alt="Community Ambulance 5K Run/Walk and Sayville Summer Series" class="w-full rounded-lg" loading="lazy">
         </div>
         <div class="w-1/2 max-md:w-full flex flex-col justify-center max-lg:text-center">
             {{ event_paragraphs }}
-            <p class="font-display text-[18px] max-md:text-[16px] font-medium leading-[30px] max-md:leading-[26px] text-text-primary mb-4">{{ text }}</p>
+            <p class="font-display text-lg max-md:text-base font-medium leading-[30px] max-md:leading-[26px] text-text-primary mb-4">{{ text }}</p>
             {{ /event_paragraphs }}
             {{ call_counts:yearly_call_counts }}
             {{ if first }}
-            <p class="font-display text-[18px] max-md:text-[16px] font-medium leading-[30px] max-md:leading-[26px] text-text-primary mb-4">This event benefits the Community Ambulance Company which serves the 5 towns of Sayville, West Sayville, Bayport, Oakdale and Bohemia. In {{ year }}, the volunteers of Community Ambulance Company answered {{ alarm_count }} 9-1-1 alarms in our district. Please show your support for the volunteers of Community Ambulance by participating in this event.</p>
+            <p class="font-display text-lg max-md:text-base font-medium leading-[30px] max-md:leading-[26px] text-text-primary mb-4">This event benefits the Community Ambulance Company which serves the 5 towns of Sayville, West Sayville, Bayport, Oakdale and Bohemia. In {{ year }}, the volunteers of Community Ambulance Company answered {{ alarm_count }} 9-1-1 alarms in our district. Please show your support for the volunteers of Community Ambulance by participating in this event.</p>
             {{ /if }}
             {{ /call_counts:yearly_call_counts }}
         </div>
@@ -29,13 +29,13 @@
     <div class="max-w-7xl mx-auto px-4">
         <div class="grid md:grid-cols-3 max-lg:grid-cols-1 gap-6 mt-[20px] mb-[20px]">
             <!-- Sponsor Card -->
-            <div class="bg-white rounded-[10px] shadow-card p-[50px] max-md:p-[30px] text-center animate-fade-in-up">
+            <div class="bg-white rounded-card shadow-card p-[50px] max-md:p-[30px] text-center animate-fade-in-up">
                 <div class="flex justify-center mb-4">
                     <div class="w-[70px] h-[70px] rounded-full border-[3px] border-brand-green flex items-center justify-center">
                         <svg class="w-[35px] h-[35px] text-brand-green" fill="currentColor" viewBox="0 0 640 512"><path d="M506.1 127.1c-17.97-20.17-61.46-61.65-122.7-71.1c-22.5-3.354-45.39 3.606-63.41 18.21C302 60.47 279.1 53.42 256.5 56.86C176.8 69.17 126.7 136.2 124.6 139.1C96.11 173.4 82.19 215.8 82.19 259.3c0 26.49 6.105 52.33 17.59 76.31c-17.15 30.77-38.37 55.22-38.72 55.61C48.84 405.3 40.67 424.2 42.7 443.3c2.02 19.11 13.24 36.27 29.89 46.36c23.29 14.1 50.25 23.42 78.95 23.42c14.24 0 28.72-2.235 42.56-7.063c41.07 22.16 88.85 36.13 136.9 36.13c30.06 0 60.82-6.396 89.85-19.55c59.52-27.01 103.5-73.38 123.2-130.5c11.51-33.38 14.06-68.04 7.49-102.3C543.5 253.6 530.8 185 506.1 127.1z"/></svg>
                     </div>
                 </div>
-                <h3 class="font-display text-[22px] max-md:text-[18px] font-semibold capitalize leading-[34px] max-md:leading-[30px] text-brand-green-accent mb-4">Become a sponsor</h3>
+                <h3 class="font-display text-sub max-md:text-lg font-semibold capitalize leading-[34px] max-md:leading-[30px] text-brand-green-accent mb-4">Become a sponsor</h3>
                 <div class="font-body text-base text-text-secondary">
                     <p class="mb-3">If you would like additional info about becoming a sponsor for the Community Ambulance 5k Run and Walk please email: <a href="mailto:{{ sponsor_email }}" class="text-link hover:text-link-hover underline">{{ sponsor_email }}</a></p>
                     <p class="mb-3">(Community Ambulance Company is a non-profit 501 (c) (3). All donations are tax deductible.)</p>
@@ -44,13 +44,13 @@
             </div>
 
             <!-- Race Details Card -->
-            <div class="bg-white rounded-[10px] shadow-card p-[50px] max-md:p-[30px] text-center animate-fade-in-up">
+            <div class="bg-white rounded-card shadow-card p-[50px] max-md:p-[30px] text-center animate-fade-in-up">
                 <div class="flex justify-center mb-4">
                     <div class="w-[70px] h-[70px] rounded-full border-[3px] border-brand-green flex items-center justify-center">
                         <svg class="w-[35px] h-[35px] text-brand-green" fill="currentColor" viewBox="0 0 416 512"><path d="M272 96c26.51 0 48-21.49 48-48S298.51 0 272 0s-48 21.49-48 48 21.49 48 48 48zM113.69 317.47l-14.8 34.52H32c-17.67 0-32 14.33-32 32s14.33 32 32 32h77.45c19.25 0 36.58-11.44 44.11-29.09l8.79-20.52-10.67-6.3c-17.32-10.23-30.06-25.37-37.99-42.61zM384 223.99h-44.03l-26.06-53.25c-12.5-25.55-35.45-44.23-61.78-50.94l-71.08-21.14c-28.3-6.8-57.77-.55-80.84 17.14l-39.67 30.41c-14.03 10.75-16.69 30.83-5.92 44.86s30.84 16.66 44.86 5.92l39.69-30.41c7.67-5.89 17.44-8 25.27-6.14l14.7 4.37-37.46 87.39c-12.62 29.48-1.31 64.01 26.3 80.31l84.98 50.17-27.47 87.73c-5.28 16.86 4.11 34.81 20.97 40.09 3.19 1 6.41 1.48 9.58 1.48 13.61 0 26.23-8.77 30.52-22.45l31.64-101.06c5.91-20.77-2.89-43.08-21.64-54.39l-61.24-36.14 31.31-78.28 20.27 41.43c8 16.34 24.92 26.89 43.11 26.89H384c17.67 0 32-14.33 32-32s-14.33-31.99-32-31.99z"/></svg>
                     </div>
                 </div>
-                <h3 class="font-display text-[22px] max-md:text-[18px] font-semibold capitalize leading-[34px] max-md:leading-[30px] text-brand-green-accent mb-4">Race Details</h3>
+                <h3 class="font-display text-sub max-md:text-lg font-semibold capitalize leading-[34px] max-md:leading-[30px] text-brand-green-accent mb-4">Race Details</h3>
                 <div class="font-body text-base text-text-secondary">
                     <div class="inline-block text-left space-y-2 mb-4">
                         <div class="flex items-center gap-2">
@@ -75,13 +75,13 @@
             </div>
 
             <!-- Series Dates Card -->
-            <div class="bg-white rounded-[10px] shadow-card p-[50px] max-md:p-[30px] text-center animate-fade-in-up">
+            <div class="bg-white rounded-card shadow-card p-[50px] max-md:p-[30px] text-center animate-fade-in-up">
                 <div class="flex justify-center mb-4">
                     <div class="w-[70px] h-[70px] rounded-full border-[3px] border-brand-green flex items-center justify-center">
                         <svg class="w-[35px] h-[35px] text-brand-green" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                     </div>
                 </div>
-                <h3 class="font-display text-[22px] max-md:text-[18px] font-semibold capitalize leading-[34px] max-md:leading-[30px] text-brand-green-accent mb-4">Sayville Summer Series</h3>
+                <h3 class="font-display text-sub max-md:text-lg font-semibold capitalize leading-[34px] max-md:leading-[30px] text-brand-green-accent mb-4">Sayville Summer Series</h3>
                 <div class="font-body text-base text-text-secondary text-center">
                     <p class="mb-4"><strong>{{ series_intro }}</strong></p>
                     <div class="inline-block text-left space-y-3 mb-4">
@@ -106,13 +106,13 @@
     <div class="max-w-7xl mx-auto px-4">
         <div class="grid md:grid-cols-2 max-lg:grid-cols-1 gap-6 mt-[20px] mb-[20px]">
             <!-- Awards Card -->
-            <div class="bg-white rounded-[10px] shadow-card p-[50px] max-md:p-[30px] text-center animate-fade-in-up">
+            <div class="bg-white rounded-card shadow-card p-[50px] max-md:p-[30px] text-center animate-fade-in-up">
                 <div class="flex justify-center mb-4">
                     <div class="w-[70px] h-[70px] rounded-full border-[3px] border-brand-green flex items-center justify-center">
                         <svg class="w-[35px] h-[35px] text-brand-green" fill="currentColor" viewBox="0 0 576 512"><path d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 35.7 22.5 72.4 61.9 100.7 31.5 22.7 69.8 37.1 110 41.7C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6c40.3-4.6 78.6-19 110-41.7C553.5 216.4 576 179.7 576 144V88c0-13.3-10.7-24-24-24zM64 144v-16h64v105.3c-46.8-21.2-64-63.5-64-89.3zm448 0c0 25.8-17.2 68.1-64 89.3V128h64v16z"/></svg>
                     </div>
                 </div>
-                <h3 class="font-display text-[22px] max-md:text-[18px] font-semibold capitalize leading-[34px] max-md:leading-[30px] text-brand-green-accent mb-4">Awards</h3>
+                <h3 class="font-display text-sub max-md:text-lg font-semibold capitalize leading-[34px] max-md:leading-[30px] text-brand-green-accent mb-4">Awards</h3>
                 <div class="font-body text-base text-text-secondary text-center">
                     <p class="mb-3"><strong>Medals will be awarded to the top three finishers in the following categories:</strong></p>
                     <div class="inline-grid grid-cols-2 max-md:grid-cols-1 gap-x-8 gap-y-2 text-left">
@@ -127,13 +127,13 @@
             </div>
 
             <!-- Race Results Card -->
-            <div class="bg-white rounded-[10px] shadow-card p-[50px] max-md:p-[30px] text-center animate-fade-in-up">
+            <div class="bg-white rounded-card shadow-card p-[50px] max-md:p-[30px] text-center animate-fade-in-up">
                 <div class="flex justify-center mb-4">
                     <div class="w-[70px] h-[70px] rounded-full border-[3px] border-brand-green flex items-center justify-center">
                         <svg class="w-[35px] h-[35px] text-brand-green" fill="currentColor" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
                     </div>
                 </div>
-                <h3 class="font-display text-[22px] max-md:text-[18px] font-semibold capitalize leading-[34px] max-md:leading-[30px] text-brand-green-accent mb-4">Race Results</h3>
+                <h3 class="font-display text-sub max-md:text-lg font-semibold capitalize leading-[34px] max-md:leading-[30px] text-brand-green-accent mb-4">Race Results</h3>
                 <div class="font-body text-base text-text-secondary text-center">
                     <p class="mb-3">{{ results_provider }} <a href="{{ results_provider_url }}" target="_blank" rel="noopener" class="text-link hover:text-link-hover underline">RunSignUp.com</a>.</p>
                     <p class="mb-6">All past race results are available on the RunSignUp page — select the year you want to view.</p>

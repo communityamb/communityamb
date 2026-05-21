@@ -4,23 +4,23 @@
     <div class="absolute inset-0">
         <img src="/assets/images/uploads/2023/09/1-2.jpg" alt="" class="w-full h-full object-cover object-center" width="1400" height="1050">
     </div>
-    <div class="absolute inset-0" style="background: linear-gradient(143deg, #F5F5F5 61%, rgba(0,0,0,0.54) 47%);"></div>
+    <div class="absolute inset-0 bg-gradient-youth-hero"></div>
 
-    <div class="relative max-w-7xl mx-auto px-4 py-[100px] max-md:py-[50px]">
-        <nav class="text-[20px] font-display font-medium text-text-primary mb-3 max-md:text-[18px] max-md:ml-2.5" aria-label="Breadcrumb">
+    <div class="relative max-w-7xl mx-auto px-4 py-[100px] max-md:py-section">
+        <nav class="text-xl font-display font-medium text-text-primary mb-3 max-md:text-lg max-md:ml-2.5" aria-label="Breadcrumb">
             <a href="/" class="hover:text-brand-green transition">Home</a>
             <span class="mx-2">|</span>
             <span>Community Ambulance Company Inc.</span>
         </nav>
-        <h1 class="font-display text-[50px] font-semibold text-brand-green uppercase border-l-[3px] border-brand-green pl-5 leading-tight max-lg:text-[40px] max-lg:leading-[50px] max-md:text-[26px] max-md:leading-[40px] max-md:ml-2.5">Youth Squad</h1>
+        <h1 class="font-display text-5xl font-semibold text-brand-green uppercase border-l-[3px] border-brand-green pl-5 leading-tight max-lg:text-hero max-lg:leading-[50px] max-md:text-mid max-md:leading-[40px] max-md:ml-2.5">Youth Squad</h1>
     </div>
 </section>
 
 {{# ── Section 2: Applications Closed Banner + Goals ───────────── #}}
-<section class="bg-white py-[50px]">
+<section class="bg-white py-section">
     <div class="max-w-7xl mx-auto px-4">
         {{ if applications_closed }}
-        <h2 class="font-display text-[34px] font-semibold capitalize leading-[44px] text-status-error text-center max-lg:text-[28px] max-lg:leading-[40px] max-md:text-[22px] max-md:leading-[34px]">
+        <h2 class="font-display text-display font-semibold capitalize leading-[44px] text-status-error text-center max-lg:text-heading max-lg:leading-[40px] max-md:text-sub max-md:leading-[34px]">
             Youth Squad Applications Are Currently Closed For The {{ closed_school_year ?? '' }} School Year
         </h2>
         <div class="flex justify-center mt-4 mb-5">
@@ -32,10 +32,10 @@
         <div class="flex flex-row max-lg:flex-col gap-6 items-stretch">
             {{# Goals text #}}
             <div class="flex-1 flex flex-col justify-center">
-                <h2 class="font-display text-[34px] font-semibold leading-[44px] text-brand-green-accent max-lg:text-[24px] max-lg:leading-[50px] max-md:text-[22px] max-md:leading-[36px] max-md:text-center">
+                <h2 class="font-display text-display font-semibold leading-[44px] text-brand-green-accent max-lg:text-2xl max-lg:leading-[50px] max-md:text-sub max-md:leading-[36px] max-md:text-center">
                     Goals of Youth Squad
                 </h2>
-                <div class="font-display text-[18px] font-normal leading-[30px] text-text-primary mt-4 max-md:text-[16px] max-md:leading-[26px] max-md:text-center">
+                <div class="font-display text-lg font-normal leading-[30px] text-text-primary mt-4 max-md:text-base max-md:leading-[26px] max-md:text-center">
                     <p>The main aim of the Community Ambulance Youth Squad is to teach young people so they're ready to join the main Community Ambulance Company when they turn 18.</p>
                     <p class="mt-4">The Community Ambulance Company, serving areas like Bayport, Bohemia, Oakdale, Sayville, and West Sayville, is always on the lookout for new volunteer members. These volunteers help provide essential ambulance services. Training young members early ensures we always have a team ready to help out.</p>
                 </div>
@@ -51,7 +51,7 @@
 </section>
 
 {{# ── Section 3: Three Info Cards ──────────────────────────────── #}}
-<section class="bg-surface-offwhite py-[50px] max-md:py-[50px]">
+<section class="bg-surface-offwhite py-section max-md:py-section">
     <div class="max-w-7xl mx-auto px-4">
         <div class="flex flex-row max-lg:flex-col gap-6 max-md:px-5">
             {{# Card 1: Age #}}
@@ -61,10 +61,10 @@
                         <svg class="w-[35px] h-[35px] text-brand-green" fill="currentColor" viewBox="0 0 640 512"><path d="M544 160l-96 0c0-35.3-28.7-64-64-64L256 96c-35.3 0-64 28.7-64 64l-96 0c-53 0-96 43-96 96l0 160c0 17.7 14.3 32 32 32l64 0c17.7 0 32-14.3 32-32l0-64 320 0 0 64c0 17.7 14.3 32 32 32l64 0c17.7 0 32-14.3 32-32l0-160c0-53-43-96-96-96zm-368 0c0-17.7 14.3-32 32-32l224 0c17.7 0 32 14.3 32 32l-288 0z"/></svg>
                     </div>
                 </div>
-                <h3 class="font-display text-[26px] font-semibold leading-[34px] text-brand-green-accent mb-3 max-md:text-[18px] max-md:leading-[30px]">
+                <h3 class="font-display text-mid font-semibold leading-[34px] text-brand-green-accent mb-3 max-md:text-lg max-md:leading-[30px]">
                     How old do you have to be to join?
                 </h3>
-                <p class="font-display text-[17px] font-normal leading-[28px] text-text-primary max-md:text-[16px] max-md:leading-[26px]">
+                <p class="font-display text-base font-normal leading-[28px] text-text-primary max-md:text-base max-md:leading-[26px]">
                     We allow young adults at the age of 14 years to join the Community Ambulance Company Youth Squad.
                 </p>
             {{ /partial:partials/feature-card }}
@@ -76,10 +76,10 @@
                         <svg class="w-[35px] h-[35px] text-brand-green" fill="currentColor" viewBox="0 0 640 512"><path d="M256 64l128 0 0 64-128 0 0-64zM240 0c-26.5 0-48 21.5-48 48l0 80 256 0 0-80c0-26.5-21.5-48-48-48L240 0zM96 160l-64 0C14.3 160 0 174.3 0 192l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32-14.3 32-32l0-64 384 0 0 64c0 17.7 14.3 32 32 32l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0-448 0z"/></svg>
                     </div>
                 </div>
-                <h3 class="font-display text-[26px] font-semibold leading-[34px] text-brand-green-accent mb-3 max-md:text-[18px] max-md:leading-[30px]">
+                <h3 class="font-display text-mid font-semibold leading-[34px] text-brand-green-accent mb-3 max-md:text-lg max-md:leading-[30px]">
                     What does Youth Squad do?
                 </h3>
-                <p class="font-display text-[17px] font-normal leading-[28px] text-text-primary max-md:text-[16px] max-md:leading-[26px]">
+                <p class="font-display text-base font-normal leading-[28px] text-text-primary max-md:text-base max-md:leading-[26px]">
                     As a member of the Youth Squad, members will be trained in all aspects of pre-hospital emergency care. This includes patient assessment, CPR, bleeding control, fracture management, oxygen administration, and other trauma and medical emergencies. In addition members are invited to attend all company trainings, drills and parades.
                 </p>
             {{ /partial:partials/feature-card }}
@@ -91,10 +91,10 @@
                         <svg class="w-[35px] h-[35px] text-brand-green" fill="currentColor" viewBox="0 0 640 512"><path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192l42.7 0c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96l-224 0C4.8 320 0 315.2 0 308.9l0-10.2zM405.3 320c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7l42.7 0C592.2 192 640 239.8 640 298.7l0 10.2c0 6.3-4.8 11.1-11.1 11.1l-224 0zM320 256a96 96 0 1 0 0-192 96 96 0 1 0 0 192zm-94.8 32l189.6 0C466.2 288 512 333.8 512 385.7l0 14.2c0 8.8-7.2 16-16 16L144 416c-8.8 0-16-7.2-16-16l0-14.2C128 333.8 173.8 288 225.2 288z"/></svg>
                     </div>
                 </div>
-                <h3 class="font-display text-[26px] font-semibold leading-[34px] text-brand-green-accent mb-3 max-md:text-[18px] max-md:leading-[30px]">
+                <h3 class="font-display text-mid font-semibold leading-[34px] text-brand-green-accent mb-3 max-md:text-lg max-md:leading-[30px]">
                     When do we meet?
                 </h3>
-                <p class="font-display text-[17px] font-normal leading-[28px] text-text-primary max-md:text-[16px] max-md:leading-[26px]">
+                <p class="font-display text-base font-normal leading-[28px] text-text-primary max-md:text-base max-md:leading-[26px]">
                     Meetings are every other Wednesday from 7:00 pm to 8:00 pm during the school year.<br><br>
                     Attendance is crucial to maintain continuity in training.
                 </p>
@@ -104,8 +104,8 @@
 </section>
 
 {{# ── Section 4: Training Duration (Image + Text) ─────────────── #}}
-<section class="bg-white py-[50px] max-md:py-[20px]">
-    <div class="max-w-[1400px] mx-auto px-4">
+<section class="bg-white py-section max-md:py-[20px]">
+    <div class="max-w-container mx-auto px-4">
         <div class="flex flex-row max-lg:flex-col gap-2.5 items-stretch">
             {{# Image #}}
             <div class="flex-1 max-md:p-2.5 max-lg:order-none max-md:order-first">
@@ -115,10 +115,10 @@
             </div>
             {{# Text #}}
             <div class="flex-1 flex flex-col justify-center pl-[30px] max-lg:pl-2.5 max-md:pl-[15px] max-md:pr-[15px] max-md:order-first">
-                <h2 class="font-display text-[34px] font-semibold leading-[44px] text-brand-green-accent max-lg:text-[24px] max-lg:leading-[50px] max-md:text-[22px] max-md:leading-[36px] max-md:text-center">
+                <h2 class="font-display text-display font-semibold leading-[44px] text-brand-green-accent max-lg:text-2xl max-lg:leading-[50px] max-md:text-sub max-md:leading-[36px] max-md:text-center">
                     How long does Youth Squad training last?
                 </h2>
-                <div class="font-display text-[18px] font-normal leading-[30px] text-text-primary mt-4 max-md:text-[16px] max-md:leading-[26px] max-md:text-center">
+                <div class="font-display text-lg font-normal leading-[30px] text-text-primary mt-4 max-md:text-base max-md:leading-[26px] max-md:text-center">
                     <p>Once members turn 16, they become eligible to join our ambulance observer program. In this program, they can spend a few hours each week (between 3 to 6 hours) experiencing firsthand what happens on the ambulance during emergencies. However, participants need to demonstrate the right level of maturity and complete all required training.</p>
                     <p class="mt-4">Parents or guardians must give their approval for their child to join this program. They'll also need to attend a brief meeting to get an overview of the program.</p>
                     <p class="mt-4">If you're thinking of joining our Youth Squad, simply fill out the application linked below. Once you've completed it, you can either mail it to: P.O. Box 450, Sayville NY 11782 or bring it with you on the first day.</p>
@@ -132,9 +132,9 @@
 
 {{# ── Section 5: Application Packet + Form ────────────────────── #}}
 {{ if applications_closed }}
-<section class="bg-surface-offwhite py-[30px]">
+<section class="bg-surface-offwhite py-section-sm">
     <div class="max-w-7xl mx-auto px-4">
-        <h2 class="font-display text-[40px] font-medium uppercase leading-[45px] text-center text-brand-green-accent max-lg:leading-[50px] max-md:text-[26px] max-md:leading-[36px] max-md:tracking-[0.5px]">
+        <h2 class="font-display text-hero font-medium uppercase leading-[45px] text-center text-brand-green-accent max-lg:leading-[50px] max-md:text-mid max-md:leading-[36px] max-md:tracking-[0.5px]">
             <a href="/assets/images/uploads/2023/09/Youth-Squad-Membership-Application-Packet.pdf" target="_blank" class="text-brand-green-accent hover:text-brand-green-dark transition">
                 Youth Squad Membership Application Packet
             </a>
@@ -147,9 +147,9 @@
     </div>
 </section>
 {{ else }}
-<section class="bg-surface-offwhite py-[30px]">
+<section class="bg-surface-offwhite py-section-sm">
     <div class="max-w-7xl mx-auto px-4">
-        <h2 class="font-display text-[40px] font-medium uppercase leading-[45px] text-center text-brand-green-accent max-lg:leading-[50px] max-md:text-[26px] max-md:leading-[36px] max-md:tracking-[0.5px]">
+        <h2 class="font-display text-hero font-medium uppercase leading-[45px] text-center text-brand-green-accent max-lg:leading-[50px] max-md:text-mid max-md:leading-[36px] max-md:tracking-[0.5px]">
             <a href="/assets/images/uploads/2023/09/Youth-Squad-Membership-Application-Packet.pdf" target="_blank" class="text-brand-green-accent hover:text-brand-green-dark transition">
                 Youth Squad Membership Application Packet
             </a>
@@ -157,43 +157,43 @@
 
         <div class="flex flex-row max-lg:flex-col gap-[30px] max-md:gap-[5px] mt-8">
             {{# Application image card #}}
-            <div class="flex-1 bg-surface-offwhite rounded-[5px] p-[50px] max-md:p-2.5 max-md:m-2.5">
+            <div class="flex-1 bg-surface-offwhite rounded-btn p-[50px] max-md:p-2.5 max-md:m-2.5">
                 <a href="/assets/images/uploads/2023/09/Youth-Squad-Membership-Application-Packet.pdf" target="_blank" class="block pt-[125px] max-md:pt-0">
                     <img src="/assets/images/uploads/2023/09/image0-15.jpeg" alt="Youth Squad members of Community Ambulance" class="w-full rounded hover:scale-105 transition-transform duration-300" loading="lazy" width="505" height="640">
                 </a>
             </div>
 
             {{# Interest form #}}
-            <div class="flex-1 bg-white rounded-[5px] p-[40px] max-md:p-[20px] flex flex-col justify-center" x-data="{ submitting: false }" @submit="submitting = true">
+            <div class="flex-1 bg-white rounded-btn p-[40px] max-md:p-[20px] flex flex-col justify-center" x-data="{ submitting: false }" @submit="submitting = true">
                 {{ form:youth_squad }}
                 <div class="space-y-5">
                     <div class="grid grid-cols-2 max-md:grid-cols-1 gap-4">
                         <div>
                             {{ partial:partials/form-input type="text" name="first_name" label="First Name" required="true" placeholder="First Name" }}
-                            {{ if error:first_name }}<p class="text-red-600 text-xs mt-1">{{ error:first_name }}</p>{{ /if }}
+                            {{ if error:first_name }}<p class="text-status-error text-xs mt-1">{{ error:first_name }}</p>{{ /if }}
                         </div>
                         <div>
                             {{ partial:partials/form-input type="text" name="last_name" label="Last Name" required="true" placeholder="Last Name" }}
-                            {{ if error:last_name }}<p class="text-red-600 text-xs mt-1">{{ error:last_name }}</p>{{ /if }}
+                            {{ if error:last_name }}<p class="text-status-error text-xs mt-1">{{ error:last_name }}</p>{{ /if }}
                         </div>
                     </div>
                     <div>
                         {{ partial:partials/form-input type="email" name="email" label="Email" required="true" placeholder="Email Address" }}
-                        {{ if error:email }}<p class="text-red-600 text-xs mt-1">{{ error:email }}</p>{{ /if }}
+                        {{ if error:email }}<p class="text-status-error text-xs mt-1">{{ error:email }}</p>{{ /if }}
                     </div>
                     <div class="grid grid-cols-2 max-md:grid-cols-1 gap-4">
                         <div>
                             {{ partial:partials/form-input type="date" name="date_of_birth" label="Date of Birth" required="true" }}
-                            {{ if error:date_of_birth }}<p class="text-red-600 text-xs mt-1">{{ error:date_of_birth }}</p>{{ /if }}
+                            {{ if error:date_of_birth }}<p class="text-status-error text-xs mt-1">{{ error:date_of_birth }}</p>{{ /if }}
                         </div>
                         <div>
                             {{ partial:partials/form-input type="tel" name="phone_number" label="Phone Number" required="true" placeholder="Phone Number" }}
-                            {{ if error:phone_number }}<p class="text-red-600 text-xs mt-1">{{ error:phone_number }}</p>{{ /if }}
+                            {{ if error:phone_number }}<p class="text-status-error text-xs mt-1">{{ error:phone_number }}</p>{{ /if }}
                         </div>
                     </div>
                     <div class="grid grid-cols-2 max-md:grid-cols-1 gap-4">
                         <div>
-                            <label for="town" class="block text-base font-medium text-text-secondary mb-2 font-display">Town of Residence <span class="text-red-500">*</span></label>
+                            <label for="town" class="block text-base font-medium text-text-secondary mb-2 font-display">Town of Residence <span class="text-status-error">*</span></label>
                             <select name="town" id="town" required class="w-full rounded border border-border-medium px-4 py-3 text-base font-body bg-white focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none">
                                 <option value="">Select your town</option>
                                 <option value="Oakdale">Oakdale</option>
@@ -203,10 +203,10 @@
                                 <option value="Bayport">Bayport</option>
                                 <option value="Other">Other</option>
                             </select>
-                            {{ if error:town }}<p class="text-red-600 text-xs mt-1">{{ error:town }}</p>{{ /if }}
+                            {{ if error:town }}<p class="text-status-error text-xs mt-1">{{ error:town }}</p>{{ /if }}
                         </div>
                         <div>
-                            <label class="block text-base font-medium text-text-secondary mb-2 font-display">Is your interest in the High School EMT program? <span class="text-red-500">*</span></label>
+                            <label class="block text-base font-medium text-text-secondary mb-2 font-display">Is your interest in the High School EMT program? <span class="text-status-error">*</span></label>
                             <div class="flex flex-wrap gap-4 mt-2">
                                 <label class="flex items-center gap-2 text-base font-display">
                                     <input type="radio" name="hs_emt_interest" value="yes" required class="text-brand-green focus:ring-brand-green"> Yes
@@ -218,7 +218,7 @@
                                     <input type="radio" name="hs_emt_interest" value="over_18" class="text-brand-green focus:ring-brand-green"> I am over 18 years old
                                 </label>
                             </div>
-                            {{ if error:hs_emt_interest }}<p class="text-red-600 text-xs mt-1">{{ error:hs_emt_interest }}</p>{{ /if }}
+                            {{ if error:hs_emt_interest }}<p class="text-status-error text-xs mt-1">{{ error:hs_emt_interest }}</p>{{ /if }}
                         </div>
                     </div>
                     <button type="submit" :disabled="submitting" :class="{ 'opacity-50 cursor-not-allowed': submitting }" class="w-full bg-brand-green hover:bg-brand-navy text-white font-semibold text-lg px-8 py-4 rounded transition font-display">
@@ -227,7 +227,7 @@
                     </button>
                 </div>
                 {{ if success }}
-                <div class="mt-4 bg-green-50 border border-green-200 rounded p-4 text-green-800">
+                <div class="mt-4 bg-status-success-bg border border-status-success-border rounded p-4 text-status-success">
                     Thank you for your interest in the Youth Squad! We will be in touch soon.
                 </div>
                 {{ /if }}
@@ -256,16 +256,16 @@
             if ($event.shiftKey && document.activeElement === first) { $event.preventDefault(); last.focus(); }
             else if (!$event.shiftKey && document.activeElement === last) { $event.preventDefault(); first.focus(); }
          ">
-        <h2 id="modal-title" class="text-status-error font-display text-[28px] font-bold mb-4 leading-[1.3]">
+        <h2 id="modal-title" class="text-status-error font-display text-heading font-bold mb-4 leading-[1.3]">
             Youth Squad Applications Are Currently Closed
         </h2>
-        <p class="text-text-primary text-[16px] leading-[1.6] mb-3 font-body">
+        <p class="text-text-primary text-base leading-[1.6] mb-3 font-body">
             Applications for the {{ closed_school_year ?? '' }} school year have closed. We will begin accepting applications for the next semester.
         </p>
-        <p class="text-text-primary text-[16px] leading-[1.6] mb-3 font-body">
+        <p class="text-text-primary text-base leading-[1.6] mb-3 font-body">
             Questions? Contact us at <a href="mailto:youthsqd@communityamb.org" class="text-brand-green underline hover:text-brand-navy">youthsqd@communityamb.org</a> or call <a href="tel:6315672586" class="text-brand-green underline hover:text-brand-navy">(631) 567-2586 x117</a>.
         </p>
-        <button @click="open = false" class="inline-block mt-5 px-10 py-3 bg-brand-green text-white border-none rounded font-semibold text-[16px] cursor-pointer hover:bg-brand-navy transition-colors duration-300">
+        <button @click="open = false" class="inline-block mt-5 px-10 py-3 bg-brand-green text-white border-none rounded font-semibold text-base cursor-pointer hover:bg-brand-navy transition-colors duration-300">
             I Understand
         </button>
     </div>

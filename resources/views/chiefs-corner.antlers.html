@@ -1,7 +1,7 @@
 {{ partial:partials/page-header }}
 
-<section class="bg-white py-[50px] max-md:py-[20px]">
-    <div class="max-w-[1400px] mx-auto px-4 flex flex-row items-stretch gap-[10px] max-lg:flex-col max-md:px-0"
+<section class="bg-white py-section max-md:py-[20px]">
+    <div class="max-w-container mx-auto px-4 flex flex-row items-stretch gap-[10px] max-lg:flex-col max-md:px-0"
          x-data="{ shown: false }"
          x-intersect.once="shown = true">
 
@@ -9,13 +9,13 @@
              x-cloak
              :class="shown ? 'animate-fade-in-up' : 'opacity-0'">
 
-            <h2 class="font-display text-[34px] font-semibold uppercase leading-[65px] text-text-primary max-lg:text-[34px] max-lg:leading-[50px] max-lg:text-center max-md:text-[26px] max-md:leading-[36px] max-md:text-center">{{ chief_name }}</h2>
+            <h2 class="font-display text-display font-semibold uppercase leading-[65px] text-text-primary max-lg:text-display max-lg:leading-[50px] max-lg:text-center max-md:text-mid max-md:leading-[36px] max-md:text-center">{{ chief_name }}</h2>
 
-            <h2 class="font-display text-[28px] font-semibold leading-[42px] text-brand-green -mt-[20px] max-lg:text-[34px] max-lg:leading-[50px] max-lg:text-center max-md:text-[22px] max-md:leading-[36px] max-md:text-center">{{ chief_title }}</h2>
+            <h2 class="font-display text-heading font-semibold leading-[42px] text-brand-green -mt-[20px] max-lg:text-display max-lg:leading-[50px] max-lg:text-center max-md:text-sub max-md:leading-[36px] max-md:text-center">{{ chief_title }}</h2>
 
             <div class="w-[20%] border-t border-black my-5 max-md:mx-auto"></div>
 
-            <div class="font-display text-[18px] font-normal leading-[30px] text-text-primary max-lg:text-center max-md:text-center max-md:text-[16px] max-md:leading-[26px] [&>h2]:hidden [&>p>a]:text-link [&>p>a:hover]:text-link-hover [&>p]:mb-[1em]">
+            <div class="font-display text-lg font-normal leading-[30px] text-text-primary max-lg:text-center max-md:text-center max-md:text-base max-md:leading-[26px] [&>h2]:hidden [&>p>a]:text-link [&>p>a:hover]:text-link-hover [&>p]:mb-[1em]">
                 {{ content }}
             </div>
         </div>
