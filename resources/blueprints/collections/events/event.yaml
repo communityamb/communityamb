@@ -43,6 +43,7 @@ tabs:
             field:
               type: bard
               display: Description
+              required: true
               buttons:
                 - h2
                 - h3

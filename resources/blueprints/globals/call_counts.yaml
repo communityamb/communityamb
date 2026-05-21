@@ -33,3 +33,4 @@ tabs:
                   field:
                     type: text
                     display: 'Alarm Count'
+                    instructions: 'Total alarms answered for the year, e.g. "3,476"'
