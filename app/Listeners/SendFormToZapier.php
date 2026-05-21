@@ -26,6 +26,7 @@ class SendFormToZapier implements ShouldQueue
 
         if (! $url) {
             Log::warning("Zapier webhook URL not configured for form: {$form}");
+
             return;
         }
 

@@ -27,7 +27,7 @@ class ThrottleFormSubmissions
             return $next($request);
         }
 
-        $key = 'form-submission:' . $request->ip();
+        $key = 'form-submission:'.$request->ip();
 
         if (RateLimiter::tooManyAttempts($key, 5)) {
             abort(429, 'Too many form submissions. Please try again later.');

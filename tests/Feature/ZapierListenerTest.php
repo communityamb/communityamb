@@ -6,14 +6,14 @@ use App\Listeners\SendFormToZapier;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Statamic\Events\FormSubmitted;
-use Statamic\Forms\Submission;
+use Statamic\Facades\Form;
 use Tests\TestCase;
 
 class ZapierListenerTest extends TestCase
 {
     private function makeSubmissionEvent(string $formHandle, array $data = []): FormSubmitted
     {
-        $form = \Statamic\Facades\Form::find($formHandle);
+        $form = Form::find($formHandle);
 
         $submission = $form->makeSubmission();
         $submission->data(collect($data));

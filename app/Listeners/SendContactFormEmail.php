@@ -20,6 +20,7 @@ class SendContactFormEmail implements ShouldQueue
 
         if (! $to) {
             Log::warning('Contact form "to" address not configured.');
+
             return;
         }
 
