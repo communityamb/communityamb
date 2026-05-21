@@ -10,7 +10,7 @@
         <!-- Image column (left) -->
         <div class="overflow-hidden rounded-[5px] group max-lg:px-[10px] max-md:px-[10px]">
             <div class="relative min-h-[550px] max-md:min-h-[300px] h-full overflow-hidden rounded-[5px]">
-                <img src="{{ program_image }}" alt="{{ program_image_alt }}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110">
+                <img src="{{ program_image }}" alt="{{ program_image_alt }}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110" loading="lazy">
             </div>
         </div>
         <!-- Text column (right) -->
@@ -32,7 +32,7 @@
         <!-- Image column (right) -->
         <div class="overflow-hidden rounded-[5px] group max-lg:px-[10px] max-md:px-[10px]">
             <div class="relative min-h-[550px] max-md:min-h-[300px] h-full overflow-hidden rounded-[5px]">
-                <img src="{{ program_image }}" alt="{{ program_image_alt }}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110">
+                <img src="{{ program_image }}" alt="{{ program_image_alt }}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110" loading="lazy">
             </div>
         </div>
         {{ /if }}
@@ -49,7 +49,7 @@
             <div class="bg-white rounded-[10px] shadow-card p-5 flex flex-col">
                 <div class="overflow-hidden rounded-[5px] group mb-4">
                     <div class="relative {{ if card_image_height == 'tall' }}min-h-[300px] max-md:min-h-[190px]{{ else }}min-h-[190px] max-md:min-h-[190px]{{ /if }} overflow-hidden rounded-[5px]">
-                        <img src="{{ card_image }}" alt="{{ card_image_alt }}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110">
+                        <img src="{{ card_image }}" alt="{{ card_image_alt }}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110" loading="lazy">
                     </div>
                 </div>
                 <h2 class="font-display text-[26px] max-md:text-[18px] font-semibold leading-[34px] max-lg:leading-[30px] max-md:leading-[30px] text-brand-green-accent mb-2 max-lg:text-center">{{ card_title }}</h2>

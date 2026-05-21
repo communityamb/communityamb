@@ -52,7 +52,7 @@
                  :class="shown ? 'animate-fade-in-up' : 'opacity-0'">
                 <div class="text-center">
                     {{ if photo_url }}
-                    <img src="{{ photo_url }}" alt="{{ title }}" class="w-[80px] h-[80px] object-cover rounded-full mx-auto">
+                    <img src="{{ photo_url }}" alt="{{ title }}" class="w-[80px] h-[80px] object-cover rounded-full mx-auto" loading="lazy">
                     {{ /if }}
                     <h3 class="font-display text-[26px] font-semibold leading-[34px] text-brand-green-accent mt-4 max-md:text-[22px] max-md:leading-[30px]">{{ title }}</h3>
                     <p class="font-display text-[18px] font-medium leading-[26px] text-brand-green-accent mt-1 max-md:text-[16px]">{{ role }}</p>
@@ -104,16 +104,16 @@
                  :class="shown ? 'animate-fade-in-up [animation-delay:300ms]' : 'opacity-0'">
                 {{ if photo_url }}
                 <div class="group relative overflow-hidden min-h-[550px] max-md:min-h-[210px]">
-                    <img src="{{ photo_url }}" alt="{{ title }}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110">
+                    <img src="{{ photo_url }}" alt="{{ title }}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110" loading="lazy">
                 </div>
                 {{ else }}
                 <div class="min-h-[550px] max-md:min-h-[210px] bg-surface-gray flex items-center justify-center">
-                    <img src="{{ organization:logo_url }}" alt="Community Ambulance Company" class="w-1/2 mx-auto">
+                    <img src="{{ organization:logo_url }}" alt="Community Ambulance Company" class="w-1/2 mx-auto" loading="lazy">
                 </div>
                 {{ /if }}
             </div>
         </div>
-        
+
         {{ /collection:team_members }}
 
         {{# Assistant Chiefs — side-by-side cards with image + text #}}
@@ -128,10 +128,10 @@
             {{# Image column #}}
             <div class="flex-1 p-[30px] max-lg:p-[10px] max-md:order-first flex items-center justify-center">
                 {{ if photo_url }}
-                <img src="{{ photo_url }}" alt="{{ title }}" class="w-full rounded">
+                <img src="{{ photo_url }}" alt="{{ title }}" class="w-full rounded" loading="lazy">
                 {{ else }}
                 <div class="w-full aspect-square bg-surface-gray rounded-lg flex items-center justify-center">
-                    <img src="{{ organization:logo_url }}" alt="Community Ambulance Company" class="w-1/2 mx-auto">
+                    <img src="{{ organization:logo_url }}" alt="Community Ambulance Company" class="w-1/2 mx-auto" loading="lazy">
                 </div>
                 {{ /if }}
             </div>
@@ -165,10 +165,10 @@
                  :class="shown ? 'animate-fade-in-up' : 'opacity-0'">
                 <div class="text-center">
                     {{ if photo_url }}
-                    <img src="{{ photo_url }}" alt="{{ title }}" class="w-1/2 mx-auto rounded">
+                    <img src="{{ photo_url }}" alt="{{ title }}" class="w-1/2 mx-auto rounded" loading="lazy">
                     {{ else }}
                     <div class="w-1/2 mx-auto aspect-square bg-surface-gray rounded-lg flex items-center justify-center">
-                        <img src="{{ organization:logo_url }}" alt="Community Ambulance Company" class="w-2/3 mx-auto">
+                        <img src="{{ organization:logo_url }}" alt="Community Ambulance Company" class="w-2/3 mx-auto" loading="lazy">
                     </div>
                     {{ /if }}
                 </div>
@@ -196,10 +196,10 @@
                  x-cloak
                  :class="shown ? 'animate-fade-in-up' : 'opacity-0'">
                 {{ if photo_url }}
-                <img src="{{ photo_url }}" alt="{{ title }}" class="w-1/2 mx-auto rounded">
+                <img src="{{ photo_url }}" alt="{{ title }}" class="w-1/2 mx-auto rounded" loading="lazy">
                 {{ else }}
                 <div class="w-1/2 aspect-square bg-surface-gray rounded-lg flex items-center justify-center">
-                    <img src="{{ organization:logo_url }}" alt="Community Ambulance Company" class="w-2/3 mx-auto">
+                    <img src="{{ organization:logo_url }}" alt="Community Ambulance Company" class="w-2/3 mx-auto" loading="lazy">
                 </div>
                 {{ /if }}
                 <h3 class="font-display text-[26px] font-semibold leading-[34px] text-brand-green-accent text-left mt-3 max-lg:text-center max-md:text-[22px] max-md:leading-[36px] max-md:text-center">{{ title }}</h3>
@@ -252,9 +252,9 @@
                  :class="shown ? 'animate-fade-in-up' : 'opacity-0'">
                 <div class="text-center">
                     {{ if photo_url }}
-                    <img src="{{ photo_url }}" alt="{{ title }}" class="w-1/2 mx-auto rounded">
+                    <img src="{{ photo_url }}" alt="{{ title }}" class="w-1/2 mx-auto rounded" loading="lazy">
                     {{ else }}
-                    <img src="{{ organization:logo_url }}" alt="Community Ambulance Company" class="w-1/2 mx-auto">
+                    <img src="{{ organization:logo_url }}" alt="Community Ambulance Company" class="w-1/2 mx-auto" loading="lazy">
                     {{ /if }}
                 </div>
                 <h3 class="font-display text-[26px] font-semibold leading-[34px] text-brand-green-accent text-center mt-4 max-lg:text-center max-md:text-[22px] max-md:leading-[36px]">{{ title }}</h3>

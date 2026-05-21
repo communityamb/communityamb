@@ -2,11 +2,12 @@
 
 namespace App\Listeners;
 
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Statamic\Events\FormSubmitted;
 
-class SendContactFormEmail
+class SendContactFormEmail implements ShouldQueue
 {
     public function handle(FormSubmitted $event): void
     {
