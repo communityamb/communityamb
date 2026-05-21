@@ -42,7 +42,7 @@ jobs:
       - name: Run tests
         run: php artisan test
         env:
-          APP_KEY: base64:dGVzdGtleWZvcmNpb25seXRoaXJ0eXR3b2J5dGVzIQ==
+          APP_KEY: base64:sdnZidVMosRdeKngIm3XIZqiQla9yblrWnI1IxaFhXI=
           APP_ENV: testing
           DB_CONNECTION: sqlite
           DB_DATABASE: ':memory:'
