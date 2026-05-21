@@ -84,7 +84,7 @@ class RedirectTest extends TestCase
             'nested category to blog' => ['/category/uncategorized/page/2', '/blog'],
             'tag to blog' => ['/tag/some-tag', '/blog'],
             'wp-content to home' => ['/wp-content/uploads/2023/image.jpg', '/'],
-            'wp-admin to cp' => ['/wp-admin', '/cp'],
+            'wp-admin to home' => ['/wp-admin', '/'],
             'wp-login to cp' => ['/wp-login.php', '/cp'],
         ];
     }
