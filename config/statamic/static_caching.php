@@ -61,7 +61,9 @@ return [
         'class' => null,
 
         'urls' => [
-            //
+            '/join-community',
+            '/join-community/join-youth-squad',
+            '/contact-us',
         ],
 
     ],
