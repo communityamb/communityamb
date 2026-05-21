@@ -61,8 +61,10 @@ tabs:
                     -
                       handle: program_image
                       field:
-                        type: text
-                        display: Image Path
+                        type: assets
+                        display: Image
+                        container: assets
+                        max_files: 1
                     -
                       handle: program_image_alt
                       field:
@@ -113,8 +115,10 @@ tabs:
                           -
                             handle: card_image
                             field:
-                              type: text
-                              display: Image Path
+                              type: assets
+                              display: Image
+                              container: assets
+                              max_files: 1
                           -
                             handle: card_image_alt
                             field:

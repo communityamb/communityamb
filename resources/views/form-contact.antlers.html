@@ -61,9 +61,9 @@
             <div class="max-md:mb-[50px]">
                 <div class="rounded-lg overflow-hidden shadow-md h-full">
                     <iframe
-                        src="https://maps.google.com/maps?q=420%20Lakeland%20Ave%2C%20Sayville%2C%20NY%2011782&t=m&z=16&output=embed&iwloc=near"
-                        title="420 Lakeland Ave, Sayville, NY 11782"
-                        aria-label="420 Lakeland Ave, Sayville, NY 11782"
+                        src="https://maps.google.com/maps?q={{ organization:street_address }}%2C%20{{ organization:city }}%2C%20{{ organization:state }}%20{{ organization:zip_code }}&t=m&z=16&output=embed&iwloc=near"
+                        title="{{ organization:street_address }}, {{ organization:city }}, {{ organization:state }} {{ organization:zip_code }}"
+                        aria-label="{{ organization:street_address }}, {{ organization:city }}, {{ organization:state }} {{ organization:zip_code }}"
                         width="100%"
                         class="min-h-[703px] max-md:min-h-[400px]"
                         style="border:0;"
