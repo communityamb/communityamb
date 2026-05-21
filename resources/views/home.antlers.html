@@ -49,10 +49,10 @@
             </template>
         </div>
         <button @click="prev()" class="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-text-secondary/70 hover:text-text-secondary" aria-label="Previous slide">
-            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            {{ partial:icon name="chevron-left" class="w-8 h-8" }}
         </button>
         <button @click="next()" class="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-text-secondary/70 hover:text-text-secondary" aria-label="Next slide">
-            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            {{ partial:icon name="chevron-right" class="w-8 h-8" }}
         </button>
         <div class="flex justify-center gap-2 mt-4">
             <template x-for="(slide, i) in slides" :key="'dot-'+i">
@@ -95,22 +95,22 @@
             <p class="font-display text-[18px] max-md:text-[16px] font-medium capitalize leading-[28px] max-md:leading-[26px] text-text-secondary mb-6">As of April 26th, 1,625 alarms have been answered for 2026.</p>
             <div class="grid grid-cols-3 max-md:grid-cols-1 gap-x-4 rounded-[5px]">
                 <ul class="space-y-[7px] font-display text-[16px] font-normal max-md:max-md:-mb-[25px]">
-                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>5,637 alarms in 2025</li>
-                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>5,780 alarms in 2024</li>
-                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>5,612 alarms in 2023</li>
-                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>5,617 alarms in 2022</li>
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0">{{ partial:icon name="circle" class="w-5 h-5" }}</span>5,637 alarms in 2025</li>
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0">{{ partial:icon name="circle" class="w-5 h-5" }}</span>5,780 alarms in 2024</li>
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0">{{ partial:icon name="circle" class="w-5 h-5" }}</span>5,612 alarms in 2023</li>
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0">{{ partial:icon name="circle" class="w-5 h-5" }}</span>5,617 alarms in 2022</li>
                 </ul>
                 <ul class="space-y-[7px] font-display text-[16px] font-normal max-md:-mt-[25px] max-md:max-md:-mb-[25px]">
-                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>5,219 alarms in 2021</li>
-                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>4,445 alarms in 2020</li>
-                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>5,268 alarms in 2019</li>
-                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>5,025 alarms in 2018</li>
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0">{{ partial:icon name="circle" class="w-5 h-5" }}</span>5,219 alarms in 2021</li>
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0">{{ partial:icon name="circle" class="w-5 h-5" }}</span>4,445 alarms in 2020</li>
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0">{{ partial:icon name="circle" class="w-5 h-5" }}</span>5,268 alarms in 2019</li>
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0">{{ partial:icon name="circle" class="w-5 h-5" }}</span>5,025 alarms in 2018</li>
                 </ul>
                 <ul class="space-y-[7px] font-display text-[16px] font-normal max-md:-mt-[25px]">
-                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>4,841 alarms in 2017</li>
-                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>4,661 alarms in 2016</li>
-                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>4,510 alarms in 2015</li>
-                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>5,318 alarms in 2014</li>
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0">{{ partial:icon name="circle" class="w-5 h-5" }}</span>4,841 alarms in 2017</li>
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0">{{ partial:icon name="circle" class="w-5 h-5" }}</span>4,661 alarms in 2016</li>
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0">{{ partial:icon name="circle" class="w-5 h-5" }}</span>4,510 alarms in 2015</li>
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0">{{ partial:icon name="circle" class="w-5 h-5" }}</span>5,318 alarms in 2014</li>
                 </ul>
             </div>
         </div>
