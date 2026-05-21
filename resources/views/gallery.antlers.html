@@ -66,23 +66,17 @@
 
         <!-- Close button -->
         <button @click="lightbox.open = false" class="absolute top-4 right-4 text-white hover:text-gray-300 z-10">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
+            {{ partial:icon name="close" class="w-8 h-8" }}
         </button>
 
         <!-- Previous button -->
         <button @click.stop="navigate(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 z-10 p-2">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-            </svg>
+            {{ partial:icon name="chevron-left" class="w-10 h-10" }}
         </button>
 
         <!-- Next button -->
         <button @click.stop="navigate(1)" class="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 z-10 p-2">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-            </svg>
+            {{ partial:icon name="chevron-right" class="w-10 h-10" }}
         </button>
 
         <!-- Image -->
