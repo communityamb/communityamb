@@ -27,13 +27,10 @@ class FormSubmissionTest extends TestCase
     {
         $response = $this->post('/!/forms/contact_us', [
             'first_name' => 'John',
-            // last_name missing
-            // email missing
-            // phone missing
-            // comments missing
         ]);
 
-        $response->assertSessionHasErrors(['last_name', 'email', 'phone', 'comments']);
+        $response->assertRedirect();
+        $response->assertSessionHasErrors(['last_name', 'email', 'phone', 'comments'], [], 'form.contact_us');
     }
 
     public function test_contact_us_form_rejects_invalid_email(): void
@@ -46,7 +43,8 @@ class FormSubmissionTest extends TestCase
             'comments' => 'Test message.',
         ]);
 
-        $response->assertSessionHasErrors(['email']);
+        $response->assertRedirect();
+        $response->assertSessionHasErrors(['email'], [], 'form.contact_us');
     }
 
     public function test_join_community_form_accepts_valid_submission(): void
@@ -57,7 +55,7 @@ class FormSubmissionTest extends TestCase
             'first_name' => 'Jane',
             'last_name' => 'Smith',
             'email' => 'jane@example.com',
-            'date_of_birth' => '1995-06-15',
+            'date_of_birth' => ['date' => '1995-06-15'],
             'phone_number' => '631-555-5678',
             'town' => 'oakdale',
             'hs_emt_interest' => 'no',
@@ -70,17 +68,14 @@ class FormSubmissionTest extends TestCase
     {
         $response = $this->post('/!/forms/join_community', [
             'first_name' => 'Jane',
-            // all other required fields missing
         ]);
 
-        $response->assertSessionHasErrors([
-            'last_name',
-            'email',
-            'date_of_birth',
-            'phone_number',
-            'town',
-            'hs_emt_interest',
-        ]);
+        $response->assertRedirect();
+        $response->assertSessionHasErrors(
+            ['last_name', 'email', 'phone_number', 'town', 'hs_emt_interest'],
+            [],
+            'form.join_community'
+        );
     }
 
     public function test_youth_squad_form_accepts_valid_submission(): void
@@ -91,7 +86,7 @@ class FormSubmissionTest extends TestCase
             'first_name' => 'Alex',
             'last_name' => 'Johnson',
             'email' => 'alex@example.com',
-            'date_of_birth' => '2008-03-20',
+            'date_of_birth' => ['date' => '2008-03-20'],
             'phone_number' => '631-555-9012',
             'town' => 'sayville',
             'hs_emt_interest' => 'yes',
@@ -104,30 +99,27 @@ class FormSubmissionTest extends TestCase
     {
         $response = $this->post('/!/forms/youth_squad', []);
 
-        $response->assertSessionHasErrors([
-            'first_name',
-            'last_name',
-            'email',
-            'date_of_birth',
-            'phone_number',
-            'town',
-            'hs_emt_interest',
-        ]);
+        $response->assertRedirect();
+        $response->assertSessionHasErrors(
+            ['first_name', 'last_name', 'email', 'phone_number', 'town', 'hs_emt_interest'],
+            [],
+            'form.youth_squad'
+        );
     }
 
     public function test_honeypot_field_blocks_spam_submission(): void
     {
-        $response = $this->post('/!/forms/contact_us', [
+        Event::fake([FormSubmitted::class]);
+
+        $this->post('/!/forms/contact_us', [
             'first_name' => 'Spam',
             'last_name' => 'Bot',
             'email' => 'spam@bot.com',
             'phone' => '000-000-0000',
             'comments' => 'Buy my stuff!',
-            'winnie' => 'gotcha',  // honeypot field filled = bot
+            'winnie' => 'gotcha',
         ]);
 
-        // Statamic silently discards honeypot-triggered submissions
-        // (returns success but does not fire FormSubmitted event)
         Event::assertNotDispatched(FormSubmitted::class);
     }
 }
