@@ -40,4 +40,9 @@ return [
         'youth_squad' => env('ZAPIER_YOUTH_WEBHOOK_URL'),
     ],
 
+    'contact_form' => [
+        'to' => env('CONTACT_FORM_TO', 'secretary@communityamb.org'),
+        'cc' => env('CONTACT_FORM_CC', 'jhartmann@communityamb.org'),
+    ],
+
 ];
