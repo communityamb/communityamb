@@ -7,6 +7,7 @@
     --color-brand-green: #3D7F31;
     --color-brand-green-light: #76A56D;
     --color-brand-green-dark: #2d6024;
+    --color-brand-green-accent: #008000;
     --color-brand-navy: #143D62;
     --color-brand-navy-light: #253551;
     --color-brand-peach: #FFC077;
@@ -27,6 +28,15 @@
 
     --color-link: #046bd2;
     --color-link-hover: #045cb4;
+
+    --color-status-error: #CC0000;
+    --color-timeline-dot: #f1f2f3;
+    --color-timeline-line: #d7e4ed;
+    --color-memorial-bg: rgba(128, 0, 128, 0.09);
+
+    --shadow-card: 0 20px 80px 0 rgba(61, 127, 49, 0.19);
+    --shadow-timeline-dot: 0 1px 0 1px rgba(0, 0, 0, 0.1);
+    --shadow-modal: 0 8px 40px rgba(0, 0, 0, 0.3);
 
     --font-heading: "Roboto Slab", serif;
     --font-body: "Roboto", sans-serif;
