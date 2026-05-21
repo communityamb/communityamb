@@ -1,0 +1,6 @@
+title: Blog
+template: blog-single
+layout: layout
+date: true
+sort_dir: desc
+route: '/blog/{slug}'

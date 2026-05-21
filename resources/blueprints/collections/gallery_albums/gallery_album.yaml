@@ -1,0 +1,36 @@
+title: Gallery Album
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Album Name
+          -
+            handle: description
+            field:
+              type: textarea
+              display: Description
+          -
+            handle: photos
+            field:
+              type: assets
+              display: Photos
+              container: assets
+              mode: grid
+          -
+            handle: date
+            field:
+              type: date
+              display: Album Date
+          -
+            handle: sort_order
+            field:
+              type: integer
+              display: Sort Order
+              default: 99

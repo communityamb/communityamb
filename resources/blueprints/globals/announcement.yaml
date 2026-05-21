@@ -1,0 +1,27 @@
+title: Announcement Banner
+tabs:
+  main:
+    display: Banner
+    sections:
+      -
+        fields:
+          -
+            handle: show_banner
+            field:
+              type: toggle
+              display: Show Banner
+              default: false
+          -
+            handle: banner_text
+            field:
+              type: text
+              display: Banner Text
+              if:
+                show_banner: 'equals true'
+          -
+            handle: banner_link
+            field:
+              type: link
+              display: Banner Link
+              if:
+                show_banner: 'equals true'

@@ -1,0 +1,37 @@
+title: Blog Post
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              container: assets
+          -
+            handle: featured_image
+            field:
+              type: assets
+              display: Featured Image
+              container: assets
+              max_files: 1
+          -
+            handle: author
+            field:
+              type: users
+              display: Author
+              max_items: 1
+          -
+            handle: excerpt
+            field:
+              type: textarea
+              display: Excerpt

@@ -1,0 +1,38 @@
+title: Organization
+tabs:
+  main:
+    display: Organization Info
+    sections:
+      -
+        fields:
+          -
+            handle: org_name
+            field:
+              type: text
+              display: Organization Name
+          -
+            handle: phone
+            field:
+              type: text
+              display: Phone Number
+          -
+            handle: email
+            field:
+              type: text
+              display: Email
+              input_type: email
+          -
+            handle: street_address
+            field:
+              type: text
+              display: Street Address
+          -
+            handle: mailing_address
+            field:
+              type: text
+              display: Mailing Address
+          -
+            handle: description
+            field:
+              type: textarea
+              display: Description

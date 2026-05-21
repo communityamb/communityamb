@@ -1,0 +1,83 @@
+title: Event
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Event Name
+          -
+            handle: date_start
+            field:
+              type: date
+              display: Start Date
+              required: true
+          -
+            handle: date_end
+            field:
+              type: date
+              display: End Date
+          -
+            handle: time
+            field:
+              type: text
+              display: Time
+              instructions: 'e.g. 9:00 AM – 12:00 PM'
+          -
+            handle: location
+            field:
+              type: text
+              display: Venue
+          -
+            handle: address
+            field:
+              type: text
+              display: Address
+          -
+            handle: description
+            field:
+              type: bard
+              display: Description
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - anchor
+                - image
+              container: assets
+          -
+            handle: image
+            field:
+              type: assets
+              display: Event Image
+              container: assets
+              max_files: 1
+          -
+            handle: registration_link
+            field:
+              type: link
+              display: Registration Link
+          -
+            handle: is_recurring
+            field:
+              type: toggle
+              display: Recurring Event
+              default: false
+          -
+            handle: status
+            field:
+              type: select
+              display: Status
+              options:
+                upcoming: Upcoming
+                past: Past
+                cancelled: Cancelled
+              default: upcoming

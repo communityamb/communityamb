@@ -1,0 +1,11 @@
+{{ announcement }}
+{{ if show_banner }}
+<div class="bg-brand-green text-text-inverse text-center text-sm py-2 px-4">
+    {{ if banner_link }}
+        <a href="{{ banner_link }}" class="underline hover:no-underline">{{ banner_text }}</a>
+    {{ else }}
+        {{ banner_text }}
+    {{ /if }}
+</div>
+{{ /if }}
+{{ /announcement }}

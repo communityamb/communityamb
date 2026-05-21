@@ -1,0 +1,5 @@
+title: 'Team Members'
+template: team
+layout: layout
+sort_dir: asc
+orderable: true

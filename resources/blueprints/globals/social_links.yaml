@@ -1,0 +1,27 @@
+title: 'Social & Donation Links'
+tabs:
+  main:
+    display: Links
+    sections:
+      -
+        fields:
+          -
+            handle: facebook_url
+            field:
+              type: link
+              display: Facebook URL
+          -
+            handle: instagram_url
+            field:
+              type: link
+              display: Instagram URL
+          -
+            handle: venmo_url
+            field:
+              type: link
+              display: Venmo Donation URL
+          -
+            handle: members_portal_url
+            field:
+              type: link
+              display: Members Portal URL

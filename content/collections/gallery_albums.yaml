@@ -1,0 +1,6 @@
+title: 'Gallery Albums'
+template: gallery-album
+layout: layout
+orderable: true
+sort_dir: asc
+route: '/gallery/{slug}'

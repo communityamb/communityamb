@@ -1,0 +1,154 @@
+<!-- Hero -->
+<section class="relative flex items-center justify-center overflow-hidden min-h-[800px] max-md:min-h-0">
+    <div class="absolute inset-0">
+        <img src="/assets/images/uploads/2023/12/covid-photo-with-blur.jpg" alt="Community Ambulance Company" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-[#11C062]/20"></div>
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 py-[200px] max-md:py-24 text-center text-white flex flex-col items-center justify-center">
+        <p class="font-display text-[26px] max-lg:text-[26px] max-md:text-[18px] font-light uppercase tracking-[5px] leading-[53px] max-md:leading-[25px] mb-0">Welcome to</p>
+        <h1 class="font-hero text-[60px] max-lg:text-[48px] max-md:text-[24px] font-bold uppercase leading-[80px] max-lg:leading-[60px] max-md:leading-[38px] mb-0">Community Ambulance Company, Inc.</h1>
+        <p class="font-display text-[19px] max-md:text-[18px] font-semibold uppercase tracking-[3px] leading-[53px] max-md:leading-[30px] mb-0">2018 REMSCO's EMS Agency of the Year</p>
+        <div class="max-w-[900px] mx-auto mt-2">
+            <p class="font-display text-[24px] max-lg:text-[24px] max-md:text-[16px] font-medium leading-[42px] max-lg:leading-[34px] max-md:leading-[24px] text-white/80 mb-8">Community Ambulance Company, Inc., a 501(c)(3), Not-For-Profit organization, proudly protects over 50,000 people living in an area of 20 square miles.</p>
+        </div>
+        {{ social_links }}
+        {{ if venmo_url }}
+        <a href="{{ venmo_url }}" target="_blank" rel="noopener" class="bg-brand-peach text-text-primary font-display font-medium px-8 py-3 rounded-[5px] transition text-lg animate-bob">
+            Make a Donation!
+        </a>
+        {{ /if }}
+        {{ /social_links }}
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 z-[2]">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" class="w-full h-[120px]">
+            <path d="M500.2,94.7L0,0v100h1000V0L500.2,94.7z" fill="#F6F6F6"/>
+        </svg>
+    </div>
+</section>
+
+<!-- Image Carousel -->
+<section class="bg-surface-offwhite pb-[50px]" x-data="{
+    current: 0,
+    slides: [
+        { src: '/assets/images/uploads/2023/12/southside-vehicles-with-blur.jpg', alt: 'Southside vehicles' },
+        { src: '/assets/images/uploads/2023/09/IMG_2852-1-scaled.jpg', alt: 'Community Ambulance members' },
+        { src: '/assets/images/uploads/2023/09/IMG_3020.jpg', alt: 'Community Ambulance in action' },
+        { src: '/assets/images/uploads/2023/09/IMG_3030.jpg', alt: 'Community Ambulance vehicles' },
+        { src: '/assets/images/uploads/2023/09/IMG_4094-scaled.jpg', alt: 'Community Ambulance team' }
+    ],
+    prev() { this.current = (this.current - 1 + this.slides.length) % this.slides.length },
+    next() { this.current = (this.current + 1) % this.slides.length },
+    init() { setInterval(() => this.next(), 5000) }
+}" x-cloak>
+    <div class="relative max-w-[70%] max-md:max-w-full mx-auto">
+        <div class="relative overflow-hidden">
+            <template x-for="(slide, i) in slides" :key="i">
+                <img :src="slide.src" :alt="slide.alt"
+                     class="w-full h-auto transition-all duration-500"
+                     :class="current === i ? 'relative opacity-100' : 'absolute inset-0 opacity-0 pointer-events-none'">
+            </template>
+        </div>
+        <button @click="prev()" class="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-text-secondary/70 hover:text-text-secondary" aria-label="Previous slide">
+            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button @click="next()" class="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-text-secondary/70 hover:text-text-secondary" aria-label="Next slide">
+            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="flex justify-center gap-2 mt-4">
+            <template x-for="(slide, i) in slides" :key="'dot-'+i">
+                <button @click="current = i" class="w-2.5 h-2.5 rounded-full transition-colors duration-300"
+                        :class="current === i ? 'bg-text-secondary' : 'bg-text-muted/50'"
+                        :aria-label="'Go to slide ' + (i+1)"></button>
+            </template>
+        </div>
+    </div>
+</section>
+
+<!-- About Us -->
+<section class="py-[50px]">
+    <div class="max-w-[1400px] mx-auto px-4 grid md:grid-cols-[55%_45%] gap-[10px] items-stretch">
+        <div class="flex flex-col justify-center md:pr-[50px] max-lg:px-[10px] max-md:text-center">
+            <h2 class="font-display text-[32px] max-md:text-[26px] font-semibold leading-[45px] max-lg:leading-[50px] max-md:leading-[36px] text-text-secondary mb-6">About Us</h2>
+            <p class="font-display text-[18px] max-md:text-[16px] font-normal leading-[30px] max-md:leading-[26px] text-text-secondary mb-4">Founded in 1950, we've dedicated ourselves to the well-being of our community for over seven decades. Day or night, we're here, providing emergency medical services to 50,000 residents across Sayville, West Sayville, Bayport, Oakdale, and Bohemia within a 20-square-mile area. Our region is diverse, encompassing landmarks like Long Island MacArthur Airport, main highways, peaceful beaches, bustling commercial zones, quiet neighborhoods, and 15 schools in 3 school districts. Your safety drives us every single day.</p>
+            <p class="font-display text-[18px] max-md:text-[16px] font-normal leading-[30px] max-md:leading-[26px] text-text-secondary">Community Ambulance Company, Inc. of Sayville is a New York State Certified organization that was founded in 1950. Since then, the members of this company have provided high quality emergency medical care to the residents of five heavily populated towns in Suffolk County. Community Ambulance Company has always been a leader in the constantly changing world of EMS.</p>
+        </div>
+        <div class="overflow-hidden rounded-[5px] group md:py-[50px] max-lg:px-[10px]">
+            <div class="relative min-h-[500px] max-md:min-h-[350px] h-full overflow-hidden rounded-[5px]">
+                <img src="/assets/images/uploads/2023/09/DSC_3381-scaled.jpg" alt="Community Ambulance team" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call Count -->
+<section class="py-[50px] max-md:py-[20px] bg-surface-offwhite">
+    <div class="max-w-[1400px] mx-auto px-4 grid md:grid-cols-2 max-lg:grid-cols-1 gap-[10px] items-stretch">
+        <div class="overflow-hidden group max-lg:order-first max-md:px-[10px] max-md:py-[10px]">
+            <div class="relative min-h-[580px] max-md:min-h-[400px] h-full overflow-hidden">
+                <img src="/assets/images/uploads/2023/12/covid-photo-with-blur.jpg" alt="Community Ambulance vehicles" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110">
+            </div>
+        </div>
+        <div class="flex flex-col justify-center md:pl-[30px] max-lg:px-[10px] max-md:text-center">
+            <h2 class="font-display text-[32px] max-lg:text-[32px] max-md:text-[26px] font-semibold capitalize leading-[44px] max-lg:leading-[50px] max-md:leading-[36px] text-brand-navy-light mb-4">How Busy Are We?</h2>
+            <p class="font-display text-[18px] max-md:text-[16px] font-normal leading-[30px] max-md:leading-[26px] text-text-secondary mb-6">Every alarm answered is a neighbor helped. From cardiac emergencies and car accidents to water rescues on Fire Island, our volunteers respond 24/7, 365 days a year — all at no cost to the communities we serve.</p>
+            <h3 class="font-display text-[24px] max-lg:text-[26px] max-md:text-[26px] font-semibold leading-[36px] max-lg:leading-[50px] max-md:leading-[36px] text-brand-navy-light mb-2">Call Count</h3>
+            <p class="font-display text-[18px] max-md:text-[16px] font-medium capitalize leading-[28px] max-md:leading-[26px] text-text-secondary mb-6">As of April 26th, 1,625 alarms have been answered for 2026.</p>
+            <div class="grid grid-cols-3 max-md:grid-cols-1 gap-x-4 rounded-[5px]">
+                <ul class="space-y-[7px] font-display text-[16px] font-normal max-md:max-md:-mb-[25px]">
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>5,637 alarms in 2025</li>
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>5,780 alarms in 2024</li>
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>5,612 alarms in 2023</li>
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>5,617 alarms in 2022</li>
+                </ul>
+                <ul class="space-y-[7px] font-display text-[16px] font-normal max-md:-mt-[25px] max-md:max-md:-mb-[25px]">
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>5,219 alarms in 2021</li>
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>4,445 alarms in 2020</li>
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>5,268 alarms in 2019</li>
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>5,025 alarms in 2018</li>
+                </ul>
+                <ul class="space-y-[7px] font-display text-[16px] font-normal max-md:-mt-[25px]">
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>4,841 alarms in 2017</li>
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>4,661 alarms in 2016</li>
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>4,510 alarms in 2015</li>
+                    <li class="flex items-center gap-2 max-md:justify-center"><span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>5,318 alarms in 2014</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Donate -->
+<section class="py-[50px] max-md:py-[20px]" style="background: linear-gradient(90deg, #3D7F31 40%, #76A56D 100%);">
+    <div class="max-w-[600px] mx-auto px-4 text-center">
+        <h2 class="font-display text-[36px] max-md:text-[20px] font-semibold capitalize leading-[50px] max-md:leading-[32px] text-white mb-4">Donate to Community Ambulance Company</h2>
+        <p class="font-display text-[22px] max-md:text-[16px] font-normal capitalize leading-[36px] max-md:leading-[26px] text-white">Checks can be made out to<br>Community Ambulance Company and mailed to:<br>P.O. Box 450<br>Sayville NY 11782</p>
+    </div>
+</section>
+
+<!-- Latest CAC Events -->
+<section class="py-[50px] bg-surface-offwhite">
+    <div class="max-w-[1400px] mx-auto px-4">
+        <h2 class="font-display text-[32px] max-md:text-[26px] font-semibold uppercase leading-[44px] max-md:leading-[36px] text-text-secondary text-center mb-2">Latest CAC Events</h2>
+        <div class="w-[10%] h-px bg-brand-green mx-auto mb-12"></div>
+        {{ collection:events sort="date_start:desc" limit="3" }}
+        {{ if no_results }}
+        <p class="text-center text-text-secondary font-display">No upcoming events at this time. Check back soon!</p>
+        {{ /if }}
+        <div class="grid md:grid-cols-3 max-md:grid-cols-1 gap-8">
+            {{ results }}
+            <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                {{ if image }}
+                <img src="{{ image }}" alt="{{ title }}" class="w-full h-48 object-cover">
+                {{ /if }}
+                <div class="p-6">
+                    <h3 class="font-heading text-lg font-semibold text-text-primary mb-2">{{ title }}</h3>
+                    <p class="text-sm text-text-secondary mb-1">{{ date_start format="F j, Y" }}</p>
+                    {{ if time }}<p class="text-sm text-text-secondary mb-1">{{ time }}</p>{{ /if }}
+                    {{ if location }}<p class="text-sm text-text-secondary">{{ location }}</p>{{ /if }}
+                </div>
+            </div>
+            {{ /results }}
+        </div>
+        {{ /collection:events }}
+    </div>
+</section>
