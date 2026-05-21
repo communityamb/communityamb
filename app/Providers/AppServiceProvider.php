@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Listeners\SendContactFormEmail;
 use App\Listeners\SendFormToZapier;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
@@ -17,5 +18,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Event::listen(FormSubmitted::class, SendFormToZapier::class);
+        Event::listen(FormSubmitted::class, SendContactFormEmail::class);
     }
 }
