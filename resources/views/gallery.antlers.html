@@ -65,23 +65,27 @@
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100"
          x-transition:leave-end="opacity-0"
-         @keydown.escape.window="lightbox.open = false"
+         @keydown.escape.window="closeLightbox()"
          @keydown.left.window="if(lightbox.open) navigate(-1)"
          @keydown.right.window="if(lightbox.open) navigate(1)"
+         @keydown.tab.window="if(lightbox.open) trapFocus($event)"
+         role="dialog"
+         aria-modal="true"
+         aria-label="Photo lightbox"
          class="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4">
 
         <!-- Close button -->
-        <button @click="lightbox.open = false" class="absolute top-4 right-4 text-white hover:text-white/70 z-10">
+        <button @click="closeLightbox()" x-ref="lightboxClose" aria-label="Close lightbox" class="absolute top-4 right-4 text-white hover:text-white/70 z-10">
             {{ partial:icon name="close" class="w-8 h-8" }}
         </button>
 
         <!-- Previous button -->
-        <button @click.stop="navigate(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-white/70 z-10 p-2">
+        <button @click.stop="navigate(-1)" aria-label="Previous photo" class="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-white/70 z-10 p-2">
             {{ partial:icon name="chevron-left" class="w-10 h-10" }}
         </button>
 
         <!-- Next button -->
-        <button @click.stop="navigate(1)" class="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-white/70 z-10 p-2">
+        <button @click.stop="navigate(1)" aria-label="Next photo" class="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-white/70 z-10 p-2">
             {{ partial:icon name="chevron-right" class="w-10 h-10" }}
         </button>
 
@@ -89,7 +93,7 @@
         <img :src="lightbox.src" :alt="lightbox.alt" class="max-w-full max-h-[90vh] object-contain rounded" @click.stop>
 
         <!-- Counter -->
-        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 text-sm font-body"
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 text-sm font-body" aria-live="polite"
              x-text="`${lightbox.index + 1} / ${lightbox.photos.length}`"></div>
     </div>
 </section>
@@ -100,7 +104,7 @@ function galleryApp() {
         activeTab: '',
         loadedTabs: [],
         albums: {},
-        lightbox: { open: false, src: '', alt: '', photos: [], index: 0 },
+        lightbox: { open: false, src: '', alt: '', photos: [], index: 0, trigger: null },
 
         init() {
             const firstBtn = this.$el.querySelector('button[data-slug]');
@@ -130,6 +134,7 @@ function galleryApp() {
             const panel = btn.closest('[data-album-id]');
             const albumId = panel.dataset.albumId;
             const buttons = Array.from(panel.querySelectorAll('button'));
+            this.lightbox.trigger = btn;
             this.openLightbox(albumId, buttons.indexOf(btn));
         },
 
@@ -141,6 +146,14 @@ function galleryApp() {
             this.lightbox.src = photos[photoIndex].src;
             this.lightbox.alt = photos[photoIndex].alt;
             this.lightbox.open = true;
+            document.body.style.overflow = 'hidden';
+            this.$nextTick(() => this.$refs.lightboxClose?.focus());
+        },
+
+        closeLightbox() {
+            this.lightbox.open = false;
+            document.body.style.overflow = '';
+            this.lightbox.trigger?.focus();
         },
 
         navigate(dir) {
@@ -149,6 +162,16 @@ function galleryApp() {
             this.lightbox.index = (this.lightbox.index + dir + len) % len;
             this.lightbox.src = this.lightbox.photos[this.lightbox.index].src;
             this.lightbox.alt = this.lightbox.photos[this.lightbox.index].alt;
+        },
+
+        trapFocus(e) {
+            const overlay = this.$el.querySelector('[role="dialog"]');
+            if (!overlay) return;
+            const focusable = overlay.querySelectorAll('button');
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+            else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
         }
     };
 }
