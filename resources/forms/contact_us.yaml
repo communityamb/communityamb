@@ -1,8 +1,2 @@
 title: 'Contact Us'
 honeypot: winnie
-email:
-  -
-    to: secretary@communityamb.org
-    cc: jhartmann@communityamb.org
-    subject: 'New Contact Form Submission'
-    html: "A new contact form submission has been received.\n\nName: {{ first_name }} {{ last_name }}\nEmail: {{ email }}\nPhone: {{ phone }}\n\nComments:\n{{ comments }}"
