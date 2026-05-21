@@ -2,13 +2,12 @@
 
 namespace Tests\Feature;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\TestCase;
 
 class PageRenderTest extends TestCase
 {
-    /**
-     * @dataProvider publicPageProvider
-     */
+    #[DataProvider('publicPageProvider')]
     public function test_public_page_renders_successfully(string $uri): void
     {
         $response = $this->get($uri);

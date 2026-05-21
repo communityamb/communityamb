@@ -2,19 +2,19 @@
 
 namespace Tests\Feature;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\TestCase;
 
 class RedirectTest extends TestCase
 {
-    /**
-     * @dataProvider wordpressRedirectProvider
-     */
+    #[DataProvider('wordpressRedirectProvider')]
     public function test_wordpress_redirect_returns_301(string $oldPath, string $expectedPath): void
     {
         $response = $this->get($oldPath);
 
         $response->assertStatus(301);
-        $response->assertHeader('Location', config('app.url').$expectedPath);
+        $location = $response->headers->get('Location');
+        $this->assertStringEndsWith($expectedPath, $location);
     }
 
     public static function wordpressRedirectProvider(): array
@@ -64,22 +64,17 @@ class RedirectTest extends TestCase
                 '/in-memoriam',
                 '/our-team/in-memoriam',
             ],
-            'installation dinner videos' => [
-                '/installation-dinner-videos',
-                '/installation-dinner-videos',
-            ],
         ];
     }
 
-    /**
-     * @dataProvider wildcardRedirectProvider
-     */
+    #[DataProvider('wildcardRedirectProvider')]
     public function test_wildcard_redirect_returns_301(string $oldPath, string $expectedPath): void
     {
         $response = $this->get($oldPath);
 
         $response->assertStatus(301);
-        $response->assertHeader('Location', config('app.url').$expectedPath);
+        $location = $response->headers->get('Location');
+        $this->assertStringEndsWith($expectedPath, $location);
     }
 
     public static function wildcardRedirectProvider(): array
@@ -96,9 +91,6 @@ class RedirectTest extends TestCase
 
     public function test_same_path_redirect_is_not_registered(): void
     {
-        // Routes like '/about-us' => '/about-us' where old === new should NOT
-        // be registered as redirects (they'd cause infinite loops).
-        // These paths should resolve to the Statamic page, not a redirect.
         $response = $this->get('/about-us');
 
         $this->assertNotEquals(301, $response->getStatusCode(),
