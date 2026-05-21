@@ -79,11 +79,11 @@
 <section class="bg-surface-offwhite py-[50px] max-md:py-[30px]">
     <div class="max-w-[1200px] mx-auto px-4">
         {{# Section title + divider #}}
-        <h2 class="font-display text-[42px] font-semibold uppercase leading-[44px] text-brand-green-accent text-center max-lg:text-[34px] max-lg:leading-[50px] max-md:text-[28px] max-md:leading-[36px]">2026 Chiefs</h2>
+        <h2 class="font-display text-[42px] font-semibold uppercase leading-[44px] text-brand-green-accent text-center max-lg:text-[34px] max-lg:leading-[50px] max-md:text-[28px] max-md:leading-[36px]">{{ now format="Y" }} Chiefs</h2>
         <div class="w-[10%] border-t border-black mx-auto mt-4 mb-[20px]"></div>
 
         {{# Chief #1 — feature layout: text-left / CTA-image-right #}}
-        {{ collection:team_members category:is="officer" sort="sort_order:asc" limit="1" }}
+        {{ collection:team_members category:is="officer" role:contains="Chief" sort="sort_order:asc" limit="1" }}
         
         <div class="flex flex-row items-stretch gap-0 max-lg:flex-col mt-0"
              x-data="{ shown: false }"
@@ -108,7 +108,7 @@
                 </div>
                 {{ else }}
                 <div class="min-h-[550px] max-md:min-h-[210px] bg-surface-gray flex items-center justify-center">
-                    <img src="/assets/images/uploads/2023/09/community-ambulance-new-logo.png" alt="Community Ambulance Company" class="w-1/2 mx-auto">
+                    <img src="{{ organization:logo_url }}" alt="Community Ambulance Company" class="w-1/2 mx-auto">
                 </div>
                 {{ /if }}
             </div>
@@ -116,8 +116,8 @@
         
         {{ /collection:team_members }}
 
-        {{# Chiefs #2 & #3 — side-by-side cards with image + text #}}
-        {{ collection:team_members category:is="officer" sort="sort_order:asc" offset="1" limit="2" }}
+        {{# Assistant Chiefs — side-by-side cards with image + text #}}
+        {{ collection:team_members category:is="officer" role:contains="Chief" sort="sort_order:asc" offset="1" }}
         {{ unless no_results }}
         
         <div class="flex flex-row items-stretch gap-0 mt-[20px] bg-white rounded-[10px] border border-border-light max-lg:flex-col"
@@ -131,7 +131,7 @@
                 <img src="{{ photo_url }}" alt="{{ title }}" class="w-full rounded">
                 {{ else }}
                 <div class="w-full aspect-square bg-surface-gray rounded-lg flex items-center justify-center">
-                    <img src="/assets/images/uploads/2023/09/community-ambulance-new-logo.png" alt="Community Ambulance Company" class="w-1/2 mx-auto">
+                    <img src="{{ organization:logo_url }}" alt="Community Ambulance Company" class="w-1/2 mx-auto">
                 </div>
                 {{ /if }}
             </div>
@@ -153,13 +153,11 @@
 {{# ── Section: Captains ──────────────────────────────────── #}}
 <section class="bg-surface-offwhite py-[50px] max-md:py-0 max-md:pb-[50px]">
     <div class="max-w-[1200px] mx-auto px-4 max-md:px-[20px]">
-        <h2 class="font-display text-[42px] font-semibold uppercase leading-[44px] text-brand-green-accent text-center max-lg:text-[34px] max-lg:leading-[50px] max-md:text-[22px] max-md:leading-[36px]">2026 Captains</h2>
+        <h2 class="font-display text-[42px] font-semibold uppercase leading-[44px] text-brand-green-accent text-center max-lg:text-[34px] max-lg:leading-[50px] max-md:text-[22px] max-md:leading-[36px]">{{ now format="Y" }} Captains</h2>
         <div class="w-[10%] border-t border-black mx-auto mt-4 mb-[20px]"></div>
 
         <div class="grid grid-cols-2 gap-[50px] mt-[20px] max-lg:grid-cols-1">
-            {{ collection:team_members category:is="officer" sort="sort_order:asc" }}
-            
-            {{ if sort_order >= 4 && sort_order <= 7 }}
+            {{ collection:team_members category:is="officer" role:is="Captain" sort="sort_order:asc" }}
             <div class="rounded-[10px] p-[30px] max-md:p-[20px] shadow-card"
                  x-data="{ shown: false }"
                  x-intersect.once="shown = true"
@@ -170,7 +168,7 @@
                     <img src="{{ photo_url }}" alt="{{ title }}" class="w-1/2 mx-auto rounded">
                     {{ else }}
                     <div class="w-1/2 mx-auto aspect-square bg-surface-gray rounded-lg flex items-center justify-center">
-                        <img src="/assets/images/uploads/2023/09/community-ambulance-new-logo.png" alt="Community Ambulance Company" class="w-2/3 mx-auto">
+                        <img src="{{ organization:logo_url }}" alt="Community Ambulance Company" class="w-2/3 mx-auto">
                     </div>
                     {{ /if }}
                 </div>
@@ -179,8 +177,6 @@
                 <p class="font-display text-[18px] font-normal leading-[28px] text-text-secondary mt-2 text-left max-md:text-center max-md:text-[16px] max-md:leading-[26px]">{{ bio }}</p>
                 {{ /if }}
             </div>
-            {{ /if }}
-            
             {{ /collection:team_members }}
         </div>
     </div>
@@ -189,13 +185,11 @@
 {{# ── Section: Lieutenants ───────────────────────────────── #}}
 <section class="bg-surface-light py-[50px] max-md:py-[30px]">
     <div class="max-w-[1200px] mx-auto px-4 max-md:px-[20px]">
-        <h2 class="font-display text-[42px] font-semibold uppercase leading-[44px] text-brand-green-accent text-center max-lg:text-[34px] max-lg:leading-[50px] max-md:text-[22px] max-md:leading-[36px]">2026 Lieutenants</h2>
+        <h2 class="font-display text-[42px] font-semibold uppercase leading-[44px] text-brand-green-accent text-center max-lg:text-[34px] max-lg:leading-[50px] max-md:text-[22px] max-md:leading-[36px]">{{ now format="Y" }} Lieutenants</h2>
         <div class="w-[10%] border-t border-black mx-auto mt-4 mb-[20px]"></div>
 
         <div class="grid grid-cols-3 gap-[50px] mt-[20px] max-lg:grid-cols-1 max-md:px-[20px]">
-            {{ collection:team_members category:is="officer" sort="sort_order:asc" }}
-            
-            {{ if sort_order >= 8 && sort_order <= 13 }}
+            {{ collection:team_members category:is="officer" role:is="Lieutenant" sort="sort_order:asc" }}
             <div class="rounded-[10px] p-[20px] shadow-card"
                  x-data="{ shown: false }"
                  x-intersect.once="shown = true"
@@ -205,7 +199,7 @@
                 <img src="{{ photo_url }}" alt="{{ title }}" class="w-1/2 mx-auto rounded">
                 {{ else }}
                 <div class="w-1/2 aspect-square bg-surface-gray rounded-lg flex items-center justify-center">
-                    <img src="/assets/images/uploads/2023/09/community-ambulance-new-logo.png" alt="Community Ambulance Company" class="w-2/3 mx-auto">
+                    <img src="{{ organization:logo_url }}" alt="Community Ambulance Company" class="w-2/3 mx-auto">
                 </div>
                 {{ /if }}
                 <h3 class="font-display text-[26px] font-semibold leading-[34px] text-brand-green-accent text-left mt-3 max-lg:text-center max-md:text-[22px] max-md:leading-[36px] max-md:text-center">{{ title }}</h3>
@@ -214,8 +208,6 @@
                 <p class="font-display text-[18px] font-normal leading-[28px] text-text-secondary mt-1 text-left max-md:text-center max-md:text-[16px] max-md:leading-[26px]">{{ bio }}</p>
                 {{ /if }}
             </div>
-            {{ /if }}
-            
             {{ /collection:team_members }}
         </div>
     </div>
@@ -224,12 +216,10 @@
 {{# ── Section: Operational Secretary ─────────────────────── #}}
 <section class="bg-surface-offwhite py-[50px] max-md:py-[30px]">
     <div class="max-w-[1200px] mx-auto px-4 max-md:px-[20px]">
-        <h2 class="font-display text-[42px] font-semibold uppercase leading-[44px] text-brand-green-accent text-center max-lg:text-[34px] max-lg:leading-[50px] max-md:text-[22px] max-md:leading-[36px]">2026 Operational Secretary</h2>
+        <h2 class="font-display text-[42px] font-semibold uppercase leading-[44px] text-brand-green-accent text-center max-lg:text-[34px] max-lg:leading-[50px] max-md:text-[22px] max-md:leading-[36px]">{{ now format="Y" }} Operational Secretary</h2>
         <div class="w-[10%] border-t border-black mx-auto mt-4 mb-[20px]"></div>
 
-        {{ collection:team_members category:is="officer" sort="sort_order:asc" }}
-        
-        {{ if sort_order == 14 }}
+        {{ collection:team_members category:is="officer" role:is="Operational Secretary" sort="sort_order:asc" }}
         <div class="flex flex-row items-stretch gap-[50px] mt-[20px] max-lg:flex-col max-md:px-[20px]">
             <div class="flex-1 rounded-[10px] p-[30px] shadow-card"
                  x-data="{ shown: false }"
@@ -242,8 +232,6 @@
                 {{ /if }}
             </div>
         </div>
-        {{ /if }}
-        
         {{ /collection:team_members }}
     </div>
 </section>
@@ -251,7 +239,7 @@
 {{# ── Section: Board ─────────────────────────────────────── #}}
 <section class="bg-surface-offwhite py-[50px] max-md:py-[30px]">
     <div class="max-w-[1200px] mx-auto px-4 max-md:px-[20px]">
-        <h2 class="font-display text-[42px] font-semibold uppercase leading-[44px] text-brand-green-accent text-center max-lg:text-[34px] max-lg:leading-[50px] max-md:text-[22px] max-md:leading-[36px]">2026 Community Ambulance Company Board</h2>
+        <h2 class="font-display text-[42px] font-semibold uppercase leading-[44px] text-brand-green-accent text-center max-lg:text-[34px] max-lg:leading-[50px] max-md:text-[22px] max-md:leading-[36px]">{{ now format="Y" }} Community Ambulance Company Board</h2>
         <div class="w-[10%] border-t border-black mx-auto mt-4 mb-[20px]"></div>
 
         <div class="grid grid-cols-3 gap-[50px] mt-[20px] max-lg:grid-cols-1 max-md:px-[20px]">
@@ -266,7 +254,7 @@
                     {{ if photo_url }}
                     <img src="{{ photo_url }}" alt="{{ title }}" class="w-1/2 mx-auto rounded">
                     {{ else }}
-                    <img src="/assets/images/uploads/2023/09/community-ambulance-new-logo.png" alt="Community Ambulance Company" class="w-1/2 mx-auto">
+                    <img src="{{ organization:logo_url }}" alt="Community Ambulance Company" class="w-1/2 mx-auto">
                     {{ /if }}
                 </div>
                 <h3 class="font-display text-[26px] font-semibold leading-[34px] text-brand-green-accent text-center mt-4 max-lg:text-center max-md:text-[22px] max-md:leading-[36px]">{{ title }}</h3>
