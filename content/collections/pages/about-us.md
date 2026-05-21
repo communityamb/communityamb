@@ -4,22 +4,8 @@ id: "7fd17c85-7f7f-42a1-a686-5612a8bc7fa8"
 template: default
 blueprint: page
 meta_description: 'Learn about Community Ambulance Company — a volunteer EMS organization founded in 1950, serving over 50,000 residents across five Long Island communities.'
-call_count_intro: "As of April 26th, 1,625 alarms have been answered for 2026."
-call_counts:
-  - "5,780 alarms in 2024"
-  - "5,612 alarms in 2023"
-  - "5,617 alarms in 2022"
-  - "5,219 alarms in 2021"
-  - "4,445 alarms in 2020"
-  - "5,268 alarms in 2019"
-  - "5,025 alarms in 2018"
-  - "4,841 alarms in 2017"
-  - "4,661 alarms in 2016"
-  - "4,510 alarms in 2015"
-  - "5,318 alarms in 2014"
-  - "4,131 alarms in 2013"
+show_call_counts: true
 chief_quote: "Be a volunteer!"
-chief_name: "Chief Elizabeth White"
 chief_image: /assets/images/uploads/2023/09/community-ambulance-new-logo.png
 ---
 ## Who Are We?

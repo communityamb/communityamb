@@ -49,7 +49,7 @@
                         </a>
                         <div x-show="openDropdown === '{{ title }}'" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="absolute left-0 top-full mt-0 w-56 bg-white rounded-md shadow-lg border border-border-light py-1 z-50" x-cloak>
                             {{ children }}
-                            <a href="{{ url }}" class="block px-4 py-2 text-sm text-text-secondary hover:bg-surface-light hover:text-brand-green transition {{ if is_current }} text-brand-green font-medium {{ /if }}">{{ title }}</a>
+                            <a href="{{ url }}" {{ if url | contains:'://' }}target="_blank" rel="noopener"{{ /if }} class="block px-4 py-2 text-sm text-text-secondary hover:bg-surface-light hover:text-brand-green transition {{ if is_current }} text-brand-green font-medium {{ /if }}">{{ title }}</a>
                             {{ /children }}
                         </div>
                     </div>

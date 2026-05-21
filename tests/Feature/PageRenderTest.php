@@ -22,7 +22,7 @@ class PageRenderTest extends TestCase
             'about us' => ['/about-us'],
             'join community' => ['/join-community'],
             'contact us' => ['/contact-us'],
-            'our team' => ['/our-team'],
+            'chiefs corner' => ['/our-team/chiefs-corner'],
             'prevention programs' => ['/prevention-programs'],
         ];
     }

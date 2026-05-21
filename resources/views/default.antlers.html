@@ -18,15 +18,13 @@
 </section>
 {{ /if }}
 
-{{ if call_counts }}
+{{ if show_call_counts }}
 <section class="py-[50px] max-md:py-[20px] bg-surface-offwhite">
     <div class="max-w-5xl mx-auto px-6 max-md:px-4">
         <h3 class="font-display text-[24px] max-md:text-[20px] font-semibold leading-[36px] text-brand-navy mb-2 uppercase tracking-wide">Call Count</h3>
-        {{ if call_count_intro }}
-        <p class="font-display text-[18px] max-md:text-[16px] font-medium leading-[28px] text-text-secondary mb-6">{{ call_count_intro }}</p>
-        {{ /if }}
+        <p class="font-display text-[18px] max-md:text-[16px] font-medium leading-[28px] text-text-secondary mb-6">{{ call_counts:current_year_summary }}</p>
         <div class="grid grid-cols-3 max-md:grid-cols-1 gap-x-4 rounded-[5px]">
-            {{ call_counts }}
+            {{ call_counts:yearly_call_counts }}
             {{ if first }}
             <ul class="space-y-[7px] font-display text-[16px] font-normal max-md:max-md:-mb-[25px]">
             {{ /if }}
@@ -40,12 +38,12 @@
             {{ /if }}
                 <li class="flex items-center gap-2 max-md:justify-center">
                     <span class="text-brand-teal shrink-0">{{ partial:icon name="circle" class="w-5 h-5" }}</span>
-                    {{ value }}
+                    {{ alarm_count }} alarms in {{ year }}
                 </li>
             {{ if last }}
             </ul>
             {{ /if }}
-            {{ /call_counts }}
+            {{ /call_counts:yearly_call_counts }}
         </div>
     </div>
 </section>
@@ -59,7 +57,9 @@
         <img src="{{ chief_image }}" alt="Community Ambulance Company" class="h-24 mx-auto mb-6" loading="lazy">
         {{ /if }}
         <p class="font-['Berkshire_Swash'] text-[40px] max-lg:text-[28px] max-md:text-[22px] leading-[1.4] text-brand-navy capitalize">{{ chief_quote }}</p>
-        <p class="font-display text-[20px] max-md:text-[18px] leading-[39px] text-brand-navy capitalize mt-2">— {{ chief_name }}</p>
+        {{ collection:team_members role:is="Chief" limit="1" }}
+        <p class="font-display text-[20px] max-md:text-[18px] leading-[39px] text-brand-navy capitalize mt-2">— Chief {{ title }}</p>
+        {{ /collection:team_members }}
     </div>
 </section>
 {{ /if }}

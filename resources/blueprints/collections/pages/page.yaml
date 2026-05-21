@@ -75,6 +75,42 @@ tabs:
               instructions: 'Image shown when this page is shared on social media. Recommended: 1200x630px.'
               container: assets
               max_files: 1
+  call_counts:
+    display: Call Counts
+    sections:
+      -
+        fields:
+          -
+            handle: show_call_counts
+            field:
+              type: toggle
+              display: Show Call Counts Section
+              instructions: 'Enable to show the call count statistics section on this page. Counts are managed in the Call Counts global.'
+              default: false
+  youth_squad:
+    display: Youth Squad
+    sections:
+      -
+        instructions: 'Controls the "applications closed" banner and popup on the Youth Squad page.'
+        fields:
+          -
+            handle: applications_closed
+            field:
+              type: toggle
+              display: Applications Closed
+              instructions: 'When enabled, shows a banner and popup indicating applications are closed, and hides the application form.'
+              default: false
+              if:
+                template: 'equals form-youth'
+          -
+            handle: closed_school_year
+            field:
+              type: text
+              display: School Year
+              instructions: 'e.g. "2025/26"'
+              if:
+                template: 'equals form-youth'
+                applications_closed: 'equals true'
   cta:
     display: Call to Action
     sections:

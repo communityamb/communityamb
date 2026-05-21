@@ -34,7 +34,7 @@ tabs:
             field:
               type: text
               display: Event Heading
-              instructions: 'e.g. "Join us for the 15th annual community ambulance 5k run and walk"'
+              instructions: 'Increment the edition number each year, e.g. "Join us for the 16th annual community ambulance 5k run and walk"'
           -
             handle: event_image
             field:
@@ -160,22 +160,6 @@ tabs:
             field:
               type: text
               display: Results Provider URL
-          -
-            handle: past_results
-            field:
-              type: grid
-              display: Past Race Results
-              fields:
-                -
-                  handle: year
-                  field:
-                    type: text
-                    display: Year
-                -
-                  handle: url
-                  field:
-                    type: text
-                    display: Results URL
   seo:
     display: SEO
     sections:
