@@ -28,7 +28,7 @@
                             {{ if error:email }}<p class="text-red-600 text-xs mt-1">{{ error:email }}</p>{{ /if }}
                         </div>
                         <div>
-                            {{ partial:partials/form-input type="tel" name="phone" label="Phone" required="true" placeholder="Phone Number" pattern="[0-9()#&+*\-=.]+" title="Only numbers and phone characters (#, -, *, etc) are accepted." label_class="block font-body text-sm font-normal text-text-primary mb-1" input_class="w-full rounded border border-[#69727d] bg-white px-4 py-[11px] text-base text-text-primary font-body focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none" }}
+                            {{ partial:partials/form-input type="tel" name="phone" label="Phone" required="true" placeholder="Phone Number" pattern="[0-9()#&+*\-=.]+" input_title="Only numbers and phone characters (#, -, *, etc) are accepted." label_class="block font-body text-sm font-normal text-text-primary mb-1" input_class="w-full rounded border border-[#69727d] bg-white px-4 py-[11px] text-base text-text-primary font-body focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none" }}
                             {{ if error:phone }}<p class="text-red-600 text-xs mt-1">{{ error:phone }}</p>{{ /if }}
                         </div>
                     </div>
