@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }} — {{ organization:org_name }}</title>
+    <meta name="description" content="{{ organization:description }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Barlow:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;600;700&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+    {{ vite src="resources/js/site.js|resources/css/site.css" }}
+</head>
+<body class="bg-surface-white font-body text-text-primary antialiased" x-data="{ mobileMenuOpen: false }">
+
+    {{ partial:partials/announcement-banner }}
+
+    {{ partial:partials/header }}
+
+    {{ partial:partials/mobile-nav }}
+
+    <main>
+        {{ template_content }}
+    </main>
+
+    {{ partial:partials/footer }}
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+{{ partial:partials/page-header }}
+
+<!-- Content -->
+{{ if content }}
+<section class="py-8">
+    <div class="max-w-4xl mx-auto px-4 prose prose-lg prose-headings:font-heading prose-a:text-link hover:prose-a:text-link-hover">
+        {{ content }}
+    </div>
+</section>
+{{ /if }}
+
+<!-- Upcoming Events -->
+<section class="py-12">
+    <div class="max-w-5xl mx-auto px-4">
+        <h2 class="font-heading text-2xl font-bold text-text-primary mb-8">Upcoming Events</h2>
+        {{ collection:events where="status:upcoming" sort="date_start:asc" }}
+        {{ unless no_results }}
+        <div class="space-y-6">
+            {{ entries }}
+            <a href="{{ url }}" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="flex flex-col md:flex-row">
+                    {{ if image }}
+                    <div class="md:w-48 flex-shrink-0">
+                        <img src="{{ image }}" alt="{{ title }}" class="w-full h-48 md:h-full object-cover">
+                    </div>
+                    {{ /if }}
+                    <div class="p-6 flex-1">
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <h3 class="font-heading text-xl font-semibold text-text-primary mb-1">{{ title }}</h3>
+                                <div class="flex flex-wrap gap-4 text-sm text-text-secondary mb-3">
+                                    <span class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                        {{ date_start format="F j, Y" }}
+                                    </span>
+                                    {{ if time }}
+                                    <span class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                        {{ time }}
+                                    </span>
+                                    {{ /if }}
+                                    {{ if location }}
+                                    <span class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                        {{ location }}
+                                    </span>
+                                    {{ /if }}
+                                </div>
+                            </div>
+                            <div class="hidden md:block bg-brand-green/10 rounded-lg p-3 text-center flex-shrink-0">
+                                <div class="text-2xl font-bold text-brand-green">{{ date_start format="d" }}</div>
+                                <div class="text-xs font-medium text-brand-green uppercase">{{ date_start format="M" }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            {{ /entries }}
+        </div>
+        {{ else }}
+        <p class="text-text-secondary text-center py-8">No upcoming events at this time. Check back soon!</p>
+        {{ /unless }}
+        {{ /collection:events }}
+
+        <!-- Past Events -->
+        <div class="mt-16">
+            <h2 class="font-heading text-2xl font-bold text-text-primary mb-8">Past Events</h2>
+            {{ collection:events where="status:past" sort="date_start:desc" limit="10" }}
+            {{ unless no_results }}
+            <div class="space-y-4">
+                {{ entries }}
+                <a href="{{ url }}" class="flex items-center gap-4 p-4 bg-surface-light rounded-lg hover:bg-surface-gray transition">
+                    <div class="bg-white rounded p-2 text-center flex-shrink-0 w-14">
+                        <div class="text-lg font-bold text-text-primary">{{ date_start format="d" }}</div>
+                        <div class="text-xs text-text-muted uppercase">{{ date_start format="M Y" }}</div>
+                    </div>
+                    <div>
+                        <h3 class="font-medium text-text-primary">{{ title }}</h3>
+                        {{ if location }}
+                        <p class="text-sm text-text-muted">{{ location }}</p>
+                        {{ /if }}
+                    </div>
+                </a>
+                {{ /entries }}
+            </div>
+            {{ /unless }}
+            {{ /collection:events }}
+        </div>
+    </div>
+</section>

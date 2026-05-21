@@ -1,0 +1,69 @@
+title: 'Join Community'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: first_name
+            field:
+              type: text
+              display: 'First Name'
+              validate:
+                - required
+          -
+            handle: last_name
+            field:
+              type: text
+              display: 'Last Name'
+              validate:
+                - required
+          -
+            handle: email
+            field:
+              type: text
+              display: Email
+              input_type: email
+              validate:
+                - required
+                - email
+          -
+            handle: date_of_birth
+            field:
+              type: date
+              display: 'Date of Birth'
+              validate:
+                - required
+          -
+            handle: phone_number
+            field:
+              type: text
+              display: 'Phone Number'
+              validate:
+                - required
+          -
+            handle: town
+            field:
+              type: select
+              display: 'Town of Residence'
+              options:
+                oakdale: Oakdale
+                bohemia: Bohemia
+                sayville: Sayville
+                west-sayville: 'West Sayville'
+                bayport: Bayport
+                other: Other
+              validate:
+                - required
+          -
+            handle: hs_emt_interest
+            field:
+              type: radio
+              display: 'HS EMT Interest'
+              options:
+                'yes': 'Yes'
+                'no': 'No'
+                over_18: 'I am over 18 years old'
+              validate:
+                - required

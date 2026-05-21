@@ -1,0 +1,65 @@
+{{ partial:partials/page-header }}
+
+<section class="py-12">
+    <div class="max-w-4xl mx-auto px-4">
+        <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Main content -->
+            <div class="lg:col-span-2">
+                {{ if image }}
+                <div class="rounded-lg overflow-hidden mb-8">
+                    <img src="{{ image }}" alt="{{ title }}" class="w-full h-auto">
+                </div>
+                {{ /if }}
+
+                {{ if description }}
+                <div class="prose prose-lg prose-headings:font-heading prose-a:text-link hover:prose-a:text-link-hover">
+                    {{ description }}
+                </div>
+                {{ /if }}
+            </div>
+
+            <!-- Sidebar -->
+            <div>
+                <div class="bg-surface-light rounded-lg p-6 sticky top-24">
+                    <h3 class="font-heading font-semibold text-lg mb-4">Event Details</h3>
+                    <dl class="space-y-3 text-sm">
+                        <div>
+                            <dt class="font-medium text-text-primary">Date</dt>
+                            <dd class="text-text-secondary">{{ date_start format="F j, Y" }}{{ if date_end }} – {{ date_end format="F j, Y" }}{{ /if }}</dd>
+                        </div>
+                        {{ if time }}
+                        <div>
+                            <dt class="font-medium text-text-primary">Time</dt>
+                            <dd class="text-text-secondary">{{ time }}</dd>
+                        </div>
+                        {{ /if }}
+                        {{ if location }}
+                        <div>
+                            <dt class="font-medium text-text-primary">Location</dt>
+                            <dd class="text-text-secondary">{{ location }}</dd>
+                        </div>
+                        {{ /if }}
+                        {{ if address }}
+                        <div>
+                            <dt class="font-medium text-text-primary">Address</dt>
+                            <dd class="text-text-secondary">{{ address }}</dd>
+                        </div>
+                        {{ /if }}
+                    </dl>
+                    {{ if registration_link }}
+                    <a href="{{ registration_link }}" target="_blank" rel="noopener" class="mt-6 block bg-brand-green hover:bg-brand-green-dark text-white text-center font-semibold px-6 py-3 rounded transition">
+                        Register
+                    </a>
+                    {{ /if }}
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8">
+            <a href="/events" class="inline-flex items-center gap-1 text-brand-green hover:text-brand-green-dark font-medium">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                Back to Events
+            </a>
+        </div>
+    </div>
+</section>

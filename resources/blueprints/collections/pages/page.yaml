@@ -1,0 +1,89 @@
+title: Page
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              container: assets
+          -
+            handle: template
+            field:
+              type: select
+              display: Template
+              options:
+                default: Default
+                home: Home
+                team: Team
+                programs-index: Programs Index
+                gallery: Gallery
+                form-join: Join Community Form
+                form-contact: Contact Us Form
+                form-youth: Youth Squad Form
+                events-index: Events
+                video-gallery: Video Gallery
+                history-timeline: History Timeline
+                5k: 5K Run
+                chiefs-corner: Chief's Corner
+                program-detail: Program Detail
+              default: default
+  hero:
+    display: Hero
+    sections:
+      -
+        fields:
+          -
+            handle: hero_image
+            field:
+              type: assets
+              display: Hero Image
+              container: assets
+              max_files: 1
+          -
+            handle: hero_subtitle
+            field:
+              type: text
+              display: Hero Subtitle
+  cta:
+    display: Call to Action
+    sections:
+      -
+        fields:
+          -
+            handle: show_cta
+            field:
+              type: toggle
+              display: Show CTA Section
+              default: false
+          -
+            handle: cta_title
+            field:
+              type: text
+              display: CTA Title
+              if:
+                show_cta: 'equals true'
+          -
+            handle: cta_button_text
+            field:
+              type: text
+              display: CTA Button Text
+              if:
+                show_cta: 'equals true'
+          -
+            handle: cta_button_link
+            field:
+              type: link
+              display: CTA Button Link
+              if:
+                show_cta: 'equals true'

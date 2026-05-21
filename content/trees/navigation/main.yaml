@@ -1,0 +1,88 @@
+tree:
+  -
+    entry: home
+    title: Home
+  -
+    entry: 7fd17c85-7f7f-42a1-a686-5612a8bc7fa8
+    title: 'About Us'
+    children:
+      -
+        entry: 007e63a9-cc3b-4a57-81c9-8728eb081453
+        title: "Community Ambulance Company's History"
+  -
+    entry: 717d6e27-2287-4111-9a54-5c949ecc60aa
+    title: 'Prevention Programs'
+    children:
+      -
+        entry: ac7b53a6-52dd-46d6-991f-a873fdc18dda
+        title: 'Car Seat Inspection & Hands Only Child/Infant CPR'
+      -
+        entry: 422c8fb1-4532-49ae-84cd-a75cb9d9e315
+        title: 'Community Education'
+      -
+        entry: c0798d06-7a03-4af4-b83b-5de2105152a8
+        title: 'Community Safety Surge'
+      -
+        entry: e313f78b-cd43-489c-96e4-2b306e110225
+        title: 'Free Turkeys for Vets'
+      -
+        entry: b22abe53-552f-452b-bd18-40255f137a3d
+        title: 'Life Jacket Loaner Program'
+      -
+        entry: 80a63bc7-6bcd-47b9-b683-43b422b73942
+        title: 'Public AEDs'
+      -
+        entry: 2e11e519-768d-4310-a068-983aafe31a70
+        title: 'Public CPR Classes'
+      -
+        entry: 7371c129-9489-43f6-928b-2f5480b4a1bf
+        title: 'Public Narcan Trainings'
+      -
+        entry: b0e21015-8d77-46db-b465-72725e1201f9
+        title: 'Shed the Meds'
+      -
+        entry: e6d987bb-31a7-439c-8942-88f961cd5480
+        title: 'Shred Day & Identity Theft Prevention'
+  -
+    entry: 5fcc1dc2-be92-4343-89ba-01fff585c363
+    title: 'Our Team'
+    children:
+      -
+        entry: 998525a0-9c50-43a2-b067-1fe4b07ab08b
+        title: "Chief's Corner"
+      -
+        entry: ff2dc70b-47d0-436e-b4e4-4ad527285338
+        title: 'Our Officers And Board Members'
+      -
+        entry: 8314ebc7-fc76-4a09-844a-3dea671c0c25
+        title: 'In Memoriam'
+      -
+        entry: 5cdb5c6d-d80d-4782-a6b8-28dcca0a0804
+        title: 'Charter Members And Life Members'
+      -
+        entry: 4e77750f-fa80-4b9b-9455-561dcf79ac8b
+        title: 'Youth Squad'
+      -
+        entry: 7b5e652b-0389-43c9-9615-395d2821e994
+        title: 'CAC Members Only'
+        url: 'https://members.communityamb.org'
+  -
+    entry: b3e7a1d2-4c5f-4892-9e8a-1a2b3c4d5e6f
+    title: Events
+    children:
+      -
+        entry: 703577d4-61cb-47cd-8b69-a0e691c4ef74
+        title: 'Annual 5K Run and Walk'
+  -
+    entry: 41fe0a0a-73df-49b2-904a-c0514a0de86f
+    title: 'Join Community'
+    children:
+      -
+        entry: 41fe0a0a-73df-49b2-904a-c0514a0de86f
+        title: 'Join Community'
+      -
+        entry: d4f8b2e3-5d6a-4a93-bf9b-2b3c4d5e6f7a
+        title: 'Join Youth Squad'
+  -
+    entry: c325f803-1a4b-4908-8f6d-34e19dfa108e
+    title: 'Contact Us'

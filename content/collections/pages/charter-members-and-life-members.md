@@ -1,0 +1,213 @@
+---
+title: Charter Members And Life Members
+id: "5cdb5c6d-d80d-4782-a6b8-28dcca0a0804"
+template: team
+blueprint: page
+---
+
+## Charter Members
+
+Community Ambulance Company was established in 1950
+
+---
+
+- Stanley Albrecht
+- James Alvarez
+- Jacob Beebe
+- Clarence Besemer
+- Edwin Boogertman
+- John Boogertman
+- Howard Cauvett
+- Gerald Collins
+- John Conkle
+- Jeffy Danek, Sr.
+- John Engel
+- Vincent Figarotta
+- William Fridrich
+- Edwin Frieman
+- Miller Gerald
+- Lawrence Gillette
+- Gareth Hlavac
+- Clarence Hoek, Sr.
+- John Hrubi
+- Joseph Jahn
+- Adolph Jost
+- Cornelius Kaan
+- Raymond King
+- Frank Krepela
+- Emil Kubevec
+- Walter Lefurgi
+- H. Garton Lewis
+- Bernard Loughlin
+- Eugene Maasch
+- Jean MacDonell Kuhn
+- Bernard Mohlenhoff
+- Joseph Mussler
+- Richard Oelkers
+- Nicholas Paglia, Sr.
+- Raymond Reilly, Sr.
+- Joseph Richter, Sr.
+- Alfred Rickey
+- J. Richard Shaber
+- Fred Smith
+- Radford Sprague
+- Ernest Stoll
+- Henry Stoll
+- Henry Tkacs
+- John Trinkwald
+- Alvin Van Wyen
+- John Van Wyen, Jr.
+- John Van Wyen, Sr.
+- Nelson Van Wyen
+- John J. Winter, Jr.
+- Edward Yablonski
+- Henry Zajicek
+- William Zajicek, Jr.
+- Robert Zigrosser, Sr.
+
+---
+
+## Life Members
+
+After 10 years of service and dedication, members at Community Ambulance Company become known as "Life Members." The following members have attained this elite status:
+
+- Diana Ahlschlager
+- Jamie Atkinson\*
+- Raymond Audett, Sr.
+- Mae Balsanek
+- Margaret Bensin
+- David Bialer
+- Seymour Bialer
+- Paul Bolliger\*
+- Thomas Brady
+- Martin Braille
+- Richard Briefs
+- Greg Burzine
+- Robert Calendrillo
+- Cecilia Carroll
+- Michael Carroll
+- Andrew Check\*
+- Erik Christensen
+- Paul Christensen
+- Rup Christensen\*
+- Wendy Christensen\*
+- Alfred Clifton
+- Christina Colasanto
+- Edward Coombs, Sr.
+- Kelsey Dargis\*
+- Gene Demott\*
+- Richard DeRonde
+- Alfred Dieumegard, Jr.\*
+- Michael Duffy\*
+- John Edwards
+- Eric Farrell\*
+- Helen Faulkner
+- Michael Ferrara\*
+- Edgar Fleidner
+- Pasquale Gamboni
+- Stephanie Golub\*
+- Christopher Gonzales\*
+- Isabelle Style Goodwin
+- Timothy Gozaloff
+- Tim Gozaloff, Jr.
+- Raymond Graunke
+- Nicole Gray\*
+- Dominic Guida\*
+- Vicki Haber\*
+- Jennifer Hartmann\*
+- Geraldine Hauser
+- Adrien Hawthorne\*
+- Annemarie Healy
+- Julius Henke, Jr.
+- Carrie Herting
+- Anna Hess
+- Donald Hester\*
+- Donald L. Horne
+- Seiver Allen Izzi
+- Lawrence Johnson\*
+- William Johnson, Jr.
+- Dennis P. Kelly, Jr.\*
+- Christina Kelly – Fealey\*
+- Michael Kennedy\*
+- Janice Kennedy\*
+- Mark Klahn\*
+- Christine Klassert\*
+- Paul Klassert\*
+- Eileen Klein
+- Brian Knussman
+- Susan Koerber
+- Arthur Krsnak
+- Christopher LoPreto\*
+- Laura LoPreto\*
+- MaryAnn MacDonell\*
+- Marc MacDonell\*
+- James MacDonell\*
+- Richard Maddox
+- Patricia Manfredonia\*
+- Patricia Marchant
+- Graham D. Masin
+- Howard Masin
+- Lorraine Masin
+- Karen McGinty
+- Kevin McGinty
+- Robert Merrill
+- Theresa Merrill
+- Tom Montalbine\*
+- Joseph Moore
+- Barbara Mullaney
+- Daniel Nicholson\*
+- William Norton
+- Charles Norman
+- Terri O'Connell\*
+- Peter O'Neill\*
+- Hector Ortiz, Jr.
+- Shawn O'Sullivan\*
+- Therese Panetta-Young\*
+- Palak Patel\*
+- Vincent Pinzone
+- Anthony Pinzone, Sr.
+- Corinna Plant
+- Joseph Plotino
+- Betty Poulos
+- John Powers
+- Elvira Powers
+- Laura Powers\*
+- Steve Redding\*
+- Diane Reilly
+- Patricia Reilly
+- Raymond Reilly, Jr.
+- Joseph Richter
+- Leo Riguad
+- Elaine Rooney
+- Arlene Ruth
+- Robert Schaefer, Jr.
+- Karen Scheck\*
+- Richard Schofield
+- Ralph Schofield
+- Anthony Sconzo
+- Fred Schreiber\*
+- Heidelind Semmig\*
+- Madeline Sieboldt
+- Lisa Sinisi\*
+- Barney Stejskal
+- William Tappin
+- Michael Teaney\*
+- Susan Timm
+- Robert Tritch, Sr.
+- Gene VanEssendelft
+- Duane VanEssendelft
+- Shawn Votino\*
+- Paul Webber\*
+- Scott Weber
+- Miriam Wehnke
+- Ernest Wehnke, Sr.
+- Walter Wenchell
+- Elizabeth White\*
+- Jason Wilans
+- Richard Yoos
+- Thomas Young\*
+- Kenneth Zegel
+- Jennifer Ziglioli
+- John Zimmerman
+
+\* On Active Members Roster as of 2024

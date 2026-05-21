@@ -1,0 +1,57 @@
+---
+title: 'Holiday Parades - 2009'
+id: f7362992-4122-4cde-84c2-c581cbaeac71
+blueprint: gallery_album
+sort_order: 6
+photos:
+  - images/uploads/photo-gallery/nov-282009-907-jpg.jpg
+  - images/uploads/photo-gallery/nov-282009-907.jpg
+  - images/uploads/photo-gallery/nov-282009-905-jpg.jpg
+  - images/uploads/photo-gallery/nov-282009-905.jpg
+  - images/uploads/photo-gallery/nov-282009-885.jpg
+  - images/uploads/photo-gallery/nov-282009-910-jpg.jpg
+  - images/uploads/photo-gallery/nov-282009-913-jpg.jpg
+  - images/uploads/photo-gallery/nov-282009-910.jpg
+  - images/uploads/photo-gallery/nov-282009-913.jpg
+  - images/uploads/photo-gallery/nov-282009-920-jpg.jpg
+  - images/uploads/photo-gallery/nov-282009-920.jpg
+  - images/uploads/photo-gallery/nov-282009-938-jpg.jpg
+  - images/uploads/photo-gallery/nov-282009-926.jpg
+  - images/uploads/photo-gallery/nov-282009-926-jpg.jpg
+  - images/uploads/photo-gallery/nov-282009-938.jpg
+  - images/uploads/photo-gallery/nov-282009-940.jpg
+  - images/uploads/photo-gallery/nov-282009-955.jpg
+  - images/uploads/photo-gallery/nov-282009-947.jpg
+  - images/uploads/photo-gallery/nov-282009-947-jpg.jpg
+  - images/uploads/photo-gallery/nov-282009-960.jpg
+  - images/uploads/photo-gallery/nov-282009-961-jpg.jpg
+  - images/uploads/photo-gallery/nov-282009-961.jpg
+  - images/uploads/photo-gallery/nov-282009-966-jpg.jpg
+  - images/uploads/photo-gallery/nov-282009-966.jpg
+  - images/uploads/photo-gallery/nov-282009-967-jpg.jpg
+  - images/uploads/photo-gallery/nov-282009-967.jpg
+  - images/uploads/photo-gallery/nov-282009-970-jpg.jpg
+  - images/uploads/photo-gallery/our-fearless-leaders.jpg
+  - images/uploads/photo-gallery/nov-282009-970.jpg
+  - images/uploads/photo-gallery/nov-282009-971-jpg.jpg
+  - images/uploads/photo-gallery/nov-282009-971.jpg
+  - images/uploads/photo-gallery/p1013116.jpg
+  - images/uploads/photo-gallery/p1013120.jpg
+  - images/uploads/photo-gallery/xmas-ambulance-001-copy.jpg
+  - images/uploads/photo-gallery/p1013121.jpg
+  - images/uploads/photo-gallery/xmas-ambulance-001.jpg
+  - images/uploads/photo-gallery/xmas-ambulance-002-copy.jpg
+  - images/uploads/photo-gallery/xmas-ambulance-002.jpg
+  - images/uploads/photo-gallery/xmas-ambulance-004.jpg
+  - images/uploads/photo-gallery/xmas-ambulance-003.jpg
+  - images/uploads/photo-gallery/xmas-ambulance-005.jpg
+  - images/uploads/photo-gallery/xmas-ambulance-006.jpg
+  - images/uploads/photo-gallery/xmas-ambulance-007.jpg
+  - images/uploads/photo-gallery/xmas-ambulance-008.jpg
+  - images/uploads/photo-gallery/xmas-ambulance-010.jpg
+  - images/uploads/photo-gallery/xmas-ambulance-009.jpg
+  - images/uploads/photo-gallery/xmas-ambulance-011.jpg
+  - images/uploads/photo-gallery/xmas-ambulance-012.jpg
+  - images/uploads/photo-gallery/xmas-ambulance-013.jpg
+  - images/uploads/photo-gallery/xmas-ambulance-014.jpg
+---

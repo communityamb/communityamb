@@ -1,0 +1,82 @@
+{{ partial:partials/page-header }}
+
+{{# ── Contact Form + Google Map Grid ─────────────────────────── #}}
+<section class="py-[50px] max-md:py-[10px] max-md:px-[10px]">
+    <div class="max-w-[1140px] mx-auto px-4">
+        <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5">
+
+            {{# ── Contact Form ───────────────────────────────── #}}
+            <div>
+                {{ form:contact_us }}
+                <div class="space-y-[10px]">
+                    {{# First Name + Last Name row #}}
+                    <div class="grid grid-cols-2 max-md:grid-cols-1 gap-[10px]">
+                        <div>
+                            <label for="first_name" class="block font-body text-sm font-normal text-text-primary mb-1">First Name <span class="text-red-500">*</span></label>
+                            <input type="text" name="first_name" id="first_name" required placeholder="First Name" class="w-full rounded border border-[#69727d] bg-white px-4 py-[11px] text-base text-text-primary font-body focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none">
+                            {{ if error:first_name }}<p class="text-red-600 text-xs mt-1">{{ error:first_name }}</p>{{ /if }}
+                        </div>
+                        <div>
+                            <label for="last_name" class="block font-body text-sm font-normal text-text-primary mb-1">Last Name <span class="text-red-500">*</span></label>
+                            <input type="text" name="last_name" id="last_name" required placeholder="Last Name" class="w-full rounded border border-[#69727d] bg-white px-4 py-[11px] text-base text-text-primary font-body focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none">
+                            {{ if error:last_name }}<p class="text-red-600 text-xs mt-1">{{ error:last_name }}</p>{{ /if }}
+                        </div>
+                    </div>
+
+                    {{# Email + Phone row #}}
+                    <div class="grid grid-cols-2 max-md:grid-cols-1 gap-[10px]">
+                        <div>
+                            <label for="email" class="block font-body text-sm font-normal text-text-primary mb-1">Email <span class="text-red-500">*</span></label>
+                            <input type="email" name="email" id="email" required placeholder="Email Address" class="w-full rounded border border-[#69727d] bg-white px-4 py-[11px] text-base text-text-primary font-body focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none">
+                            {{ if error:email }}<p class="text-red-600 text-xs mt-1">{{ error:email }}</p>{{ /if }}
+                        </div>
+                        <div>
+                            <label for="phone" class="block font-body text-sm font-normal text-text-primary mb-1">Phone <span class="text-red-500">*</span></label>
+                            <input type="tel" name="phone" id="phone" required placeholder="Phone Number" pattern="[0-9()#&+*\-=.]+" title="Only numbers and phone characters (#, -, *, etc) are accepted." class="w-full rounded border border-[#69727d] bg-white px-4 py-[11px] text-base text-text-primary font-body focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none">
+                            {{ if error:phone }}<p class="text-red-600 text-xs mt-1">{{ error:phone }}</p>{{ /if }}
+                        </div>
+                    </div>
+
+                    {{# Comments (full width) #}}
+                    <div>
+                        <label for="comments" class="block font-body text-sm font-normal text-text-primary mb-1">Comments <span class="text-red-500">*</span></label>
+                        <textarea name="comments" id="comments" rows="4" required placeholder="How can we help you?" class="w-full rounded border border-[#69727d] bg-white px-4 py-[11px] text-base text-text-primary font-body focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none resize-y"></textarea>
+                        {{ if error:comments }}<p class="text-red-600 text-xs mt-1">{{ error:comments }}</p>{{ /if }}
+                    </div>
+
+                    {{# Submit button (full width) #}}
+                    <div>
+                        <button type="submit" class="w-full bg-brand-green hover:bg-brand-green-dark text-white font-body font-medium text-base rounded px-[30px] py-[15px] min-h-[47px] transition">
+                            Send Message
+                        </button>
+                    </div>
+                </div>
+
+                {{ if success }}
+                <div class="mt-4 bg-green-50 border border-green-200 rounded p-4 text-green-800">
+                    Thank you for your message! We will get back to you as soon as possible.
+                </div>
+                {{ /if }}
+                {{ /form:contact_us }}
+            </div>
+
+            {{# ── Google Map ─────────────────────────────────── #}}
+            <div class="max-md:mb-[50px]">
+                <div class="rounded-lg overflow-hidden shadow-md h-full">
+                    <iframe
+                        src="https://maps.google.com/maps?q=420%20Lakeland%20Ave%2C%20Sayville%2C%20NY%2011782&t=m&z=16&output=embed&iwloc=near"
+                        title="420 Lakeland Ave, Sayville, NY 11782"
+                        aria-label="420 Lakeland Ave, Sayville, NY 11782"
+                        width="100%"
+                        class="min-h-[703px] max-md:min-h-[400px]"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

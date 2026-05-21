@@ -1,0 +1,58 @@
+---
+title: 'Just Hanging Around'
+id: ccac5893-fa25-441d-9175-feb10039b683
+blueprint: gallery_album
+sort_order: 5
+photos:
+  - images/uploads/photo-gallery/20144_269061859013_645394013_3277256_3863675_n.jpg
+  - images/uploads/photo-gallery/182258_10150098502020765_610345764_6579409_2433337_n.jpg
+  - images/uploads/photo-gallery/181794_10150098501135765_610345764_6579398_3620527_n.jpg
+  - images/uploads/photo-gallery/163259_549046924195_79400135_32171605_2826944_n.jpg
+  - images/uploads/photo-gallery/163262_484547895764_610345764_6188975_6651295_n.jpg
+  - images/uploads/photo-gallery/182782_10150098501455765_610345764_6579403_3678393_n.jpg
+  - images/uploads/photo-gallery/190151_10150204965079692_768879691_8993530_362342_n.jpg
+  - images/uploads/photo-gallery/188564_1851816745693_1549007613_31964153_4842289_n.jpg
+  - images/uploads/photo-gallery/183410_10150098500175765_610345764_6579383_7609118_n.jpg
+  - images/uploads/photo-gallery/189932_1851806705442_1549007613_31964120_93054_n.jpg
+  - images/uploads/photo-gallery/190653_1899077603361_1434271089_32198642_6254495_n.jpg
+  - images/uploads/photo-gallery/199572_1851811945573_1549007613_31964136_7174314_n.jpg
+  - images/uploads/photo-gallery/225336_10150178873520765_610345764_7142553_2834824_n-01-09-39.jpg
+  - images/uploads/photo-gallery/226795_156719761062379_148282335239455_334233_1936103_n.jpg
+  - images/uploads/photo-gallery/218134_148331678567854_148282335239455_281431_419588_n.jpg
+  - images/uploads/photo-gallery/226997_156719731062382_148282335239455_334230_3328790_n.jpg
+  - images/uploads/photo-gallery/229141_156719454395743_148282335239455_334209_8335380_n.jpg
+  - images/uploads/photo-gallery/229400_156719617729060_148282335239455_334221_1736433_n.jpg
+  - images/uploads/photo-gallery/253464_159889710745384_148282335239455_354371_6384295_n.jpg
+  - images/uploads/photo-gallery/249801_640679696432_84104866_33953993_691871_n.jpg
+  - images/uploads/photo-gallery/254829_10150204264914014_645394013_6968718_4451441_n.jpg
+  - images/uploads/photo-gallery/248937_10150211007159014_645394013_7026062_7433212_n.jpg
+  - images/uploads/photo-gallery/254857_2098663390109_1351118284_2564540_5635275_n.jpg
+  - images/uploads/photo-gallery/255124_10150204265214014_645394013_6968720_5074048_n.jpg
+  - images/uploads/photo-gallery/264745_2152094528626_1434271089_32547799_1505035_n.jpg
+  - images/uploads/photo-gallery/298529_578729026025_79400135_32588480_4030427_n_0.jpg
+  - images/uploads/photo-gallery/296732_2537258877494_1434271089_32941678_957558057_n.jpg
+  - images/uploads/photo-gallery/298529_578729026025_79400135_32588480_4030427_n.jpg
+  - images/uploads/photo-gallery/308954_10150359960514014_645394013_8114001_406993728_n.jpg
+  - images/uploads/photo-gallery/311935_10150332652969014_645394013_7968235_1887387890_n_0.jpg
+  - images/uploads/photo-gallery/309783_10150297601784014_645394013_7756889_1336559_n_0.jpg
+  - images/uploads/photo-gallery/309783_10150297601784014_645394013_7756889_1336559_n.jpg
+  - images/uploads/photo-gallery/312112_10150297183164014_645394013_7753127_1589910_n_0.jpg
+  - images/uploads/photo-gallery/311935_10150332652969014_645394013_7968235_1887387890_n.jpg
+  - images/uploads/photo-gallery/312112_10150297183164014_645394013_7753127_1589910_n.jpg
+  - images/uploads/photo-gallery/312547_162538583839942_100002514055896_292049_561230261_n.jpg
+  - images/uploads/photo-gallery/381258_10150409770259014_645394013_8328379_149349878_n.jpg
+  - images/uploads/photo-gallery/383905_2576800186002_1434271089_32970785_1130851831_n.jpg
+  - images/uploads/photo-gallery/384722_221783207889367_148282335239455_560875_484241472_n_(1).jpg
+  - images/uploads/photo-gallery/0611111707b.jpg
+  - images/uploads/photo-gallery/0727111730.jpg
+  - images/uploads/photo-gallery/communityamb-18-org_.jpg
+  - images/uploads/photo-gallery/dscn2642.jpg
+  - images/uploads/photo-gallery/dscn2643.jpg
+  - images/uploads/photo-gallery/img00178-20110618-1701.jpg
+  - images/uploads/photo-gallery/p1013599_(1).jpg
+  - images/uploads/photo-gallery/p1013600_(1).jpg
+  - images/uploads/photo-gallery/p1013606_(1).jpg
+  - images/uploads/photo-gallery/p1013609_(1).jpg
+  - images/uploads/photo-gallery/paulpete.jpg
+  - images/uploads/photo-gallery/p1013634_(1).jpg
+---

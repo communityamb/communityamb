@@ -1,0 +1,9 @@
+title: Events
+template: event-single
+layout: layout
+date: true
+sort_dir: desc
+date_behavior:
+  past: public
+  future: public
+route: '/events/{slug}'

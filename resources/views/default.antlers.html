@@ -1,0 +1,79 @@
+{{ partial:partials/page-header }}
+
+{{ if content }}
+<section class="py-12 max-md:py-8">
+    <div class="max-w-5xl mx-auto px-6 max-md:px-4">
+        <div class="prose prose-lg max-w-none font-display
+            prose-headings:font-display prose-headings:uppercase prose-headings:tracking-wide
+            prose-h2:text-brand-navy prose-h2:text-[1.75rem] prose-h2:leading-tight prose-h2:font-semibold prose-h2:mb-4 prose-h2:mt-10
+            prose-h3:text-brand-navy prose-h3:text-xl prose-h3:font-semibold prose-h3:mb-3 prose-h3:mt-8
+            prose-p:text-text-secondary prose-p:text-lg prose-p:leading-relaxed prose-p:font-normal prose-p:mb-5 max-md:prose-p:text-base
+            prose-li:text-text-secondary prose-li:text-lg prose-li:leading-relaxed max-md:prose-li:text-base
+            prose-a:text-link hover:prose-a:text-link-hover prose-a:font-semibold
+            prose-strong:text-text-primary prose-strong:font-semibold
+            prose-img:rounded-lg prose-img:shadow-md prose-img:my-8">
+            {{ content }}
+        </div>
+    </div>
+</section>
+{{ /if }}
+
+{{ if call_counts }}
+<section class="py-[50px] max-md:py-[20px] bg-surface-offwhite">
+    <div class="max-w-5xl mx-auto px-6 max-md:px-4">
+        <h3 class="font-display text-[24px] max-md:text-[20px] font-semibold leading-[36px] text-brand-navy mb-2 uppercase tracking-wide">Call Count</h3>
+        {{ if call_count_intro }}
+        <p class="font-display text-[18px] max-md:text-[16px] font-medium leading-[28px] text-text-secondary mb-6">{{ call_count_intro }}</p>
+        {{ /if }}
+        <div class="grid grid-cols-3 max-md:grid-cols-1 gap-x-4 rounded-[5px]">
+            {{ call_counts }}
+            {{ if first }}
+            <ul class="space-y-[7px] font-display text-[16px] font-normal max-md:max-md:-mb-[25px]">
+            {{ /if }}
+            {{ if index == 4 }}
+            </ul>
+            <ul class="space-y-[7px] font-display text-[16px] font-normal max-md:-mt-[25px] max-md:max-md:-mb-[25px]">
+            {{ /if }}
+            {{ if index == 8 }}
+            </ul>
+            <ul class="space-y-[7px] font-display text-[16px] font-normal max-md:-mt-[25px]">
+            {{ /if }}
+                <li class="flex items-center gap-2 max-md:justify-center">
+                    <span class="text-brand-teal shrink-0"><svg class="w-5 h-5" viewBox="0 0 512 512"><circle cx="256" cy="256" r="224" fill="none" stroke="currentColor" stroke-width="32"/></svg></span>
+                    {{ value }}
+                </li>
+            {{ if last }}
+            </ul>
+            {{ /if }}
+            {{ /call_counts }}
+        </div>
+    </div>
+</section>
+{{ /if }}
+
+{{ if chief_quote }}
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+<section class="py-[50px] max-md:py-[30px]">
+    <div class="max-w-3xl mx-auto px-6 max-md:px-4 text-center">
+        <h2 class="font-display text-[28px] max-md:text-[22px] font-semibold uppercase tracking-wide text-brand-navy mb-8">Message from our Chief</h2>
+        {{ if chief_image }}
+        <img src="{{ chief_image }}" alt="Community Ambulance Company" class="h-24 mx-auto mb-6">
+        {{ /if }}
+        <p class="font-['Berkshire_Swash'] text-[40px] max-lg:text-[28px] max-md:text-[22px] leading-[1.4] text-brand-navy capitalize">{{ chief_quote }}</p>
+        <p class="font-display text-[20px] max-md:text-[18px] leading-[39px] text-brand-navy capitalize mt-2">— {{ chief_name }}</p>
+    </div>
+</section>
+{{ /if }}
+
+{{ if show_cta }}
+<section class="bg-brand-green py-16 max-md:py-10">
+    <div class="max-w-4xl mx-auto px-6 max-md:px-4 text-center text-white">
+        <h2 class="font-display text-3xl max-md:text-2xl font-bold mb-4 uppercase tracking-wide">{{ cta_title }}</h2>
+        {{ if cta_button_link }}
+        <a href="{{ cta_button_link }}" class="inline-block bg-white text-brand-green font-semibold px-8 py-3 rounded hover:bg-surface-offwhite transition">
+            {{ cta_button_text ?? "Learn More" }}
+        </a>
+        {{ /if }}
+    </div>
+</section>
+{{ /if }}

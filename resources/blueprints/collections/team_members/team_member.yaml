@@ -1,0 +1,53 @@
+title: Team Member
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Name
+          -
+            handle: role
+            field:
+              type: text
+              display: Title/Position
+          -
+            handle: photo
+            field:
+              type: assets
+              display: Photo
+              container: assets
+              max_files: 1
+          -
+            handle: category
+            field:
+              type: select
+              display: Category
+              required: true
+              options:
+                officer: Officer
+                board: Board Member
+                charter-member: Charter Member
+                in-memoriam: In Memoriam
+                youth-squad: Youth Squad
+          -
+            handle: bio
+            field:
+              type: textarea
+              display: Biography
+          -
+            handle: sort_order
+            field:
+              type: integer
+              display: Sort Order
+              default: 99
+          -
+            handle: years_of_service
+            field:
+              type: text
+              display: Years of Service
