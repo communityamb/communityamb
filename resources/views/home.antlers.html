@@ -8,11 +8,11 @@
         <div class="absolute inset-0 bg-brand-green/20"></div>
     </div>
     <div class="relative z-10 max-w-4xl mx-auto px-4 py-[200px] max-md:py-24 text-center text-white flex flex-col items-center justify-center">
-        <p class="font-display text-mid max-lg:text-mid max-md:text-lg font-light uppercase tracking-[5px] leading-[53px] max-md:leading-[25px] mb-0">{{ hero_welcome_text }}</p>
-        <h1 class="font-hero text-6xl max-lg:text-5xl max-md:text-2xl font-bold uppercase leading-[80px] max-lg:leading-[60px] max-md:leading-[38px] mb-0">{{ hero_heading }}</h1>
-        <p class="font-display text-lg max-md:text-lg font-semibold uppercase tracking-[3px] leading-[53px] max-md:leading-[30px] mb-0">{{ hero_award_line }}</p>
+        <p class="font-display text-mid max-lg:text-mid max-md:text-lg font-light uppercase tracking-[5px] leading-[53px] max-md:leading-[25px] mb-0" {{ visual_edit field="hero_welcome_text" }}>{{ hero_welcome_text }}</p>
+        <h1 class="font-hero text-6xl max-lg:text-5xl max-md:text-2xl font-bold uppercase leading-[80px] max-lg:leading-[60px] max-md:leading-[38px] mb-0" {{ visual_edit field="hero_heading" }}>{{ hero_heading }}</h1>
+        <p class="font-display text-lg max-md:text-lg font-semibold uppercase tracking-[3px] leading-[53px] max-md:leading-[30px] mb-0" {{ visual_edit field="hero_award_line" }}>{{ hero_award_line }}</p>
         <div class="max-w-[900px] mx-auto mt-2">
-            <p class="font-display text-2xl max-lg:text-2xl max-md:text-base font-medium leading-[42px] max-lg:leading-[34px] max-md:leading-[24px] text-white/80 mb-8">{{ hero_description }}</p>
+            <p class="font-display text-2xl max-lg:text-2xl max-md:text-base font-medium leading-[42px] max-lg:leading-[34px] max-md:leading-[24px] text-white/80 mb-8" {{ visual_edit field="hero_description" }}>{{ hero_description }}</p>
         </div>
         {{ social_links }}
         {{ if venmo_url }}
@@ -71,9 +71,9 @@
 <section class="py-section">
     <div class="max-w-container mx-auto px-4 grid md:grid-cols-[55%_45%] gap-[10px] items-stretch">
         <div class="flex flex-col justify-center md:pr-[50px] max-lg:px-[10px] max-md:text-center">
-            <h2 class="font-display text-display max-md:text-mid font-semibold leading-[45px] max-lg:leading-[50px] max-md:leading-[36px] text-text-secondary mb-6">{{ about_heading }}</h2>
-            <p class="font-display text-lg max-md:text-base font-normal leading-[30px] max-md:leading-[26px] text-text-secondary mb-4">{{ about_paragraph_1 }}</p>
-            <p class="font-display text-lg max-md:text-base font-normal leading-[30px] max-md:leading-[26px] text-text-secondary">{{ about_paragraph_2 }}</p>
+            <h2 class="font-display text-display max-md:text-mid font-semibold leading-[45px] max-lg:leading-[50px] max-md:leading-[36px] text-text-secondary mb-6" {{ visual_edit field="about_heading" }}>{{ about_heading }}</h2>
+            <p class="font-display text-lg max-md:text-base font-normal leading-[30px] max-md:leading-[26px] text-text-secondary mb-4" {{ visual_edit field="about_paragraph_1" }}>{{ about_paragraph_1 }}</p>
+            <p class="font-display text-lg max-md:text-base font-normal leading-[30px] max-md:leading-[26px] text-text-secondary" {{ visual_edit field="about_paragraph_2" }}>{{ about_paragraph_2 }}</p>
         </div>
         <div class="overflow-hidden rounded-btn group md:py-section max-lg:px-[10px]">
             <div class="relative min-h-[500px] max-md:min-h-[350px] h-full overflow-hidden rounded-btn">
@@ -98,8 +98,8 @@
             </div>
         </div>
         <div class="flex flex-col justify-center md:pl-[30px] max-lg:px-[10px] max-md:text-center">
-            <h2 class="font-display text-display max-lg:text-display max-md:text-mid font-semibold capitalize leading-[44px] max-lg:leading-[50px] max-md:leading-[36px] text-brand-navy-light mb-4">{{ call_count_heading }}</h2>
-            <p class="font-display text-lg max-md:text-base font-normal leading-[30px] max-md:leading-[26px] text-text-secondary mb-6">{{ call_count_description }}</p>
+            <h2 class="font-display text-display max-lg:text-display max-md:text-mid font-semibold capitalize leading-[44px] max-lg:leading-[50px] max-md:leading-[36px] text-brand-navy-light mb-4" {{ visual_edit field="call_count_heading" }}>{{ call_count_heading }}</h2>
+            <p class="font-display text-lg max-md:text-base font-normal leading-[30px] max-md:leading-[26px] text-text-secondary mb-6" {{ visual_edit field="call_count_description" }}>{{ call_count_description }}</p>
             <h3 class="font-display text-2xl max-lg:text-mid max-md:text-mid font-semibold leading-[36px] max-lg:leading-[50px] max-md:leading-[36px] text-brand-navy-light mb-2">{{ call_count_subheading }}</h3>
             <p class="font-display text-lg max-md:text-base font-medium capitalize leading-[28px] max-md:leading-[26px] text-text-secondary mb-6">{{ call_counts:current_year_summary }}</p>
             <div class="grid grid-rows-4 grid-flow-col max-md:grid-rows-none max-md:grid-flow-row gap-x-4 gap-y-[7px] rounded-btn">
@@ -114,8 +114,8 @@
 <!-- Donate -->
 <section class="py-section max-md:py-[20px] bg-gradient-green">
     <div class="max-w-[600px] mx-auto px-4 text-center">
-        <h2 class="font-display text-4xl max-md:text-xl font-semibold capitalize leading-[50px] max-md:leading-[32px] text-white mb-4">{{ donate_heading }}</h2>
-        <p class="font-display text-sub max-md:text-base font-normal capitalize leading-[36px] max-md:leading-[26px] text-white">{{ donate_text | nl2br }}</p>
+        <h2 class="font-display text-4xl max-md:text-xl font-semibold capitalize leading-[50px] max-md:leading-[32px] text-white mb-4" {{ visual_edit field="donate_heading" }}>{{ donate_heading }}</h2>
+        <p class="font-display text-sub max-md:text-base font-normal capitalize leading-[36px] max-md:leading-[26px] text-white" {{ visual_edit field="donate_text" }}>{{ donate_text | nl2br }}</p>
     </div>
 </section>
 

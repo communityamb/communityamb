@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6761d9528ed6d11373e531c4f6bf40ac",
+    "content-hash": "88fb662caebbbf11c9fd2fe2f7ba7aa3",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -2895,6 +2895,52 @@
                 }
             ],
             "time": "2026-04-11T18:38:28+00:00"
+        },
+        {
+            "name": "mariohamann/statamic-visual-editor",
+            "version": "v0.1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mariohamann/statamic-visual-editor.git",
+                "reference": "8b61aa93f99d0bda6ef29fb1e1ffbfbc656954f8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mariohamann/statamic-visual-editor/zipball/8b61aa93f99d0bda6ef29fb1e1ffbfbc656954f8",
+                "reference": "8b61aa93f99d0bda6ef29fb1e1ffbfbc656954f8",
+                "shasum": ""
+            },
+            "require": {
+                "statamic/cms": "^6.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^10.8"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "MarioHamann\\StatamicVisualEditor\\ServiceProvider"
+                    ]
+                },
+                "statamic": {
+                    "name": "Statamic Visual Editor",
+                    "description": "Statamic Visual Editor addon"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "MarioHamann\\StatamicVisualEditor\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "support": {
+                "source": "https://github.com/mariohamann/statamic-visual-editor/tree/v0.1.8"
+            },
+            "time": "2026-03-19T18:07:47+00:00"
         },
         {
             "name": "michelf/php-smartypants",

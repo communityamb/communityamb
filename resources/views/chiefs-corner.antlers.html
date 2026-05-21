@@ -9,13 +9,13 @@
              x-cloak
              :class="shown ? 'animate-fade-in-up' : 'opacity-0'">
 
-            <h2 class="font-display text-display font-semibold uppercase leading-[65px] text-text-primary max-lg:text-display max-lg:leading-[50px] max-lg:text-center max-md:text-mid max-md:leading-[36px] max-md:text-center">{{ chief_name }}</h2>
+            <h2 class="font-display text-display font-semibold uppercase leading-[65px] text-text-primary max-lg:text-display max-lg:leading-[50px] max-lg:text-center max-md:text-mid max-md:leading-[36px] max-md:text-center" {{ visual_edit field="chief_name" }}>{{ chief_name }}</h2>
 
-            <h2 class="font-display text-heading font-semibold leading-[42px] text-brand-green -mt-[20px] max-lg:text-display max-lg:leading-[50px] max-lg:text-center max-md:text-sub max-md:leading-[36px] max-md:text-center">{{ chief_title }}</h2>
+            <h2 class="font-display text-heading font-semibold leading-[42px] text-brand-green -mt-[20px] max-lg:text-display max-lg:leading-[50px] max-lg:text-center max-md:text-sub max-md:leading-[36px] max-md:text-center" {{ visual_edit field="chief_title" }}>{{ chief_title }}</h2>
 
             <div class="w-[20%] border-t border-black my-5 max-md:mx-auto"></div>
 
-            <div class="font-display text-lg font-normal leading-[30px] text-text-primary max-lg:text-center max-md:text-center max-md:text-base max-md:leading-[26px] [&>h2]:hidden [&>p>a]:text-link [&>p>a:hover]:text-link-hover [&>p]:mb-[1em]">
+            <div class="font-display text-lg font-normal leading-[30px] text-text-primary max-lg:text-center max-md:text-center max-md:text-base max-md:leading-[26px] [&>h2]:hidden [&>p>a]:text-link [&>p>a:hover]:text-link-hover [&>p]:mb-[1em]" {{ visual_edit field="content" }}>
                 {{ content }}
             </div>
         </div>

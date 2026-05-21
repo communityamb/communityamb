@@ -11,7 +11,7 @@
             prose-li:text-text-secondary prose-li:text-lg prose-li:leading-relaxed max-md:prose-li:text-base
             prose-a:text-link hover:prose-a:text-link-hover prose-a:font-semibold
             prose-strong:text-text-primary prose-strong:font-semibold
-            prose-img:rounded-lg prose-img:shadow-md prose-img:my-8">
+            prose-img:rounded-lg prose-img:shadow-md prose-img:my-8" {{ visual_edit field="content" }}>
             {{ content }}
         </div>
     </div>
@@ -56,7 +56,7 @@
         {{ if chief_image }}
         <img src="{{ glide :src="chief_image" preset="logo" }}" alt="Community Ambulance Company" class="h-24 mx-auto mb-6" loading="lazy">
         {{ /if }}
-        <p class="font-['Berkshire_Swash'] text-hero max-lg:text-heading max-md:text-sub leading-[1.4] text-brand-navy capitalize">{{ chief_quote }}</p>
+        <p class="font-['Berkshire_Swash'] text-hero max-lg:text-heading max-md:text-sub leading-[1.4] text-brand-navy capitalize" {{ visual_edit field="chief_quote" }}>{{ chief_quote }}</p>
         {{ collection:team_members role:is="Chief" limit="1" }}
         <p class="font-display text-xl max-md:text-lg leading-[39px] text-brand-navy capitalize mt-2">— Chief {{ title }}</p>
         {{ /collection:team_members }}
@@ -67,7 +67,7 @@
 {{ if show_cta }}
 <section class="bg-brand-green py-16 max-md:py-10">
     <div class="max-w-4xl mx-auto px-6 max-md:px-4 text-center text-white">
-        <h2 class="font-display text-3xl max-md:text-2xl font-bold mb-4 uppercase tracking-wide">{{ cta_title }}</h2>
+        <h2 class="font-display text-3xl max-md:text-2xl font-bold mb-4 uppercase tracking-wide" {{ visual_edit field="cta_title" }}>{{ cta_title }}</h2>
         {{ if cta_button_link }}
         <a href="{{ cta_button_link }}" class="inline-block bg-white text-brand-green font-semibold px-8 py-3 rounded hover:bg-surface-offwhite transition">
             {{ cta_button_text ?? "Learn More" }}

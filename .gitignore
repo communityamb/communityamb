@@ -20,7 +20,7 @@
 /public/static
 /public/img
 /public/storage
-/public/vendor/statamic
+/public/vendor
 /storage/*.key
 /storage/forms
 /storage/pail

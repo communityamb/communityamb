@@ -60,5 +60,5 @@ foreach ($redirects as $old => $new) {
 Route::permanentRedirect('/category/{any}', '/blog')->where('any', '.*');
 Route::permanentRedirect('/tag/{any}', '/blog')->where('any', '.*');
 Route::permanentRedirect('/wp-content/{any}', '/')->where('any', '.*');
-Route::permanentRedirect('/wp-admin', '/');
+Route::permanentRedirect('/wp-admin', '/cp');
 Route::permanentRedirect('/wp-login.php', '/cp');
