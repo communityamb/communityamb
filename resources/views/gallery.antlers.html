@@ -30,7 +30,7 @@
              data-album-id="{{ slug }}"
              class="py-2.5">
 
-            <div class="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-[10px]">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[10px]">
                 {{ photos }}
                 <button
                     @click="openFromEl($event)"
@@ -47,6 +47,8 @@
         </div>
         {{ /albums }}
 
+        {{ else }}
+        <p class="text-center text-text-muted py-12">No gallery albums available yet.</p>
         {{ /if }}
         {{ /collection:gallery_albums }}
     </div>
