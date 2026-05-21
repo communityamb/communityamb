@@ -18,6 +18,7 @@
     "dependencies": {
         "@alpinejs/collapse": "^3.15.12",
         "@alpinejs/intersect": "^3.15.12",
-        "alpinejs": "^3.15.12"
+        "alpinejs": "^3.15.12",
+        "lite-youtube-embed": "^0.3.4"
     }
 }
