@@ -24,7 +24,7 @@
              x-cloak
              :class="shown ? 'animate-fade-in-up [animation-delay:300ms]' : 'opacity-0'">
             <div class="group relative overflow-hidden rounded min-h-[900px] max-md:min-h-[278px]">
-                <img src="{{ chief_photo }}"
+                <img src="{{ glide :src="chief_photo" preset="hero" }}"
                      alt="{{ chief_photo_alt }}"
                      class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110"
                      loading="lazy">

@@ -52,7 +52,7 @@ return [
         |
         */
 
-        'cache' => false,
+        'cache' => env('GLIDE_CACHE', true),
         'cache_path' => public_path('img'),
 
         /*
@@ -83,7 +83,12 @@ return [
         */
 
         'presets' => [
-            // 'small' => ['w' => 200, 'h' => 200, 'q' => 75, 'fit' => 'crop'],
+            'hero'      => ['w' => 1920, 'q' => 80, 'fm' => 'webp'],
+            'card'      => ['w' => 600,  'q' => 80, 'fm' => 'webp'],
+            'gallery'   => ['w' => 800,  'q' => 80, 'fm' => 'webp'],
+            'team'      => ['w' => 400,  'q' => 80, 'fm' => 'webp'],
+            'thumbnail' => ['w' => 200,  'q' => 75, 'fm' => 'webp'],
+            'logo'      => ['w' => 200,  'q' => 85, 'fm' => 'webp'],
         ],
 
         /*
