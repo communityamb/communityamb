@@ -8,7 +8,7 @@
         <div class="w-[10%] h-px bg-white mx-auto my-4"></div>
 
         <div class="flex flex-row max-lg:flex-col gap-4 mt-5">
-            <div class="flex-1 bg-white rounded-[10px] shadow-[0_20px_80px_0_rgba(61,127,49,0.19)] p-[50px] max-md:p-[30px] text-center animate-fade-in-up">
+            {{ partial:partials/feature-card }}
                 <div class="flex justify-center mb-3">
                     <div class="w-[70px] h-[70px] rounded-full border-2 border-brand-green flex items-center justify-center">
                         <svg class="w-[35px] h-[35px] text-brand-green" fill="currentColor" viewBox="0 0 640 512"><path d="M506.1 127.1c-17.97-20.17-61.46-61.65-122.7-71.1-22.5-3.354-45.39 3.606-63.41 18.21C302 60.47 279.1 53.42 256.5 56.86C176.8 69.17 126.7 136.2 124.6 139.1c-7.369 10.58-4.684 25.11 5.896 32.48C134.4 174.7 139.1 176 143.8 176c7.281 0 14.42-3.464 18.85-9.896c16.72-24.36 54.49-68.17 110.6-76.94c11.05-1.729 22.07 2.137 30.28 10.58L320 116.1l16.43-16.39c8.211-8.444 19.24-12.31 30.28-10.58c56.13 8.77 93.91 52.59 110.6 76.94C481.8 172.5 488.9 176 496.2 176c4.281 0 9.166-1.29 13.01-4.516C519.8 164.2 513.5 147.3 506.1 127.1zM475.6 351.8c-19.84-19.84-45.77-29.75-71.69-29.75s-51.85 9.914-71.69 29.75L320 363.9l-12.21-12.12c-19.84-19.84-45.77-29.75-71.69-29.75c-25.92 0-51.85 9.914-71.69 29.75c-39.58 39.58-39.58 103.8 0 143.4l143.3 142.2c6.248 6.248 14.44 9.373 22.62 9.373c8.184 0 16.38-3.125 22.62-9.373l143.3-142.2C515.2 455.6 515.2 391.4 475.6 351.8zM455.1 474.1L320 607.5l-135.1-133.4c-26.12-26.12-26.12-68.58 0-94.7c12.65-12.65 29.47-19.62 47.35-19.62s34.7 6.969 47.35 19.62l24.04 23.87c12.39 12.39 32.54 12.39 44.94 0l24.04-23.87c12.65-12.65 29.47-19.62 47.35-19.62c17.88 0 34.7 6.969 47.35 19.62C481.2 405.5 481.2 447.1 455.1 474.1z"/></svg>
@@ -17,9 +17,9 @@
                 <h2 class="font-display text-[22px] max-md:text-[18px] font-semibold capitalize leading-[34px] max-lg:leading-[30px] text-[#008000]">
                     Help members of your community
                 </h2>
-            </div>
+            {{ /partial:partials/feature-card }}
 
-            <div class="flex-1 bg-white rounded-[10px] shadow-[0_20px_80px_0_rgba(61,127,49,0.19)] p-[50px] max-md:p-[30px] text-center animate-fade-in-up">
+            {{ partial:partials/feature-card }}
                 <div class="flex justify-center mb-3">
                     <div class="w-[70px] h-[70px] rounded-full border-2 border-brand-green flex items-center justify-center">
                         <svg class="w-[35px] h-[35px] text-brand-green" fill="currentColor" viewBox="0 0 448 512"><path d="M96 32V64H48C21.5 64 0 85.5 0 112v48H448V112c0-26.5-21.5-48-48-48H352V32c0-17.7-14.3-32-32-32s-32 14.3-32 32V64H160V32c0-17.7-14.3-32-32-32S96 14.3 96 32zM448 192H0V464c0 26.5 21.5 48 48 48H400c26.5 0 48-21.5 48-48V192zM224 304c0-8.8 7.2-16 16-16h96c8.8 0 16 7.2 16 16s-7.2 16-16 16H240c-8.8 0-16-7.2-16-16zm-96 0c0-8.8 7.2-16 16-16h0c8.8 0 16 7.2 16 16s-7.2 16-16 16h0c-8.8 0-16-7.2-16-16z"/></svg>
@@ -28,9 +28,9 @@
                 <h2 class="font-display text-[22px] max-md:text-[18px] font-semibold capitalize leading-[34px] max-lg:leading-[30px] text-[#008000]">
                     Learn new medical skills
                 </h2>
-            </div>
+            {{ /partial:partials/feature-card }}
 
-            <div class="flex-1 bg-white rounded-[10px] shadow-[0_20px_80px_0_rgba(61,127,49,0.19)] p-[50px] max-md:p-[30px] text-center animate-fade-in-up">
+            {{ partial:partials/feature-card }}
                 <div class="flex justify-center mb-3">
                     <div class="w-[70px] h-[70px] rounded-full border-2 border-brand-green flex items-center justify-center">
                         <svg class="w-[35px] h-[35px] text-brand-green" fill="currentColor" viewBox="0 0 640 512"><path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96H21.3C9.6 320 0 310.4 0 298.7zM405.3 320H235.6c26.5-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C423.2 192 471 239.8 471 298.7c0 11.8-9.6 21.3-21.3 21.3h-44.3zM320 128a96 96 0 1 1 0 192 96 96 0 1 1 0-192zM320 352c59.7 0 115.9 22.4 159 62.7C515.4 449 544 500.2 544 556.8c0 24.3-19.7 44-44 44H140c-24.3 0-44-19.7-44-44c0-56.6 28.6-107.8 65-142.1C204.1 374.4 260.3 352 320 352z"/></svg>
@@ -39,7 +39,7 @@
                 <h2 class="font-display text-[22px] max-md:text-[18px] font-semibold capitalize leading-[34px] max-lg:leading-[30px] text-[#008000]">
                     Make new lifelong friends
                 </h2>
-            </div>
+            {{ /partial:partials/feature-card }}
         </div>
     </div>
 </section>
@@ -54,42 +54,15 @@
                 There's something truly special about lending a hand when someone needs it most, especially when volunteering. You don't need any medical background to start. We offer a great chance to dive into the medical world and enjoy these additional benefits:
             </p>
             <ul class="mt-6 space-y-2">
-                <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                    <svg class="w-[18px] h-[18px] text-brand-green mt-1 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                    All medical training provided: CPR/AED certification as well as NYS EMT certification
-                </li>
-                <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                    <svg class="w-[18px] h-[18px] text-brand-green mt-1 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                    Attend Suffolk County Community College for Free -- SERVES Program
-                </li>
-                <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                    <svg class="w-[18px] h-[18px] text-brand-green mt-1 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                    All uniforms provided
-                </li>
-                <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                    <svg class="w-[18px] h-[18px] text-brand-green mt-1 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                    A modest retirement program: Earn $30+ per month/per year of service after retirement!
-                </li>
-                <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                    <svg class="w-[18px] h-[18px] text-brand-green mt-1 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                    10% property tax reduction for active members
-                </li>
-                <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                    <svg class="w-[18px] h-[18px] text-brand-green mt-1 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                    Opportunities to further your medical education through various training courses
-                </li>
-                <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                    <svg class="w-[18px] h-[18px] text-brand-green mt-1 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                    Opportunities to become an Advanced Life Support provider such as a Paramedic
-                </li>
-                <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                    <svg class="w-[18px] h-[18px] text-brand-green mt-1 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                    Form lifelong friendships
-                </li>
-                <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                    <svg class="w-[18px] h-[18px] text-brand-green mt-1 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                    An unmatched adrenaline rush: Imagine saving someone's life or delivering a baby
-                </li>
+                {{ partial:partials/check-item text="All medical training provided: CPR/AED certification as well as NYS EMT certification" }}
+                {{ partial:partials/check-item text="Attend Suffolk County Community College for Free -- SERVES Program" }}
+                {{ partial:partials/check-item text="All uniforms provided" }}
+                {{ partial:partials/check-item text="A modest retirement program: Earn $30+ per month/per year of service after retirement!" }}
+                {{ partial:partials/check-item text="10% property tax reduction for active members" }}
+                {{ partial:partials/check-item text="Opportunities to further your medical education through various training courses" }}
+                {{ partial:partials/check-item text="Opportunities to become an Advanced Life Support provider such as a Paramedic" }}
+                {{ partial:partials/check-item text="Form lifelong friendships" }}
+                {{ partial:partials/check-item text="An unmatched adrenaline rush: Imagine saving someone's life or delivering a baby" }}
             </ul>
         </div>
 
@@ -112,18 +85,9 @@
                     </h2>
                 </div>
                 <ul class="space-y-4">
-                    <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                        <svg class="w-7 h-7 text-brand-green mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                        All are eligible to apply for Company membership provided they are found to be of good moral standing, have not been convicted of a crime or have criminal charges pending against them, and are over the age of eighteen
-                    </li>
-                    <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                        <svg class="w-7 h-7 text-brand-green mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                        Required to ride a minimum of 6 hours of in-house standby each week.
-                    </li>
-                    <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                        <svg class="w-7 h-7 text-brand-green mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                        Upon full membership have voting rights within the company and right to hold office
-                    </li>
+                    {{ partial:partials/check-item size="lg" text="All are eligible to apply for Company membership provided they are found to be of good moral standing, have not been convicted of a crime or have criminal charges pending against them, and are over the age of eighteen" }}
+                    {{ partial:partials/check-item size="lg" text="Required to ride a minimum of 6 hours of in-house standby each week." }}
+                    {{ partial:partials/check-item size="lg" text="Upon full membership have voting rights within the company and right to hold office" }}
                 </ul>
             </div>
 
@@ -135,18 +99,9 @@
                     </h2>
                 </div>
                 <ul class="space-y-4">
-                    <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                        <svg class="w-7 h-7 text-brand-green mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                        All are eligible to apply for Company membership provided they are found to be of good moral standing, have not been convicted of a crime or have criminal charges pending against them, and are over the age of eighteen
-                    </li>
-                    <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                        <svg class="w-7 h-7 text-brand-green mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                        Any fireman, EMS, or police personnel who has served 10 years or more of active service, with a recommendation from their previous Chief/Supervisor and a qualified driver or any person that has held a clean NYS Driver's License for over 20 years
-                    </li>
-                    <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                        <svg class="w-7 h-7 text-brand-green mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                        Not eligible for voting rights or to hold office within the company
-                    </li>
+                    {{ partial:partials/check-item size="lg" text="All are eligible to apply for Company membership provided they are found to be of good moral standing, have not been convicted of a crime or have criminal charges pending against them, and are over the age of eighteen" }}
+                    {{ partial:partials/check-item size="lg" text="Any fireman, EMS, or police personnel who has served 10 years or more of active service, with a recommendation from their previous Chief/Supervisor and a qualified driver or any person that has held a clean NYS Driver's License for over 20 years" }}
+                    {{ partial:partials/check-item size="lg" text="Not eligible for voting rights or to hold office within the company" }}
                 </ul>
             </div>
         </div>
@@ -168,18 +123,9 @@
                     </h2>
                 </div>
                 <ul class="space-y-2">
-                    <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                        <svg class="w-[18px] h-[18px] text-brand-green mt-1 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                        Members of the community
-                    </li>
-                    <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                        <svg class="w-[18px] h-[18px] text-brand-green mt-1 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                        Persons eager to learn new medical skills
-                    </li>
-                    <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                        <svg class="w-[18px] h-[18px] text-brand-green mt-1 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                        Persons new to the medical field or already certified as EMT's or Paramedics
-                    </li>
+                    {{ partial:partials/check-item text="Members of the community" }}
+                    {{ partial:partials/check-item text="Persons eager to learn new medical skills" }}
+                    {{ partial:partials/check-item text="Persons new to the medical field or already certified as EMT's or Paramedics" }}
                 </ul>
 
                 <div class="pt-5 pb-2.5">
@@ -188,14 +134,8 @@
                     </h2>
                 </div>
                 <ul class="space-y-2">
-                    <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                        <svg class="w-[18px] h-[18px] text-brand-green mt-1 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                        Be available for 6 hours a week for in-house standby
-                    </li>
-                    <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                        <svg class="w-[18px] h-[18px] text-brand-green mt-1 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                        Complete required trainings
-                    </li>
+                    {{ partial:partials/check-item text="Be available for 6 hours a week for in-house standby" }}
+                    {{ partial:partials/check-item text="Complete required trainings" }}
                 </ul>
 
                 <div class="pt-5 pb-2.5">
@@ -207,30 +147,12 @@
                     No medical experience is required, and this company offers an opportunity to join the medical field. Other benefits include:
                 </p>
                 <ul class="mt-4 space-y-2">
-                    <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                        <svg class="w-[18px] h-[18px] text-brand-green mt-1 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                        All medical training provided: CPR/AED certification as well as NYS EMT certification
-                    </li>
-                    <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                        <svg class="w-[18px] h-[18px] text-brand-green mt-1 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                        College tuition assistance -- SERVES Program
-                    </li>
-                    <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                        <svg class="w-[18px] h-[18px] text-brand-green mt-1 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                        All uniforms provided
-                    </li>
-                    <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                        <svg class="w-[18px] h-[18px] text-brand-green mt-1 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                        Retirement program: Earn $30+ per month/per year of service after retirement!
-                    </li>
-                    <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                        <svg class="w-[18px] h-[18px] text-brand-green mt-1 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                        Property tax reduction for active members
-                    </li>
-                    <li class="flex items-start gap-3 font-display text-[18px] max-md:text-[15px] font-medium leading-normal max-md:leading-[25px] text-text-secondary">
-                        <svg class="w-[18px] h-[18px] text-brand-green mt-1 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                        Opportunities to become an Advanced Life Support provider such as a Paramedic
-                    </li>
+                    {{ partial:partials/check-item text="All medical training provided: CPR/AED certification as well as NYS EMT certification" }}
+                    {{ partial:partials/check-item text="College tuition assistance -- SERVES Program" }}
+                    {{ partial:partials/check-item text="All uniforms provided" }}
+                    {{ partial:partials/check-item text="Retirement program: Earn $30+ per month/per year of service after retirement!" }}
+                    {{ partial:partials/check-item text="Property tax reduction for active members" }}
+                    {{ partial:partials/check-item text="Opportunities to become an Advanced Life Support provider such as a Paramedic" }}
                 </ul>
             </div>
 
@@ -239,30 +161,25 @@
                 <div class="space-y-5">
                     <div class="grid grid-cols-2 max-md:grid-cols-1 gap-4">
                         <div>
-                            <label for="first_name" class="block text-base font-medium text-text-secondary mb-2 font-display">First Name <span class="text-red-500">*</span></label>
-                            <input type="text" name="first_name" id="first_name" required placeholder="First Name" class="w-full rounded border border-border-medium px-4 py-3 text-base font-body bg-white focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none">
+                            {{ partial:partials/form-input type="text" name="first_name" label="First Name" required="true" placeholder="First Name" }}
                             {{ if error:first_name }}<p class="text-red-600 text-xs mt-1">{{ error:first_name }}</p>{{ /if }}
                         </div>
                         <div>
-                            <label for="last_name" class="block text-base font-medium text-text-secondary mb-2 font-display">Last Name <span class="text-red-500">*</span></label>
-                            <input type="text" name="last_name" id="last_name" required placeholder="Last Name" class="w-full rounded border border-border-medium px-4 py-3 text-base font-body bg-white focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none">
+                            {{ partial:partials/form-input type="text" name="last_name" label="Last Name" required="true" placeholder="Last Name" }}
                             {{ if error:last_name }}<p class="text-red-600 text-xs mt-1">{{ error:last_name }}</p>{{ /if }}
                         </div>
                     </div>
                     <div>
-                        <label for="email" class="block text-base font-medium text-text-secondary mb-2 font-display">Email <span class="text-red-500">*</span></label>
-                        <input type="email" name="email" id="email" required placeholder="Email Address" class="w-full rounded border border-border-medium px-4 py-3 text-base font-body bg-white focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none">
+                        {{ partial:partials/form-input type="email" name="email" label="Email" required="true" placeholder="Email Address" }}
                         {{ if error:email }}<p class="text-red-600 text-xs mt-1">{{ error:email }}</p>{{ /if }}
                     </div>
                     <div class="grid grid-cols-2 max-md:grid-cols-1 gap-4">
                         <div>
-                            <label for="date_of_birth" class="block text-base font-medium text-text-secondary mb-2 font-display">Date of Birth <span class="text-red-500">*</span></label>
-                            <input type="date" name="date_of_birth" id="date_of_birth" required class="w-full rounded border border-border-medium px-4 py-3 text-base font-body bg-white focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none">
+                            {{ partial:partials/form-input type="date" name="date_of_birth" label="Date of Birth" required="true" }}
                             {{ if error:date_of_birth }}<p class="text-red-600 text-xs mt-1">{{ error:date_of_birth }}</p>{{ /if }}
                         </div>
                         <div>
-                            <label for="phone_number" class="block text-base font-medium text-text-secondary mb-2 font-display">Phone Number <span class="text-red-500">*</span></label>
-                            <input type="tel" name="phone_number" id="phone_number" required placeholder="Phone Number" class="w-full rounded border border-border-medium px-4 py-3 text-base font-body bg-white focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none">
+                            {{ partial:partials/form-input type="tel" name="phone_number" label="Phone Number" required="true" placeholder="Phone Number" }}
                             {{ if error:phone_number }}<p class="text-red-600 text-xs mt-1">{{ error:phone_number }}</p>{{ /if }}
                         </div>
                     </div>
@@ -318,7 +235,7 @@
         <div class="w-[10%] h-px bg-white mx-auto my-4"></div>
 
         <div class="flex flex-row max-lg:flex-col gap-4 mt-5">
-            <a href="/assets/documents/Membership-Application.pdf" target="_blank" class="flex-1 bg-white rounded-[10px] shadow-[0_20px_80px_0_rgba(61,127,49,0.19)] p-[50px] max-md:p-[30px] text-center animate-fade-in-up block group">
+            {{ partial:partials/feature-card tag="a" href="/assets/documents/Membership-Application.pdf" target="_blank" }}
                 <div class="flex justify-center mb-3">
                     <div class="w-[70px] h-[70px] rounded-full border-2 border-brand-green flex items-center justify-center">
                         <svg class="w-[35px] h-[35px] text-brand-green" fill="currentColor" viewBox="0 0 640 512"><path d="M506.1 127.1c-17.97-20.17-61.46-61.65-122.7-71.1-22.5-3.354-45.39 3.606-63.41 18.21C302 60.47 279.1 53.42 256.5 56.86C176.8 69.17 126.7 136.2 124.6 139.1c-7.369 10.58-4.684 25.11 5.896 32.48C134.4 174.7 139.1 176 143.8 176c7.281 0 14.42-3.464 18.85-9.896c16.72-24.36 54.49-68.17 110.6-76.94c11.05-1.729 22.07 2.137 30.28 10.58L320 116.1l16.43-16.39c8.211-8.444 19.24-12.31 30.28-10.58c56.13 8.77 93.91 52.59 110.6 76.94C481.8 172.5 488.9 176 496.2 176c4.281 0 9.166-1.29 13.01-4.516C519.8 164.2 513.5 147.3 506.1 127.1zM475.6 351.8c-19.84-19.84-45.77-29.75-71.69-29.75s-51.85 9.914-71.69 29.75L320 363.9l-12.21-12.12c-19.84-19.84-45.77-29.75-71.69-29.75c-25.92 0-51.85 9.914-71.69 29.75c-39.58 39.58-39.58 103.8 0 143.4l143.3 142.2c6.248 6.248 14.44 9.373 22.62 9.373c8.184 0 16.38-3.125 22.62-9.373l143.3-142.2C515.2 455.6 515.2 391.4 475.6 351.8zM455.1 474.1L320 607.5l-135.1-133.4c-26.12-26.12-26.12-68.58 0-94.7c12.65-12.65 29.47-19.62 47.35-19.62s34.7 6.969 47.35 19.62l24.04 23.87c12.39 12.39 32.54 12.39 44.94 0l24.04-23.87c12.65-12.65 29.47-19.62 47.35-19.62c17.88 0 34.7 6.969 47.35 19.62C481.2 405.5 481.2 447.1 455.1 474.1z"/></svg>
@@ -333,9 +250,9 @@
                     Apply Now
                     {{ partial:icon name="external-link" class="w-4 h-4" }}
                 </span>
-            </a>
+            {{ /partial:partials/feature-card }}
 
-            <a href="/assets/documents/Associate-Membership-Application.pdf" target="_blank" class="flex-1 bg-white rounded-[10px] shadow-[0_20px_80px_0_rgba(61,127,49,0.19)] p-[50px] max-md:p-[30px] text-center animate-fade-in-up block group">
+            {{ partial:partials/feature-card tag="a" href="/assets/documents/Associate-Membership-Application.pdf" target="_blank" }}
                 <div class="flex justify-center mb-3">
                     <div class="w-[70px] h-[70px] rounded-full border-2 border-brand-green flex items-center justify-center">
                         <svg class="w-[35px] h-[35px] text-brand-green" fill="currentColor" viewBox="0 0 640 512"><path d="M506.1 127.1c-17.97-20.17-61.46-61.65-122.7-71.1-22.5-3.354-45.39 3.606-63.41 18.21C302 60.47 279.1 53.42 256.5 56.86C176.8 69.17 126.7 136.2 124.6 139.1c-7.369 10.58-4.684 25.11 5.896 32.48C134.4 174.7 139.1 176 143.8 176c7.281 0 14.42-3.464 18.85-9.896c16.72-24.36 54.49-68.17 110.6-76.94c11.05-1.729 22.07 2.137 30.28 10.58L320 116.1l16.43-16.39c8.211-8.444 19.24-12.31 30.28-10.58c56.13 8.77 93.91 52.59 110.6 76.94C481.8 172.5 488.9 176 496.2 176c4.281 0 9.166-1.29 13.01-4.516C519.8 164.2 513.5 147.3 506.1 127.1zM475.6 351.8c-19.84-19.84-45.77-29.75-71.69-29.75s-51.85 9.914-71.69 29.75L320 363.9l-12.21-12.12c-19.84-19.84-45.77-29.75-71.69-29.75c-25.92 0-51.85 9.914-71.69 29.75c-39.58 39.58-39.58 103.8 0 143.4l143.3 142.2c6.248 6.248 14.44 9.373 22.62 9.373c8.184 0 16.38-3.125 22.62-9.373l143.3-142.2C515.2 455.6 515.2 391.4 475.6 351.8zM455.1 474.1L320 607.5l-135.1-133.4c-26.12-26.12-26.12-68.58 0-94.7c12.65-12.65 29.47-19.62 47.35-19.62s34.7 6.969 47.35 19.62l24.04 23.87c12.39 12.39 32.54 12.39 44.94 0l24.04-23.87c12.65-12.65 29.47-19.62 47.35-19.62c17.88 0 34.7 6.969 47.35 19.62C481.2 405.5 481.2 447.1 455.1 474.1z"/></svg>
@@ -350,7 +267,7 @@
                     Apply Now
                     {{ partial:icon name="external-link" class="w-4 h-4" }}
                 </span>
-            </a>
+            {{ /partial:partials/feature-card }}
         </div>
 
         <div class="flex flex-row max-lg:flex-col gap-4 mt-5">
