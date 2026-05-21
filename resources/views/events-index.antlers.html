@@ -21,7 +21,7 @@
                 <div class="flex flex-col md:flex-row">
                     {{ if image }}
                     <div class="md:w-48 flex-shrink-0">
-                        <img src="{{ image }}" alt="{{ title }}" class="w-full h-48 md:h-full object-cover" loading="lazy">
+                        <img src="{{ glide :src="image" preset="card" }}" alt="{{ title }}" class="w-full h-48 md:h-full object-cover" loading="lazy">
                     </div>
                     {{ /if }}
                     <div class="p-6 flex-1">

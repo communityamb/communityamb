@@ -3,7 +3,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- About -->
             <div>
-                <img src="{{ organization:logo_url }}" alt="{{ organization:org_name }}" class="h-12 w-auto mb-4 brightness-0 invert" loading="lazy" width="500" height="500">
+                <img src="{{ glide :src="organization:logo_url" preset="logo" }}" alt="{{ organization:org_name }}" class="h-12 w-auto mb-4 brightness-0 invert" loading="lazy" width="200" height="200">
                 <p class="text-sm text-footer-text">{{ organization:description }}</p>
             </div>
 
