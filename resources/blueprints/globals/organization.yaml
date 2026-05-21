@@ -32,6 +32,12 @@ tabs:
               type: text
               display: Mailing Address
           -
+            handle: logo_url
+            field:
+              type: text
+              display: Logo URL
+              instructions: 'Path to the organization logo (e.g., /assets/images/logo.png)'
+          -
             handle: description
             field:
               type: textarea
