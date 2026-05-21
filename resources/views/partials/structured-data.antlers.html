@@ -1,0 +1,24 @@
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "EmergencyService",
+    "name": "{{ organization:org_name }}",
+    "description": "{{ organization:description }}",
+    "url": "{{ config:app:url }}",
+    "telephone": "{{ organization:phone }}",
+    "email": "{{ organization:email }}",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "420 Lakeland Ave",
+        "addressLocality": "Sayville",
+        "addressRegion": "NY",
+        "postalCode": "11782",
+        "addressCountry": "US"
+    },
+    "areaServed": ["Sayville, NY", "West Sayville, NY", "Oakdale, NY", "Bohemia, NY", "Bayport, NY"],
+    "foundingDate": "1950",
+    "nonprofitStatus": "501(c)(3)",
+    "logo": "{{ config:app:url }}/assets/images/uploads/2023/09/community-ambulance-new-logo.png"{{ if social_links:facebook_url || social_links:instagram_url }},
+    "sameAs": [{{ if social_links:facebook_url }}"{{ social_links:facebook_url }}"{{ /if }}{{ if social_links:facebook_url && social_links:instagram_url }}, {{ /if }}{{ if social_links:instagram_url }}"{{ social_links:instagram_url }}"{{ /if }}]{{ /if }}
+}
+</script>

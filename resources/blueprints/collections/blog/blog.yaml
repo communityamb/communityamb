@@ -35,3 +35,23 @@ tabs:
             field:
               type: textarea
               display: Excerpt
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: meta_description
+            field:
+              type: textarea
+              display: Meta Description
+              instructions: 'Override the default site description for this post. Recommended: 150-160 characters.'
+              character_limit: 160
+          -
+            handle: og_image
+            field:
+              type: assets
+              display: Social Share Image
+              instructions: 'Image shown when this post is shared on social media. Falls back to Featured Image.'
+              container: assets
+              max_files: 1

@@ -36,3 +36,17 @@ tabs:
             field:
               type: textarea
               display: Description
+          -
+            handle: site_url
+            field:
+              type: text
+              display: Site URL
+              instructions: 'Full site URL including https:// (e.g., https://communityamb.org). Used for canonical URLs and structured data.'
+          -
+            handle: default_og_image
+            field:
+              type: assets
+              display: Default Social Share Image
+              instructions: 'Default image shown when pages are shared on social media. Recommended: 1200x630px.'
+              container: assets
+              max_files: 1
