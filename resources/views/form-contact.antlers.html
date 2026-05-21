@@ -1,7 +1,7 @@
 {{ partial:partials/page-header }}
 
 {{# ── Contact Form + Google Map Grid ─────────────────────────── #}}
-<section class="py-[50px] max-md:py-[10px] max-md:px-[10px]">
+<section class="py-section max-md:py-[10px] max-md:px-[10px]">
     <div class="max-w-[1140px] mx-auto px-4">
         <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5">
 
@@ -13,11 +13,11 @@
                     <div class="grid grid-cols-2 max-md:grid-cols-1 gap-[10px]">
                         <div>
                             {{ partial:partials/form-input type="text" name="first_name" label="First Name" required="true" placeholder="First Name" label_class="block font-body text-sm font-normal text-text-primary mb-1" input_class="w-full rounded border border-border-medium bg-white px-4 py-[11px] text-base text-text-primary font-body focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none" }}
-                            {{ if error:first_name }}<p class="text-red-600 text-xs mt-1">{{ error:first_name }}</p>{{ /if }}
+                            {{ if error:first_name }}<p class="text-status-error text-xs mt-1">{{ error:first_name }}</p>{{ /if }}
                         </div>
                         <div>
                             {{ partial:partials/form-input type="text" name="last_name" label="Last Name" required="true" placeholder="Last Name" label_class="block font-body text-sm font-normal text-text-primary mb-1" input_class="w-full rounded border border-border-medium bg-white px-4 py-[11px] text-base text-text-primary font-body focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none" }}
-                            {{ if error:last_name }}<p class="text-red-600 text-xs mt-1">{{ error:last_name }}</p>{{ /if }}
+                            {{ if error:last_name }}<p class="text-status-error text-xs mt-1">{{ error:last_name }}</p>{{ /if }}
                         </div>
                     </div>
 
@@ -25,19 +25,19 @@
                     <div class="grid grid-cols-2 max-md:grid-cols-1 gap-[10px]">
                         <div>
                             {{ partial:partials/form-input type="email" name="email" label="Email" required="true" placeholder="Email Address" label_class="block font-body text-sm font-normal text-text-primary mb-1" input_class="w-full rounded border border-border-medium bg-white px-4 py-[11px] text-base text-text-primary font-body focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none" }}
-                            {{ if error:email }}<p class="text-red-600 text-xs mt-1">{{ error:email }}</p>{{ /if }}
+                            {{ if error:email }}<p class="text-status-error text-xs mt-1">{{ error:email }}</p>{{ /if }}
                         </div>
                         <div>
                             {{ partial:partials/form-input type="tel" name="phone" label="Phone" required="true" placeholder="Phone Number" pattern="[0-9()#&+*\-=.]+" input_title="Only numbers and phone characters (#, -, *, etc) are accepted." label_class="block font-body text-sm font-normal text-text-primary mb-1" input_class="w-full rounded border border-border-medium bg-white px-4 py-[11px] text-base text-text-primary font-body focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none" }}
-                            {{ if error:phone }}<p class="text-red-600 text-xs mt-1">{{ error:phone }}</p>{{ /if }}
+                            {{ if error:phone }}<p class="text-status-error text-xs mt-1">{{ error:phone }}</p>{{ /if }}
                         </div>
                     </div>
 
                     {{# Comments (full width) #}}
                     <div>
-                        <label for="comments" class="block font-body text-sm font-normal text-text-primary mb-1">Comments <span class="text-red-500">*</span></label>
+                        <label for="comments" class="block font-body text-sm font-normal text-text-primary mb-1">Comments <span class="text-status-error">*</span></label>
                         <textarea name="comments" id="comments" rows="4" required placeholder="How can we help you?" class="w-full rounded border border-border-medium bg-white px-4 py-[11px] text-base text-text-primary font-body focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none resize-y"></textarea>
-                        {{ if error:comments }}<p class="text-red-600 text-xs mt-1">{{ error:comments }}</p>{{ /if }}
+                        {{ if error:comments }}<p class="text-status-error text-xs mt-1">{{ error:comments }}</p>{{ /if }}
                     </div>
 
                     {{# Submit button (full width) #}}
@@ -50,7 +50,7 @@
                 </div>
 
                 {{ if success }}
-                <div class="mt-4 bg-green-50 border border-green-200 rounded p-4 text-green-800">
+                <div class="mt-4 bg-status-success-bg border border-status-success-border rounded p-4 text-status-success">
                     Thank you for your message! We will get back to you as soon as possible.
                 </div>
                 {{ /if }}

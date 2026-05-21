@@ -1,0 +1,20 @@
+<a href="mailto:{{ organization:email }}" class="{{ link_class }}" aria-label="Email">
+    {{ partial:icon name="email" class="w-4 h-4" }}
+</a>
+{{ social_links }}
+{{ if facebook_url }}
+<a href="{{ facebook_url }}" target="_blank" rel="noopener" class="{{ link_class }}" aria-label="Facebook">
+    {{ partial:icon name="facebook" class="w-4 h-4" }}
+</a>
+{{ /if }}
+{{ if instagram_url }}
+<a href="{{ instagram_url }}" target="_blank" rel="noopener" class="{{ link_class }}" aria-label="Instagram">
+    {{ partial:icon name="instagram" class="w-4 h-4" }}
+</a>
+{{ /if }}
+{{ if venmo_url }}{{ if show_venmo }}
+<a href="{{ venmo_url }}" target="_blank" rel="noopener" class="{{ link_class }}" aria-label="Donate">
+    {{ partial:icon name="venmo" class="w-4 h-4" }}
+</a>
+{{ /if }}{{ /if }}
+{{ /social_links }}

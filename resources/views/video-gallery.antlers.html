@@ -1,16 +1,16 @@
 {{ partial:partials/page-header }}
 
 <!-- Video Grid -->
-<section class="py-[30px] bg-white">
+<section class="py-section-sm bg-white">
     <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-5">
 
         {{ unless videos }}
         <p class="text-center text-text-muted py-12 col-span-full">No videos available yet.</p>
         {{ /unless }}
         {{ videos }}
-        <div class="rounded-[10px] overflow-hidden shadow-card">
+        <div class="rounded-card overflow-hidden shadow-card">
             <div class="bg-brand-green py-2.5 px-2.5 text-center">
-                <h2 class="font-display text-[32px] max-md:text-[26px] font-semibold uppercase leading-[44px] max-md:leading-[36px] text-white m-0">{{ year }}</h2>
+                <h2 class="font-display text-display max-md:text-mid font-semibold uppercase leading-[44px] max-md:leading-[36px] text-white m-0">{{ year }}</h2>
             </div>
             <div class="aspect-[3/2]">
                 <iframe src="https://www.youtube.com/embed/{{ youtube_id }}" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" title="{{ year }} Community Ambulance Video" sandbox="allow-scripts allow-same-origin"></iframe>

@@ -7,26 +7,7 @@
                 {{ organization:phone }}
             </a>
             <div class="flex items-center gap-3">
-                <a href="mailto:{{ organization:email }}" class="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/20 transition" aria-label="Email">
-                    {{ partial:icon name="email" class="w-4 h-4" }}
-                </a>
-                {{ social_links }}
-                {{ if facebook_url }}
-                <a href="{{ facebook_url }}" target="_blank" rel="noopener" class="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/20 transition" aria-label="Facebook">
-                    {{ partial:icon name="facebook" class="w-4 h-4" }}
-                </a>
-                {{ /if }}
-                {{ if instagram_url }}
-                <a href="{{ instagram_url }}" target="_blank" rel="noopener" class="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/20 transition" aria-label="Instagram">
-                    {{ partial:icon name="instagram" class="w-4 h-4" }}
-                </a>
-                {{ /if }}
-                {{ if venmo_url }}
-                <a href="{{ venmo_url }}" target="_blank" rel="noopener" class="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/20 transition" aria-label="Donate">
-                    {{ partial:icon name="venmo" class="w-4 h-4" }}
-                </a>
-                {{ /if }}
-                {{ /social_links }}
+                {{ partial:social-links link_class="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/20 transition" show_venmo="true" }}
             </div>
         </div>
     </div>
