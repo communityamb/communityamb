@@ -31,7 +31,7 @@ host('production')
     ->set('deploy_path', getenv('DEPLOY_PATH') ?: '~/communityamb');
 
 task('deploy:build_upload', function () {
-    $buildPath = get('release_path') . '/public/build';
+    $buildPath = get('release_path').'/public/build';
     run("mkdir -p {$buildPath}");
     upload('public/build/', $buildPath);
 })->desc('Upload locally-built Vite assets');
