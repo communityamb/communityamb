@@ -41,7 +41,7 @@ task('statamic:stache:warm', artisan('statamic:stache:warm'));
 
 task('deploy:symlink_public_html', function () {
     $deployPath = get('deploy_path');
-    run("rm -rf ~/domains/communityamb.org/public_html");
+    run('rm -rf ~/domains/communityamb.org/public_html');
     run("ln -s {$deployPath}/current/public ~/domains/communityamb.org/public_html");
 })->desc('Symlink public_html to current release public/');
 
