@@ -2,20 +2,20 @@
 
 <section class="py-8 max-md:py-4 max-md:mt-0">
     <div class="max-w-7xl mx-auto px-4">
-        <h2 class="font-display text-[42px] max-lg:text-[34px] max-md:text-[24px] font-semibold capitalize leading-[44px] max-lg:leading-[50px] max-md:leading-[36px] text-brand-green-accent text-center">2025 Date - June 15th, 2025</h2>
+        <h2 class="font-display text-[42px] max-lg:text-[34px] max-md:text-[24px] font-semibold capitalize leading-[44px] max-lg:leading-[50px] max-md:leading-[36px] text-brand-green-accent text-center">{{ event_date_display }}</h2>
     </div>
 </section>
 
 <section class="py-[30px] max-md:py-[10px]">
     <div class="max-w-7xl mx-auto px-4 flex flex-row max-md:flex-col gap-6 items-stretch">
         <div class="w-1/2 max-md:w-full flex flex-col justify-center">
-            <h2 class="font-display text-[42px] max-lg:text-[34px] max-md:text-[24px] font-semibold capitalize leading-[44px] max-lg:leading-[50px] max-md:leading-[36px] text-brand-green-accent text-center mb-6">Join us for the 15th annual community ambulance 5k run and walk</h2>
-            <img src="/assets/images/uploads/2023/09/run.jpg" alt="Community Ambulance 5K Run/Walk and Sayville Summer Series" class="w-full rounded-lg">
+            <h2 class="font-display text-[42px] max-lg:text-[34px] max-md:text-[24px] font-semibold capitalize leading-[44px] max-lg:leading-[50px] max-md:leading-[36px] text-brand-green-accent text-center mb-6">{{ event_heading }}</h2>
+            <img src="{{ event_image }}" alt="Community Ambulance 5K Run/Walk and Sayville Summer Series" class="w-full rounded-lg">
         </div>
         <div class="w-1/2 max-md:w-full flex flex-col justify-center max-lg:text-center">
-            <h5 class="font-display text-[18px] max-md:text-[16px] font-medium leading-[30px] max-md:leading-[26px] text-text-primary mb-4">The run begins at 9am at the Islip Grange Park in Sayville, NY. The course is a mix of some cross country running through the park and then transitions onto the road. The finish will be back inside the park.</h5>
-            <h5 class="font-display text-[18px] max-md:text-[16px] font-medium leading-[30px] max-md:leading-[26px] text-text-primary mb-4">Following the event will be Food, Music and the awards ceremony in the park. Cooling station after the race to chill out.</h5>
-            <h5 class="font-display text-[18px] max-md:text-[16px] font-medium leading-[30px] max-md:leading-[26px] text-text-primary mb-4">This event benefits the Community Ambulance Company which serves the 5 towns of Sayville, West Sayville, Bayport, Oakdale and Bohemia. In 2024, the volunteers of Community Ambulance Company answered over 5,600 9-1-1 alarms in our district. Since 2020, the volunteers have been fighting against COVID-19 and continue to help on the front lines and respond to pandemic emergencies. Please show your support for the volunteers of Community Ambulance by participating in this event.</h5>
+            {{ event_paragraphs }}
+            <h5 class="font-display text-[18px] max-md:text-[16px] font-medium leading-[30px] max-md:leading-[26px] text-text-primary mb-4">{{ text }}</h5>
+            {{ /event_paragraphs }}
         </div>
     </div>
 </section>
@@ -23,6 +23,7 @@
 <section class="bg-white py-[5px]">
     <div class="max-w-7xl mx-auto px-4">
         <div class="grid md:grid-cols-3 max-lg:grid-cols-1 gap-6 mt-[20px] mb-[20px]">
+            <!-- Sponsor Card -->
             <div class="bg-white rounded-[10px] shadow-card p-[50px] max-md:p-[30px] text-center animate-fade-in-up">
                 <div class="flex justify-center mb-4">
                     <div class="w-[70px] h-[70px] rounded-full border-[3px] border-brand-green flex items-center justify-center">
@@ -31,12 +32,13 @@
                 </div>
                 <h2 class="font-display text-[22px] max-md:text-[18px] font-semibold capitalize leading-[34px] max-md:leading-[30px] text-brand-green-accent mb-4">Become a sponsor</h2>
                 <div class="font-body text-base text-text-secondary">
-                    <p class="mb-3">If you would like additional info about becoming a sponsor for the Community Ambulance 5k Run and Walk please email: <a href="mailto:kscheck@communityamb.org" class="text-link hover:text-link-hover underline">kscheck@communityamb.org</a></p>
+                    <p class="mb-3">If you would like additional info about becoming a sponsor for the Community Ambulance 5k Run and Walk please email: <a href="mailto:{{ sponsor_email }}" class="text-link hover:text-link-hover underline">{{ sponsor_email }}</a></p>
                     <p class="mb-3">(Community Ambulance Company is a non-profit 501 (c) (3). All donations are tax deductible.)</p>
-                    <p><a href="/assets/documents/2024-sponsor-letter.docx.pdf" class="text-link hover:text-link-hover underline">Click here</a> for the Sponsorship Application</p>
+                    <p><a href="{{ sponsor_pdf }}" class="text-link hover:text-link-hover underline">Click here</a> for the Sponsorship Application</p>
                 </div>
             </div>
 
+            <!-- Race Details Card -->
             <div class="bg-white rounded-[10px] shadow-card p-[50px] max-md:p-[30px] text-center animate-fade-in-up">
                 <div class="flex justify-center mb-4">
                     <div class="w-[70px] h-[70px] rounded-full border-[3px] border-brand-green flex items-center justify-center">
@@ -45,11 +47,12 @@
                 </div>
                 <h2 class="font-display text-[22px] max-md:text-[18px] font-semibold capitalize leading-[34px] max-md:leading-[30px] text-brand-green-accent mb-4">Race Details</h2>
                 <div class="font-body text-base text-text-secondary">
-                    <p class="mb-3"><strong>Date:</strong> June 15th, 2025<br><strong>Time:</strong> 9AM – Rain or Shine<br><strong>Location:</strong> Islip Grange Park<br><strong>Registration:</strong> <a href="https://runsignup.com/Race/NY/Sayville/CommunityAmbulance5kRunandWalk" class="text-link hover:text-link-hover underline">Here</a></p>
-                    <p class="text-center">Race results will be collected after each event via a form emailed to all participants. Entrants will be on the honor system for submitting their own results. Results will be posted after each race and emailed to participants. Race results must be submitted by 11:59PM on the Sunday of the weekend the race takes place.</p>
+                    <p class="mb-3"><strong>Date:</strong> {{ race_date }}<br><strong>Time:</strong> {{ race_time }}<br><strong>Location:</strong> {{ race_location }}<br><strong>Registration:</strong> <a href="{{ registration_url }}" class="text-link hover:text-link-hover underline">Here</a></p>
+                    <p class="text-center">{{ race_results_note }}</p>
                 </div>
             </div>
 
+            <!-- Series Dates Card -->
             <div class="bg-white rounded-[10px] shadow-card p-[50px] max-md:p-[30px] text-center animate-fade-in-up">
                 <div class="flex justify-center mb-4">
                     <div class="w-[70px] h-[70px] rounded-full border-[3px] border-brand-green flex items-center justify-center">
@@ -58,9 +61,13 @@
                 </div>
                 <h2 class="font-display text-[22px] max-md:text-[18px] font-semibold capitalize leading-[34px] max-md:leading-[30px] text-brand-green-accent mb-4">Sayville summer series dates</h2>
                 <div class="font-body text-base text-text-secondary text-center">
-                    <p class="mb-3"><strong>The Community Ambulance 5K is part of the Sayville Summer Series</strong></p>
-                    <p class="mb-3"><strong>June 7th, 2025: 5k Keith Nintzel Memorial Run</strong> – Rotary Park (Candee Ave.)<br><strong>June 15th, 2025: Community Ambulance 5K</strong> – Broadway Ave Islip Grange<br><strong>June 21st, 2025: Sayville Fire Department Run</strong> – Broadway Ave<br><strong>July 4th, 2025: Iron Horse 4 Mile</strong> – Long Island Maritime Museum<br><strong>August 2nd, 2025: Hon. John P. Cohalan Sayville Summerfest 4 mile run</strong> – Sayville Running Company</p>
-                    <p><strong>Please note:</strong> To register for all 5 of the Sayville Run Series running events please <a href="https://runsignup.com/Race/NY/Sayville/SayvilleSummerSeries" target="_blank" rel="noopener" class="text-link hover:text-link-hover underline">click here</a>. There is a discount if you sign up for all 5 events at once.</p>
+                    <p class="mb-3"><strong>{{ series_intro }}</strong></p>
+                    <p class="mb-3">
+                        {{ series_events }}
+                        <strong>{{ event_name }}</strong> – {{ event_location }}{{ unless last }}<br>{{ /unless }}
+                        {{ /series_events }}
+                    </p>
+                    <p><strong>Please note:</strong> To register for all 5 of the Sayville Run Series running events please <a href="{{ series_registration_url }}" target="_blank" rel="noopener" class="text-link hover:text-link-hover underline">click here</a>. {{ series_registration_note }}</p>
                 </div>
             </div>
         </div>
@@ -70,6 +77,7 @@
 <section class="bg-white py-[5px]">
     <div class="max-w-7xl mx-auto px-4">
         <div class="grid md:grid-cols-2 max-lg:grid-cols-1 gap-6 mt-[20px] mb-[20px]">
+            <!-- Awards Card -->
             <div class="bg-white rounded-[10px] shadow-card p-[50px] max-md:p-[30px] text-center animate-fade-in-up">
                 <div class="flex justify-center mb-4">
                     <div class="w-[70px] h-[70px] rounded-full border-[3px] border-brand-green flex items-center justify-center">
@@ -80,26 +88,14 @@
                 <div class="font-body text-base text-text-secondary text-center">
                     <p class="mb-3"><strong>Medals will be awarded to the top three finishers in the following categories:</strong></p>
                     <ul class="list-disc list-inside text-left inline-block">
-                        <li>Overall Male</li>
-                        <li>Overall Female</li>
-                        <li>Ages:
-                            <ul class="list-disc list-inside ml-4">
-                                <li>10 and under</li>
-                                <li>11-14</li>
-                                <li>15-19</li>
-                                <li>20-29</li>
-                                <li>30-39</li>
-                                <li>40-49</li>
-                                <li>50-59</li>
-                                <li>60-69</li>
-                                <li>70-79</li>
-                                <li>80+</li>
-                            </ul>
-                        </li>
+                        {{ award_categories }}
+                        <li>{{ category }}</li>
+                        {{ /award_categories }}
                     </ul>
                 </div>
             </div>
 
+            <!-- Race Results Card -->
             <div class="bg-white rounded-[10px] shadow-card p-[50px] max-md:p-[30px] text-center animate-fade-in-up">
                 <div class="flex justify-center mb-4">
                     <div class="w-[70px] h-[70px] rounded-full border-[3px] border-brand-green flex items-center justify-center">
@@ -108,14 +104,12 @@
                 </div>
                 <h2 class="font-display text-[22px] max-md:text-[18px] font-semibold capitalize leading-[34px] max-md:leading-[30px] text-brand-green-accent mb-4">Race Results</h2>
                 <div class="font-body text-base text-text-secondary text-center">
-                    <p class="mb-3"><strong>Timing and results are managed by <a href="https://runsignup.com/Race/NY/Sayville/CommunityAmbulance5kRunandWalk" target="_blank" rel="noopener" class="text-link hover:text-link-hover underline">RunSignUp.com</a>.</strong></p>
+                    <p class="mb-3"><strong>{{ results_provider }} <a href="{{ results_provider_url }}" target="_blank" rel="noopener" class="text-link hover:text-link-hover underline">RunSignUp.com</a>.</strong></p>
                     <p class="mb-3">Browse the race results for each year:</p>
                     <ul class="list-disc list-inside text-left inline-block">
-                        <li><a href="https://runsignup.com/Race/Results/Simple/19097#resultSetId-465506;perpage:100" class="text-link hover:text-link-hover underline">2024 Race Results</a></li>
-                        <li><a href="https://runsignup.com/Race/Results/Simple/19097#resultSetId-388750;perpage:100" target="_blank" rel="noopener" class="text-link hover:text-link-hover underline">2023 Race Results</a></li>
-                        <li><a href="https://runsignup.com/Race/Results/Simple/19097#resultSetId-327634;perpage:100" target="_blank" rel="noopener" class="text-link hover:text-link-hover underline">2022 Race Results</a></li>
-                        <li><a href="https://runsignup.com/Race/Results/Simple/19097#resultSetId-161197;perpage:100" target="_blank" rel="noopener" class="text-link hover:text-link-hover underline">2019 Race Results</a></li>
-                        <li><a href="https://runsignup.com/Race/Results/Simple/19097#resultSetId-122017;perpage:100" target="_blank" rel="noopener" class="text-link hover:text-link-hover underline">2018 Race Results</a></li>
+                        {{ past_results }}
+                        <li><a href="{{ url }}" target="_blank" rel="noopener" class="text-link hover:text-link-hover underline">{{ year }} Race Results</a></li>
+                        {{ /past_results }}
                     </ul>
                 </div>
             </div>

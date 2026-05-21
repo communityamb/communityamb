@@ -1,0 +1,63 @@
+title: Video Gallery
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: template
+            field:
+              type: hidden
+              display: Template
+              default: video-gallery
+  videos:
+    display: Videos
+    sections:
+      -
+        display: Installation Dinner Videos
+        fields:
+          -
+            handle: videos
+            field:
+              type: grid
+              display: Videos
+              instructions: 'YouTube videos displayed in the gallery. Listed newest first.'
+              fields:
+                -
+                  handle: year
+                  field:
+                    type: text
+                    display: Year
+                    required: true
+                -
+                  handle: youtube_id
+                  field:
+                    type: text
+                    display: YouTube Video ID
+                    instructions: 'The ID from the YouTube URL (e.g. yuuuzJo71Wk).'
+                    required: true
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: meta_description
+            field:
+              type: textarea
+              display: Meta Description
+              character_limit: 160
+          -
+            handle: og_image
+            field:
+              type: assets
+              display: Social Share Image
+              container: assets
+              max_files: 1

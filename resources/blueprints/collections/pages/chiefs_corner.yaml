@@ -1,0 +1,72 @@
+title: Chief's Corner
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              container: assets
+          -
+            handle: template
+            field:
+              type: hidden
+              display: Template
+              default: chiefs-corner
+  chief:
+    display: Chief
+    sections:
+      -
+        display: Chief Information
+        fields:
+          -
+            handle: chief_name
+            field:
+              type: text
+              display: Chief Name
+              required: true
+          -
+            handle: chief_title
+            field:
+              type: text
+              display: Chief Title
+              default: Chief
+          -
+            handle: chief_photo
+            field:
+              type: text
+              display: Chief Photo Path
+              instructions: 'Path to the chief photo image.'
+          -
+            handle: chief_photo_alt
+            field:
+              type: text
+              display: Chief Photo Alt Text
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: meta_description
+            field:
+              type: textarea
+              display: Meta Description
+              character_limit: 160
+          -
+            handle: og_image
+            field:
+              type: assets
+              display: Social Share Image
+              container: assets
+              max_files: 1
