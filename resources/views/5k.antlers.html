@@ -16,6 +16,11 @@
             {{ event_paragraphs }}
             <h5 class="font-display text-[18px] max-md:text-[16px] font-medium leading-[30px] max-md:leading-[26px] text-text-primary mb-4">{{ text }}</h5>
             {{ /event_paragraphs }}
+            {{ call_counts:yearly_call_counts }}
+            {{ if first }}
+            <h5 class="font-display text-[18px] max-md:text-[16px] font-medium leading-[30px] max-md:leading-[26px] text-text-primary mb-4">This event benefits the Community Ambulance Company which serves the 5 towns of Sayville, West Sayville, Bayport, Oakdale and Bohemia. In {{ year }}, the volunteers of Community Ambulance Company answered {{ alarm_count }} 9-1-1 alarms in our district. Please show your support for the volunteers of Community Ambulance by participating in this event.</h5>
+            {{ /if }}
+            {{ /call_counts:yearly_call_counts }}
         </div>
     </div>
 </section>
@@ -47,8 +52,25 @@
                 </div>
                 <h2 class="font-display text-[22px] max-md:text-[18px] font-semibold capitalize leading-[34px] max-md:leading-[30px] text-brand-green-accent mb-4">Race Details</h2>
                 <div class="font-body text-base text-text-secondary">
-                    <p class="mb-3"><strong>Date:</strong> {{ race_date }}<br><strong>Time:</strong> {{ race_time }}<br><strong>Location:</strong> {{ race_location }}<br><strong>Registration:</strong> <a href="{{ registration_url }}" class="text-link hover:text-link-hover underline">Here</a></p>
-                    <p class="text-center">{{ race_results_note }}</p>
+                    <div class="inline-block text-left space-y-2 mb-4">
+                        <div class="flex items-center gap-2">
+                            <span class="text-brand-teal shrink-0">{{ partial:icon name="circle" class="w-3 h-3" }}</span>
+                            <span><strong>Date:</strong> {{ race_date }}</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-brand-teal shrink-0">{{ partial:icon name="circle" class="w-3 h-3" }}</span>
+                            <span><strong>Time:</strong> {{ race_time }}</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-brand-teal shrink-0">{{ partial:icon name="circle" class="w-3 h-3" }}</span>
+                            <span><strong>Location:</strong> {{ race_location }}</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-brand-teal shrink-0">{{ partial:icon name="circle" class="w-3 h-3" }}</span>
+                            <span><strong>Registration:</strong> <a href="{{ registration_url }}" class="text-link hover:text-link-hover underline">Here</a></span>
+                        </div>
+                    </div>
+                    <p class="text-center text-sm">{{ race_results_note }}</p>
                 </div>
             </div>
 
@@ -59,14 +81,20 @@
                         <svg class="w-[35px] h-[35px] text-brand-green" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                     </div>
                 </div>
-                <h2 class="font-display text-[22px] max-md:text-[18px] font-semibold capitalize leading-[34px] max-md:leading-[30px] text-brand-green-accent mb-4">Sayville summer series dates</h2>
+                <h2 class="font-display text-[22px] max-md:text-[18px] font-semibold capitalize leading-[34px] max-md:leading-[30px] text-brand-green-accent mb-4">Sayville Summer Series</h2>
                 <div class="font-body text-base text-text-secondary text-center">
-                    <p class="mb-3"><strong>{{ series_intro }}</strong></p>
-                    <p class="mb-3">
+                    <p class="mb-4"><strong>{{ series_intro }}</strong></p>
+                    <div class="inline-block text-left space-y-3 mb-4">
                         {{ series_events }}
-                        <strong>{{ event_name }}</strong> – {{ event_location }}{{ unless last }}<br>{{ /unless }}
+                        <div class="flex items-start gap-2">
+                            <span class="text-brand-teal shrink-0 mt-1">{{ partial:icon name="circle" class="w-3 h-3" }}</span>
+                            <div>
+                                <strong>{{ event_name }}</strong>
+                                <div class="text-text-muted text-sm">{{ event_location }}</div>
+                            </div>
+                        </div>
                         {{ /series_events }}
-                    </p>
+                    </div>
                     <p><strong>Please note:</strong> To register for all 5 of the Sayville Run Series running events please <a href="{{ series_registration_url }}" target="_blank" rel="noopener" class="text-link hover:text-link-hover underline">click here</a>. {{ series_registration_note }}</p>
                 </div>
             </div>
@@ -87,11 +115,14 @@
                 <h2 class="font-display text-[22px] max-md:text-[18px] font-semibold capitalize leading-[34px] max-md:leading-[30px] text-brand-green-accent mb-4">Awards</h2>
                 <div class="font-body text-base text-text-secondary text-center">
                     <p class="mb-3"><strong>Medals will be awarded to the top three finishers in the following categories:</strong></p>
-                    <ul class="list-disc list-inside text-left inline-block">
+                    <div class="inline-grid grid-cols-2 max-md:grid-cols-1 gap-x-8 gap-y-2 text-left">
                         {{ award_categories }}
-                        <li>{{ category }}</li>
+                        <div class="flex items-center gap-2">
+                            <span class="text-brand-teal shrink-0">{{ partial:icon name="circle" class="w-3 h-3" }}</span>
+                            <span>{{ category }}</span>
+                        </div>
                         {{ /award_categories }}
-                    </ul>
+                    </div>
                 </div>
             </div>
 
@@ -104,13 +135,11 @@
                 </div>
                 <h2 class="font-display text-[22px] max-md:text-[18px] font-semibold capitalize leading-[34px] max-md:leading-[30px] text-brand-green-accent mb-4">Race Results</h2>
                 <div class="font-body text-base text-text-secondary text-center">
-                    <p class="mb-3"><strong>{{ results_provider }} <a href="{{ results_provider_url }}" target="_blank" rel="noopener" class="text-link hover:text-link-hover underline">RunSignUp.com</a>.</strong></p>
-                    <p class="mb-3">Browse the race results for each year:</p>
-                    <ul class="list-disc list-inside text-left inline-block">
-                        {{ past_results }}
-                        <li><a href="{{ url }}" target="_blank" rel="noopener" class="text-link hover:text-link-hover underline">{{ year }} Race Results</a></li>
-                        {{ /past_results }}
-                    </ul>
+                    <p class="mb-3">{{ results_provider }} <a href="{{ results_provider_url }}" target="_blank" rel="noopener" class="text-link hover:text-link-hover underline">RunSignUp.com</a>.</p>
+                    <p class="mb-6">All past race results are available on the RunSignUp page — select the year you want to view.</p>
+                    <a href="{{ results_provider_url }}/results" target="_blank" rel="noopener" class="inline-block bg-brand-green hover:bg-brand-navy text-white font-semibold px-8 py-3 rounded transition font-display">
+                        View Race Results
+                    </a>
                 </div>
             </div>
         </div>

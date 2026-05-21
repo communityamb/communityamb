@@ -23,6 +23,10 @@ Route::get('/sitemap.xml', function () {
         ->header('Content-Type', 'application/xml');
 });
 
+// Parent menu items that should redirect to their primary child page
+Route::permanentRedirect('/our-team', '/our-team/chiefs-corner');
+Route::permanentRedirect('/events', '/events/annual-5k-run-and-walk');
+
 // 301 redirects — old flat URL structure to new nested hierarchy
 $redirects = [
     '/community-ambulance-companys-history' => '/about-us/community-ambulance-companys-history',

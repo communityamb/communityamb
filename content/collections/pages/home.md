@@ -32,45 +32,7 @@ about_image: /assets/images/uploads/2023/09/DSC_3381-scaled.jpg
 call_count_heading: 'How Busy Are We?'
 call_count_description: "Every alarm answered is a neighbor helped. From cardiac emergencies and car accidents to water rescues on Fire Island, our volunteers respond 24/7, 365 days a year — all at no cost to the communities we serve."
 call_count_subheading: Call Count
-call_count_summary: 'As of April 26th, 1,625 alarms have been answered for 2026.'
 call_count_image: /assets/images/uploads/2023/12/covid-photo-with-blur.jpg
-yearly_call_counts:
-  -
-    year: '2025'
-    alarm_count: '5,637'
-  -
-    year: '2024'
-    alarm_count: '5,780'
-  -
-    year: '2023'
-    alarm_count: '5,612'
-  -
-    year: '2022'
-    alarm_count: '5,617'
-  -
-    year: '2021'
-    alarm_count: '5,219'
-  -
-    year: '2020'
-    alarm_count: '4,445'
-  -
-    year: '2019'
-    alarm_count: '5,268'
-  -
-    year: '2018'
-    alarm_count: '5,025'
-  -
-    year: '2017'
-    alarm_count: '4,841'
-  -
-    year: '2016'
-    alarm_count: '4,661'
-  -
-    year: '2015'
-    alarm_count: '4,510'
-  -
-    year: '2014'
-    alarm_count: '5,318'
 donate_heading: Donate to Community Ambulance Company
 donate_text: |-
   Checks can be made out to

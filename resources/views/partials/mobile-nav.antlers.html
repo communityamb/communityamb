@@ -10,7 +10,7 @@
                 <div x-show="openSection === '{{ title }}'" x-collapse class="ml-4 space-y-1">
                     <a href="{{ url }}" class="block px-3 py-1.5 text-sm text-text-muted hover:text-brand-green">{{ title }} Overview</a>
                     {{ children }}
-                    <a href="{{ url }}" class="block px-3 py-1.5 text-sm text-text-muted hover:text-brand-green {{ if is_current }} text-brand-green {{ /if }}">{{ title }}</a>
+                    <a href="{{ url }}" {{ if url | contains:'://' }}target="_blank" rel="noopener"{{ /if }} class="block px-3 py-1.5 text-sm text-text-muted hover:text-brand-green {{ if is_current }} text-brand-green {{ /if }}">{{ title }}</a>
                     {{ /children }}
                 </div>
             </div>

@@ -1,0 +1,35 @@
+title: 'Call Counts'
+tabs:
+  main:
+    display: 'Call Counts'
+    sections:
+      -
+        display: 'Current Year'
+        instructions: 'Update the summary line whenever the running count changes. When a new year starts, move the final count to the top of the yearly list below, drop the oldest year, and update this summary for the new year.'
+        fields:
+          -
+            handle: current_year_summary
+            field:
+              type: text
+              display: 'Current Year Summary'
+              instructions: 'e.g. "As of April 26th, 1,625 alarms have been answered for 2026."'
+      -
+        display: 'Historical Call Counts'
+        instructions: 'Newest year first. When a year ends, add its final count at the top and remove the oldest entry at the bottom.'
+        fields:
+          -
+            handle: yearly_call_counts
+            field:
+              type: grid
+              display: 'Yearly Call Counts'
+              fields:
+                -
+                  handle: year
+                  field:
+                    type: text
+                    display: Year
+                -
+                  handle: alarm_count
+                  field:
+                    type: text
+                    display: 'Alarm Count'

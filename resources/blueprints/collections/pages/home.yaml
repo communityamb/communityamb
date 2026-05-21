@@ -126,32 +126,10 @@ tabs:
               display: Call Count Subheading
               default: 'Call Count'
           -
-            handle: call_count_summary
-            field:
-              type: text
-              display: Call Count Summary
-              instructions: 'e.g. "As of April 26th, 1,625 alarms have been answered for 2026."'
-          -
             handle: call_count_image
             field:
               type: text
               display: Call Count Image Path
-          -
-            handle: yearly_call_counts
-            field:
-              type: grid
-              display: Yearly Call Counts
-              fields:
-                -
-                  handle: year
-                  field:
-                    type: text
-                    display: Year
-                -
-                  handle: alarm_count
-                  field:
-                    type: text
-                    display: Alarm Count
   donate:
     display: Donate
     sections:
