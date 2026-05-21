@@ -61,9 +61,9 @@
     --text-hero: 2.625rem;
     --text-hero--line-height: 1.1;
 
-    --max-w-container: 87.5rem;
-    --max-w-content: 75rem;
-    --max-w-narrow: 61.25rem;
+    --container-container: 87.5rem;
+    --container-content: 75rem;
+    --container-narrow: 61.25rem;
 
     --spacing-section: 3.125rem;
     --spacing-section-sm: 1.875rem;
