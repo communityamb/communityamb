@@ -29,7 +29,8 @@ host('production')
     ->set('hostname', getenv('DEPLOY_HOST') ?: '0.0.0.0')
     ->set('port', (int) (getenv('DEPLOY_PORT') ?: 22))
     ->set('deploy_path', getenv('DEPLOY_PATH') ?: '~/communityamb')
-    ->set('bin/php', '~/bin/php');
+    ->set('bin/php', '~/bin/php')
+    ->set('shell', 'bash -s');
 
 task('deploy:build_upload', function () {
     $buildPath = get('release_path').'/public/build';
