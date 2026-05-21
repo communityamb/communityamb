@@ -70,6 +70,17 @@ After each phase, document:
 - Tailwind CSS v4 `max-w-*` utilities are generated from `--container-*` theme tokens, NOT `--max-w-*`. Use `--container-<name>` in `@theme` to create `max-w-<name>` utilities.
 - Team role select uses display values as both key and label (e.g., `Chief: Chief`) because templates filter with `role:is="Chief"`.
 
+## Phase Validation Checklist (mandatory before merge)
+
+Every phase MUST pass all of these before merging to main. A build success or 200 status is NOT sufficient.
+
+1. **Build check:** `npx vite build` succeeds
+2. **Utility class verification:** If new `@theme` tokens were added, grep the built CSS to confirm the expected utility classes exist (e.g., `grep 'max-w-container' public/build/assets/*.css`)
+3. **Blueprint field check:** If any blueprint field type was changed, verify `{{ field_name }}` renders the expected HTML on at least one affected page (curl the page and check for raw markdown, empty output, or broken tags)
+4. **Visual rendering check:** Start the server (`php artisan serve`), load every modified page in a browser (or curl and inspect the `<main>` HTML), and confirm content renders with proper structure and styling. A 200 response does not mean the page looks correct.
+5. **Stache clear:** Run `php artisan statamic:stache:clear && php artisan statamic:stache:warm` after blueprint changes before testing
+6. **No stale hot file:** Verify `public/hot` does not exist before testing built assets (delete it if Vite is not running)
+
 ## Dev servers
 ```
 composer run dev    # PHP artisan on 8000, Vite on 5173, queue + pail
