@@ -19,12 +19,12 @@ class SecurityHeaders
         $response->headers->set(
             'Content-Security-Policy',
             "default-src 'self'; "
-            ."script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.youtube.com https://s.ytimg.com https://cdn.jsdelivr.net; "
+            ."script-src 'self' 'unsafe-eval' https://www.youtube.com https://s.ytimg.com https://cdn.jsdelivr.net https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; "
             ."style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
             ."font-src 'self' https://fonts.gstatic.com; "
             ."img-src 'self' data: https:; "
-            .'frame-src https://www.youtube.com https://www.google.com https://maps.google.com; '
-            ."connect-src 'self'"
+            .'frame-src https://www.youtube.com https://www.google.com https://maps.google.com https://www.google.com/recaptcha/; '
+            ."connect-src 'self' https://www.google.com/recaptcha/"
         );
 
         if (! app()->environment('local', 'testing')) {

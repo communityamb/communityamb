@@ -1,48 +1,83 @@
-<p align="center">
-<picture>
-    <source srcset="https://statamic.com/assets/branding/squircle/statamic-logo-lime-white.svg" media="(prefers-color-scheme: dark)">
-    <img align="center" width="350" alt="Statamic Logo" src="https://statamic.com/assets/branding/squircle/statamic-logo-lime.svg">
-</picture>
-</p>
+# Community Ambulance Company
 
-## About Statamic
+Website for [Community Ambulance Company, Inc.](https://communityamb.org) — a volunteer 501(c)(3) providing emergency medical services to Sayville, West Sayville, Oakdale, Bayport, and Bohemia, NY since 1950.
 
-Statamic is the flat-first, Laravel + Git powered CMS designed for building beautiful, easy to manage websites.
+## Stack
 
-> [!NOTE]
-> This repository contains the code for a fresh Statamic project that is installed via the Statamic CLI tool.
->
-> The code for the Statamic Composer package itself can be found at the [Statamic core package repository][cms-repo].
+- **CMS**: [Statamic 6](https://statamic.com) (flat-file, Laravel-based)
+- **Framework**: Laravel 13 / PHP 8.4+
+- **Frontend**: Tailwind CSS 4, Alpine.js 3, Vite 8
+- **Hosting**: Hostinger (deployed via [Deployer](https://deployer.org))
 
+## Local Development
 
-## Learning Statamic
+```bash
+# Install dependencies
+composer install
+npm install
 
-Statamic has extensive [documentation][docs]. We dedicate a significant amount of time and energy every day to improving them, so if something is unclear, feel free to open issues for anything you find confusing or incomplete. We are happy to consider anything you feel will make the docs and CMS better.
+# Copy environment and generate key
+cp .env.example .env
+php artisan key:generate
 
-## Support
+# Start dev servers (PHP, Vite, queue worker, log tail)
+composer run dev
+```
 
-We provide official developer support on [Statamic Pro](https://statamic.com/pricing) projects. Community-driven support is available via [GitHub Discussions](https://github.com/statamic/cms/discussions) and in [Discord][discord].
+The site runs at `http://localhost:8000`. The Statamic control panel is at `/cp`.
 
+## Project Structure
 
-## Contributing
+```
+content/            Flat-file CMS content (collections, globals, navigation)
+resources/
+  blueprints/       Statamic field definitions
+  forms/            Form configurations (contact, join, youth squad)
+  views/            Antlers templates
+  css/              Tailwind CSS
+  js/               Alpine.js + gallery + reCAPTCHA
+config/statamic/    Statamic configuration
+app/
+  Http/Middleware/   Security headers, rate limiting, reCAPTCHA validation
+  Listeners/         Form submission handlers (email, Zapier webhooks)
+```
 
-Thank you for considering contributing to Statamic! We simply ask that you review the [contribution guide][contribution] before you open issues or send pull requests.
+## Forms
 
+Three public forms, all protected by honeypot, rate limiting (5/min/IP), and optional reCAPTCHA v3:
 
-## Code of Conduct
+| Form | Path | Handler |
+|------|------|---------|
+| Contact Us | `/contact-us` | Email to secretary/board |
+| Join Community | `/join-community` | Zapier webhook |
+| Youth Squad | `/join-community/join-youth-squad` | Zapier webhook |
 
-In order to ensure that the Statamic community is welcoming to all and generally a rad place to belong, please review and abide by the [Code of Conduct](https://github.com/statamic/cms/wiki/Code-of-Conduct).
+## Environment Variables
 
+See `.env.example` for the full list. Key production settings:
 
-## Important Links
+| Variable | Purpose |
+|----------|---------|
+| `QUEUE_CONNECTION` | Set to `database` in production for async form processing |
+| `RECAPTCHA_SITE_KEY` / `RECAPTCHA_SECRET_KEY` | Google reCAPTCHA v3 (optional — forms work without it) |
+| `ZAPIER_JOIN_WEBHOOK_URL` / `ZAPIER_YOUTH_WEBHOOK_URL` | Zapier endpoints for membership forms |
+| `CONTACT_FORM_TO` / `CONTACT_FORM_CC` | Email recipients for contact form |
+| `STATAMIC_LICENSE_KEY` | Required for Statamic Pro features |
 
-- [Statamic Main Site](https://statamic.com)
-- [Statamic Documentation][docs]
-- [Statamic Core Package Repo][cms-repo]
-- [Statamic Migrator](https://github.com/statamic/migrator)
-- [Statamic Discord][discord]
+## Deployment
 
-[docs]: https://statamic.dev/
-[discord]: https://statamic.com/discord
-[contribution]: https://github.com/statamic/cms/blob/master/CONTRIBUTING.md
-[cms-repo]: https://github.com/statamic/cms
+Deployments use Deployer for atomic releases with zero-downtime symlink swaps.
+
+```bash
+# Manual deploy (usually triggered by GitHub Actions)
+vendor/bin/dep deploy production
+```
+
+The deploy workflow (`.github/workflows/deploy.yml`) runs CI first, builds Vite assets in the runner, then deploys code and uploads built assets to the server.
+
+## CI/CD
+
+- **CI**: Runs on every PR and push to main — Pint lint, Vite build, PHPUnit tests
+- **Deploy**: Manual trigger via GitHub Actions (workflow_dispatch)
+- **Dependabot**: Weekly PRs for Composer, npm, and GitHub Actions updates
+- **Branch protection**: `main` requires passing CI (`test-and-build` check)
