@@ -43,7 +43,7 @@ return [
 
         'password' => [
             'driver' => 'password',
-            'allowed' => ['secret'],
+            'allowed' => array_filter([env('STATAMIC_PROTECT_PASSWORD')]),
             'field' => null,
             'form_url' => null,
         ],

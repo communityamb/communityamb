@@ -1,3 +1,5 @@
 name: 'Elizabeth White'
 super: false
+roles:
+  - editor
 id: 6890ab4e-091a-445e-b650-8ea3d0ee2db0
