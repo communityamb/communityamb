@@ -2,11 +2,12 @@
 
 namespace App\Listeners;
 
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Statamic\Events\FormSubmitted;
 
-class SendFormToZapier
+class SendFormToZapier implements ShouldQueue
 {
     protected array $webhooks = [
         'join_community' => 'ZAPIER_JOIN_WEBHOOK_URL',
