@@ -10,6 +10,7 @@ use Statamic\Events\FormSubmitted;
 class SendFormToZapier implements ShouldQueue
 {
     protected array $webhooks = [
+        'contact_us' => 'ZAPIER_CONTACT_WEBHOOK_URL',
         'join_community' => 'ZAPIER_JOIN_WEBHOOK_URL',
         'youth_squad' => 'ZAPIER_YOUTH_WEBHOOK_URL',
     ];

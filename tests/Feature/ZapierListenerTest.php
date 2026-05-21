@@ -81,9 +81,14 @@ class ZapierListenerTest extends TestCase
         });
     }
 
-    public function test_contact_us_form_does_not_dispatch_webhook(): void
+    public function test_contact_us_form_dispatches_webhook(): void
     {
-        Http::fake();
+        $webhookUrl = 'https://hooks.zapier.com/hooks/catch/test-contact';
+        config(['services.zapier.contact_us' => $webhookUrl]);
+
+        Http::fake([
+            $webhookUrl => Http::response([], 200),
+        ]);
 
         $data = [
             'first_name' => 'John',
@@ -98,7 +103,11 @@ class ZapierListenerTest extends TestCase
         $listener = new SendFormToZapier;
         $listener->handle($event);
 
-        Http::assertNothingSent();
+        Http::assertSent(function ($request) use ($webhookUrl, $data) {
+            return $request->url() === $webhookUrl
+                && $request['first_name'] === $data['first_name']
+                && $request['email'] === $data['email'];
+        });
     }
 
     public function test_missing_webhook_url_logs_warning(): void

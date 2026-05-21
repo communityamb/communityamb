@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Listeners\SendContactFormEmail;
 use App\Listeners\SendFormToZapier;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Support\Facades\Event;
@@ -20,7 +19,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Event::listen(FormSubmitted::class, SendFormToZapier::class);
-        Event::listen(FormSubmitted::class, SendContactFormEmail::class);
 
         RateLimiter::for('form-submissions', function ($request) {
             return Limit::perMinute(5)->by($request->ip());

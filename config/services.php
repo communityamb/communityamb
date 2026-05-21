@@ -36,13 +36,9 @@ return [
     ],
 
     'zapier' => [
+        'contact_us' => env('ZAPIER_CONTACT_WEBHOOK_URL'),
         'join_community' => env('ZAPIER_JOIN_WEBHOOK_URL'),
         'youth_squad' => env('ZAPIER_YOUTH_WEBHOOK_URL'),
-    ],
-
-    'contact_form' => [
-        'to' => env('CONTACT_FORM_TO', 'secretary@communityamb.org'),
-        'cc' => env('CONTACT_FORM_CC', 'jhartmann@communityamb.org'),
     ],
 
     'recaptcha' => [
