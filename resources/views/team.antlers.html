@@ -10,7 +10,7 @@
     <div class="max-w-[1200px] mx-auto px-4">
         <div class="prose prose-lg max-w-none
                     font-display
-                    prose-headings:font-display prose-headings:text-[#008000] prose-headings:text-center prose-headings:uppercase prose-headings:font-semibold
+                    prose-headings:font-display prose-headings:text-brand-green-accent prose-headings:text-center prose-headings:uppercase prose-headings:font-semibold
                     prose-h2:text-[42px] prose-h2:leading-[44px] max-lg:prose-h2:text-[34px] max-lg:prose-h2:leading-[50px] max-md:prose-h2:text-[22px] max-md:prose-h2:leading-[36px]
                     prose-p:text-[18px] prose-p:leading-[30px] prose-p:font-display prose-p:text-text-secondary prose-p:text-center max-md:prose-p:text-[16px] max-md:prose-p:leading-[26px]
                     prose-li:text-[18px] prose-li:leading-[30px] prose-li:font-display prose-li:text-text-secondary prose-li:list-none max-md:prose-li:text-[16px] max-md:prose-li:leading-[26px]
@@ -29,15 +29,15 @@
    ═══════════════════════════════════════════════════════════ #}}
 
 {{# Subtitle #}}
-<section class="bg-[#80008017] py-[50px] max-md:py-[30px]">
+<section class="bg-memorial-bg py-[50px] max-md:py-[30px]">
     <div class="max-w-[1200px] mx-auto px-4 text-center">
-        <h2 class="font-display text-[42px] font-semibold uppercase leading-[44px] text-[#008000] max-lg:text-[34px] max-lg:leading-[50px] max-md:text-[22px] max-md:leading-[36px]">Members who have Answered their Last Alarm</h2>
+        <h2 class="font-display text-[42px] font-semibold uppercase leading-[44px] text-brand-green-accent max-lg:text-[34px] max-lg:leading-[50px] max-md:text-[22px] max-md:leading-[36px]">Members who have Answered their Last Alarm</h2>
         <div class="w-[10%] border-t border-black mx-auto mt-4"></div>
     </div>
 </section>
 
 {{# Memorial cards #}}
-<section class="bg-[#80008017] pb-[50px] max-md:pb-[30px]">
+<section class="bg-memorial-bg pb-[50px] max-md:pb-[30px]">
     <div class="max-w-[1200px] mx-auto px-4">
         <style>
             .memorial-grid > *:first-child:nth-last-child(odd) { grid-column: 1 / -1; }
@@ -45,7 +45,7 @@
         <div class="memorial-grid grid grid-cols-1 md:grid-cols-2 gap-[20px]">
             {{ collection:team_members category:is="in-memoriam" sort="sort_order:asc" }}
 
-            <div class="rounded-[10px] p-[30px] max-md:p-[20px] bg-[#8000801A]"
+            <div class="rounded-[10px] p-[30px] max-md:p-[20px] bg-memorial-bg"
                  x-data="{ shown: false }"
                  x-intersect.once="shown = true"
                  x-cloak
@@ -54,8 +54,8 @@
                     {{ if photo_url }}
                     <img src="{{ photo_url }}" alt="{{ title }}" class="w-[80px] h-[80px] object-cover rounded-full mx-auto">
                     {{ /if }}
-                    <h3 class="font-display text-[26px] font-semibold leading-[34px] text-[#008000] mt-4 max-md:text-[22px] max-md:leading-[30px]">{{ title }}</h3>
-                    <p class="font-display text-[18px] font-medium leading-[26px] text-[#008000] mt-1 max-md:text-[16px]">{{ role }}</p>
+                    <h3 class="font-display text-[26px] font-semibold leading-[34px] text-brand-green-accent mt-4 max-md:text-[22px] max-md:leading-[30px]">{{ title }}</h3>
+                    <p class="font-display text-[18px] font-medium leading-[26px] text-brand-green-accent mt-1 max-md:text-[16px]">{{ role }}</p>
                     {{ if date_of_passing }}
                     <p class="font-display text-[16px] leading-[24px] text-text-secondary mt-1 italic">{{ date_of_passing }}</p>
                     {{ /if }}
@@ -79,7 +79,7 @@
 <section class="bg-surface-offwhite py-[50px] max-md:py-[30px]">
     <div class="max-w-[1200px] mx-auto px-4">
         {{# Section title + divider #}}
-        <h2 class="font-display text-[42px] font-semibold uppercase leading-[44px] text-[#008000] text-center max-lg:text-[34px] max-lg:leading-[50px] max-md:text-[28px] max-md:leading-[36px]">2026 Chiefs</h2>
+        <h2 class="font-display text-[42px] font-semibold uppercase leading-[44px] text-brand-green-accent text-center max-lg:text-[34px] max-lg:leading-[50px] max-md:text-[28px] max-md:leading-[36px]">2026 Chiefs</h2>
         <div class="w-[10%] border-t border-black mx-auto mt-4 mb-[20px]"></div>
 
         {{# Chief #1 — feature layout: text-left / CTA-image-right #}}
@@ -92,8 +92,8 @@
             <div class="flex-1 bg-white p-[30px] max-lg:p-[10px] max-md:p-[10px] flex flex-col justify-center"
                  x-cloak
                  :class="shown ? 'animate-fade-in-up' : 'opacity-0'">
-                <h2 class="font-display text-[34px] font-semibold leading-[44px] text-[#008000] text-left max-lg:text-[24px] max-lg:leading-[50px] max-md:text-[22px] max-md:leading-[36px] max-md:text-center">{{ title }}</h2>
-                <p class="font-display text-[24px] font-medium capitalize leading-[28px] text-[#008000] -mt-[10px] text-left max-lg:text-[20px] max-lg:leading-[30px] max-md:text-[16px] max-md:leading-[26px] max-md:text-center">{{ role }}</p>
+                <h2 class="font-display text-[34px] font-semibold leading-[44px] text-brand-green-accent text-left max-lg:text-[24px] max-lg:leading-[50px] max-md:text-[22px] max-md:leading-[36px] max-md:text-center">{{ title }}</h2>
+                <p class="font-display text-[24px] font-medium capitalize leading-[28px] text-brand-green-accent -mt-[10px] text-left max-lg:text-[20px] max-lg:leading-[30px] max-md:text-[16px] max-md:leading-[26px] max-md:text-center">{{ role }}</p>
                 {{ if bio }}
                 <p class="font-display text-[18px] font-normal leading-[30px] text-text-secondary mt-4 text-left max-md:text-center max-md:text-[16px] max-md:leading-[26px]">{{ bio }}</p>
                 {{ /if }}
@@ -120,7 +120,7 @@
         {{ collection:team_members category:is="officer" sort="sort_order:asc" offset="1" limit="2" }}
         {{ unless no_results }}
         
-        <div class="flex flex-row items-stretch gap-0 mt-[20px] bg-white rounded-[10px] border border-[#00000024] max-lg:flex-col"
+        <div class="flex flex-row items-stretch gap-0 mt-[20px] bg-white rounded-[10px] border border-border-light max-lg:flex-col"
              x-data="{ shown: false }"
              x-intersect.once="shown = true"
              x-cloak
@@ -137,8 +137,8 @@
             </div>
             {{# Text column #}}
             <div class="flex-1 p-[30px] max-lg:p-[10px] flex flex-col justify-center">
-                <h3 class="font-display text-[26px] font-semibold leading-[34px] text-[#008000] text-left max-lg:text-center max-md:text-[22px] max-md:text-center">{{ title }}</h3>
-                <p class="font-display text-[20px] font-medium capitalize leading-[28px] text-[#008000] -mt-[10px] text-left max-lg:text-center max-md:text-[16px] max-md:leading-[26px] max-md:text-center">{{ role }}</p>
+                <h3 class="font-display text-[26px] font-semibold leading-[34px] text-brand-green-accent text-left max-lg:text-center max-md:text-[22px] max-md:text-center">{{ title }}</h3>
+                <p class="font-display text-[20px] font-medium capitalize leading-[28px] text-brand-green-accent -mt-[10px] text-left max-lg:text-center max-md:text-[16px] max-md:leading-[26px] max-md:text-center">{{ role }}</p>
                 {{ if bio }}
                 <p class="font-display text-[17px] font-normal leading-[28px] text-text-secondary mt-2 text-left max-md:text-center max-md:text-[16px] max-md:leading-[26px]">{{ bio }}</p>
                 {{ /if }}
@@ -153,14 +153,14 @@
 {{# ── Section: Captains ──────────────────────────────────── #}}
 <section class="bg-surface-offwhite py-[50px] max-md:py-0 max-md:pb-[50px]">
     <div class="max-w-[1200px] mx-auto px-4 max-md:px-[20px]">
-        <h2 class="font-display text-[42px] font-semibold uppercase leading-[44px] text-[#008000] text-center max-lg:text-[34px] max-lg:leading-[50px] max-md:text-[22px] max-md:leading-[36px]">2026 Captains</h2>
+        <h2 class="font-display text-[42px] font-semibold uppercase leading-[44px] text-brand-green-accent text-center max-lg:text-[34px] max-lg:leading-[50px] max-md:text-[22px] max-md:leading-[36px]">2026 Captains</h2>
         <div class="w-[10%] border-t border-black mx-auto mt-4 mb-[20px]"></div>
 
         <div class="grid grid-cols-2 gap-[50px] mt-[20px] max-lg:grid-cols-1">
             {{ collection:team_members category:is="officer" sort="sort_order:asc" }}
             
             {{ if sort_order >= 4 && sort_order <= 7 }}
-            <div class="rounded-[10px] p-[30px] max-md:p-[20px] shadow-[0_20px_80px_0_rgba(61,127,49,0.19)]"
+            <div class="rounded-[10px] p-[30px] max-md:p-[20px] shadow-card"
                  x-data="{ shown: false }"
                  x-intersect.once="shown = true"
                  x-cloak
@@ -174,7 +174,7 @@
                     </div>
                     {{ /if }}
                 </div>
-                <h3 class="font-display text-[26px] font-semibold leading-[34px] text-[#008000] text-left mt-4 max-lg:text-center max-md:text-[22px] max-md:leading-[36px] max-md:text-center">{{ title }}</h3>
+                <h3 class="font-display text-[26px] font-semibold leading-[34px] text-brand-green-accent text-left mt-4 max-lg:text-center max-md:text-[22px] max-md:leading-[36px] max-md:text-center">{{ title }}</h3>
                 {{ if bio }}
                 <p class="font-display text-[18px] font-normal leading-[28px] text-text-secondary mt-2 text-left max-md:text-center max-md:text-[16px] max-md:leading-[26px]">{{ bio }}</p>
                 {{ /if }}
@@ -189,14 +189,14 @@
 {{# ── Section: Lieutenants ───────────────────────────────── #}}
 <section class="bg-surface-light py-[50px] max-md:py-[30px]">
     <div class="max-w-[1200px] mx-auto px-4 max-md:px-[20px]">
-        <h2 class="font-display text-[42px] font-semibold uppercase leading-[44px] text-[#008000] text-center max-lg:text-[34px] max-lg:leading-[50px] max-md:text-[22px] max-md:leading-[36px]">2026 Lieutenants</h2>
+        <h2 class="font-display text-[42px] font-semibold uppercase leading-[44px] text-brand-green-accent text-center max-lg:text-[34px] max-lg:leading-[50px] max-md:text-[22px] max-md:leading-[36px]">2026 Lieutenants</h2>
         <div class="w-[10%] border-t border-black mx-auto mt-4 mb-[20px]"></div>
 
         <div class="grid grid-cols-3 gap-[50px] mt-[20px] max-lg:grid-cols-1 max-md:px-[20px]">
             {{ collection:team_members category:is="officer" sort="sort_order:asc" }}
             
             {{ if sort_order >= 8 && sort_order <= 13 }}
-            <div class="rounded-[10px] p-[20px] shadow-[0_20px_80px_0_rgba(61,127,49,0.19)]"
+            <div class="rounded-[10px] p-[20px] shadow-card"
                  x-data="{ shown: false }"
                  x-intersect.once="shown = true"
                  x-cloak
@@ -208,8 +208,8 @@
                     <img src="/assets/images/uploads/2023/09/community-ambulance-new-logo.png" alt="Community Ambulance Company" class="w-2/3 mx-auto">
                 </div>
                 {{ /if }}
-                <h3 class="font-display text-[26px] font-semibold leading-[34px] text-[#008000] text-left mt-3 max-lg:text-center max-md:text-[22px] max-md:leading-[36px] max-md:text-center">{{ title }}</h3>
-                <p class="font-display text-[20px] font-semibold leading-[34px] text-[#008000] -mt-[10px] text-left max-lg:text-center max-md:text-[18px] max-md:text-center">{{ role }}</p>
+                <h3 class="font-display text-[26px] font-semibold leading-[34px] text-brand-green-accent text-left mt-3 max-lg:text-center max-md:text-[22px] max-md:leading-[36px] max-md:text-center">{{ title }}</h3>
+                <p class="font-display text-[20px] font-semibold leading-[34px] text-brand-green-accent -mt-[10px] text-left max-lg:text-center max-md:text-[18px] max-md:text-center">{{ role }}</p>
                 {{ if bio }}
                 <p class="font-display text-[18px] font-normal leading-[28px] text-text-secondary mt-1 text-left max-md:text-center max-md:text-[16px] max-md:leading-[26px]">{{ bio }}</p>
                 {{ /if }}
@@ -224,19 +224,19 @@
 {{# ── Section: Operational Secretary ─────────────────────── #}}
 <section class="bg-surface-offwhite py-[50px] max-md:py-[30px]">
     <div class="max-w-[1200px] mx-auto px-4 max-md:px-[20px]">
-        <h2 class="font-display text-[42px] font-semibold uppercase leading-[44px] text-[#008000] text-center max-lg:text-[34px] max-lg:leading-[50px] max-md:text-[22px] max-md:leading-[36px]">2026 Operational Secretary</h2>
+        <h2 class="font-display text-[42px] font-semibold uppercase leading-[44px] text-brand-green-accent text-center max-lg:text-[34px] max-lg:leading-[50px] max-md:text-[22px] max-md:leading-[36px]">2026 Operational Secretary</h2>
         <div class="w-[10%] border-t border-black mx-auto mt-4 mb-[20px]"></div>
 
         {{ collection:team_members category:is="officer" sort="sort_order:asc" }}
         
         {{ if sort_order == 14 }}
         <div class="flex flex-row items-stretch gap-[50px] mt-[20px] max-lg:flex-col max-md:px-[20px]">
-            <div class="flex-1 rounded-[10px] p-[30px] shadow-[0_20px_80px_0_rgba(61,127,49,0.19)]"
+            <div class="flex-1 rounded-[10px] p-[30px] shadow-card"
                  x-data="{ shown: false }"
                  x-intersect.once="shown = true"
                  x-cloak
                  :class="shown ? 'animate-fade-in-up' : 'opacity-0'">
-                <h3 class="font-display text-[26px] font-semibold leading-[34px] text-[#008000] text-left self-center max-lg:text-center max-md:text-[22px] max-md:leading-[36px] max-md:text-center">{{ title }}</h3>
+                <h3 class="font-display text-[26px] font-semibold leading-[34px] text-brand-green-accent text-left self-center max-lg:text-center max-md:text-[22px] max-md:leading-[36px] max-md:text-center">{{ title }}</h3>
                 {{ if bio }}
                 <p class="font-display text-[18px] font-normal leading-[30px] text-text-secondary mt-3 text-left max-md:text-center max-md:text-[16px] max-md:leading-[26px]">{{ bio }}</p>
                 {{ /if }}
@@ -251,7 +251,7 @@
 {{# ── Section: Board ─────────────────────────────────────── #}}
 <section class="bg-surface-offwhite py-[50px] max-md:py-[30px]">
     <div class="max-w-[1200px] mx-auto px-4 max-md:px-[20px]">
-        <h2 class="font-display text-[42px] font-semibold uppercase leading-[44px] text-[#008000] text-center max-lg:text-[34px] max-lg:leading-[50px] max-md:text-[22px] max-md:leading-[36px]">2026 Community Ambulance Company Board</h2>
+        <h2 class="font-display text-[42px] font-semibold uppercase leading-[44px] text-brand-green-accent text-center max-lg:text-[34px] max-lg:leading-[50px] max-md:text-[22px] max-md:leading-[36px]">2026 Community Ambulance Company Board</h2>
         <div class="w-[10%] border-t border-black mx-auto mt-4 mb-[20px]"></div>
 
         <div class="grid grid-cols-3 gap-[50px] mt-[20px] max-lg:grid-cols-1 max-md:px-[20px]">
@@ -269,7 +269,7 @@
                     <img src="/assets/images/uploads/2023/09/community-ambulance-new-logo.png" alt="Community Ambulance Company" class="w-1/2 mx-auto">
                     {{ /if }}
                 </div>
-                <h3 class="font-display text-[26px] font-semibold leading-[34px] text-[#008000] text-center mt-4 max-lg:text-center max-md:text-[22px] max-md:leading-[36px]">{{ title }}</h3>
+                <h3 class="font-display text-[26px] font-semibold leading-[34px] text-brand-green-accent text-center mt-4 max-lg:text-center max-md:text-[22px] max-md:leading-[36px]">{{ title }}</h3>
                 <p class="font-display text-[18px] font-normal leading-[28px] text-text-secondary text-center max-md:text-[16px] max-md:leading-[26px]">{{ role }}</p>
                 {{ if bio }}
                 <p class="font-display text-[18px] font-normal leading-[28px] text-text-secondary text-center mt-2 max-md:text-[16px] max-md:leading-[26px]">{{ bio }}</p>
