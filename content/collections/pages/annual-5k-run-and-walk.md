@@ -3,6 +3,7 @@ title: Annual 5k Run and Walk
 id: "703577d4-61cb-47cd-8b69-a0e691c4ef74"
 template: 5k
 blueprint: page
+meta_description: 'Register for the annual Community Ambulance 5K Run and Walk at Islip Grange Park in Sayville, NY. Race results, age categories, and series information.'
 ---
 
 ## Join us for the 15th annual community ambulance 5k run and walk

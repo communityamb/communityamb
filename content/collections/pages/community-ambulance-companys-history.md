@@ -3,6 +3,7 @@ title: Community Ambulance Company’s History
 id: "007e63a9-cc3b-4a57-81c9-8728eb081453"
 template: "history-timeline"
 blueprint: page
+meta_description: ‘Explore the history of Community Ambulance Company from its founding in 1950 through decades of volunteer EMS service to Long Island communities.’
 ---
 From Humble Beginnings to Lifesaving Vanguard
 

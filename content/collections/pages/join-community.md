@@ -3,6 +3,7 @@ title: Join Community
 id: "41fe0a0a-73df-49b2-904a-c0514a0de86f"
 template: "form-join"
 blueprint: page
+meta_description: 'Become a volunteer member of Community Ambulance Company. Learn about membership benefits, requirements, and apply online to serve your community.'
 ---
 
 ## Help members of your community

@@ -3,6 +3,7 @@ title: Chief’s Corner
 id: "998525a0-9c50-43a2-b067-1fe4b07ab08b"
 template: "chiefs-corner"
 blueprint: page
+meta_description: "A message from the Chief of Department at Community Ambulance Company about our mission, achievements, and commitment to community EMS service."
 ---
 
 ## Chief

@@ -55,6 +55,26 @@ tabs:
             field:
               type: text
               display: Hero Subtitle
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: meta_description
+            field:
+              type: textarea
+              display: Meta Description
+              instructions: 'Override the default site description for this page. Recommended: 150-160 characters.'
+              character_limit: 160
+          -
+            handle: og_image
+            field:
+              type: assets
+              display: Social Share Image
+              instructions: 'Image shown when this page is shared on social media. Recommended: 1200x630px.'
+              container: assets
+              max_files: 1
   cta:
     display: Call to Action
     sections:
