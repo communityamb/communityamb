@@ -14,8 +14,17 @@ tabs:
           -
             handle: content
             field:
-              type: markdown
+              type: bard
               display: Content
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - anchor
+                - image
               container: assets
           -
             handle: template
@@ -57,6 +66,13 @@ tabs:
     sections:
       -
         fields:
+          -
+            handle: meta_title
+            field:
+              type: text
+              display: Meta Title
+              instructions: 'Override the page title shown in browser tabs and search results. Leave blank to use the page title.'
+              character_limit: 70
           -
             handle: meta_description
             field:
