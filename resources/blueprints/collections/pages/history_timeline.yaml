@@ -1,0 +1,69 @@
+title: History Timeline
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: template
+            field:
+              type: hidden
+              display: Template
+              default: history-timeline
+  timeline:
+    display: Timeline
+    sections:
+      -
+        display: Timeline Content
+        fields:
+          -
+            handle: timeline_subtitle
+            field:
+              type: text
+              display: Timeline Subtitle
+              instructions: 'Displayed below the page header.'
+          -
+            handle: timeline_entries
+            field:
+              type: grid
+              display: Timeline Entries
+              instructions: 'Chronological events. Displayed alternating left/right on desktop.'
+              fields:
+                -
+                  handle: year
+                  field:
+                    type: text
+                    display: Year / Date
+                    required: true
+                    instructions: 'e.g. "1930", "April 1938", "Summer 1950"'
+                -
+                  handle: description
+                  field:
+                    type: textarea
+                    display: Description
+                    required: true
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: meta_description
+            field:
+              type: textarea
+              display: Meta Description
+              character_limit: 160
+          -
+            handle: og_image
+            field:
+              type: assets
+              display: Social Share Image
+              container: assets
+              max_files: 1
