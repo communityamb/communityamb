@@ -1,6 +1,27 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Statamic\Facades\Entry;
+
+Route::get('/sitemap.xml', function () {
+    $collections = ['pages', 'blog', 'events', 'gallery_albums'];
+
+    $entries = Entry::query()
+        ->whereIn('collection', $collections)
+        ->where('published', true)
+        ->get()
+        ->filter(fn ($entry) => $entry->absoluteUrl())
+        ->map(fn ($entry) => [
+            'loc' => $entry->absoluteUrl(),
+            'lastmod' => $entry->lastModified()->toDateString(),
+        ])
+        ->sortBy('loc')
+        ->values();
+
+    return response()
+        ->view('sitemap', ['entries' => $entries])
+        ->header('Content-Type', 'application/xml');
+});
 
 // 301 redirects — old flat URL structure to new nested hierarchy
 $redirects = [

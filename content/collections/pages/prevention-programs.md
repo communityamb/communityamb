@@ -3,6 +3,7 @@ title: Prevention Programs
 id: "717d6e27-2287-4111-9a54-5c949ecc60aa"
 template: "programs-index"
 blueprint: page
+meta_description: 'Free community programs from Community Ambulance: CPR classes, Narcan training, car seat inspections, Shed the Meds, life jacket loaners, and more.'
 ---
 
 Shed the Meds allows residents, throughout Suffolk County, the opportunity to safely dispose of unwanted and unused medications and prescription drugs. Non-medical use of prescription and over-the-counter medicines remains a significant part of the drug problem here on Long Island. The members of the Community Ambulance Company have seen the effects of overdoses and accidental poisonings by prescription medications firsthand. Now, they spearheaded programs, like Shed the Meds, in an attempt to curb the drug problem in our local community. Members of the Suffolk County Sheriff’s Department are available to assist and answer any questions residents may have.
