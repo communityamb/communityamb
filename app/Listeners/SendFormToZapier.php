@@ -28,6 +28,10 @@ class SendFormToZapier
             return;
         }
 
-        Http::timeout(10)->post($url, $event->submission->data()->toArray());
+        try {
+            Http::timeout(10)->post($url, $event->submission->data()->toArray());
+        } catch (\Throwable $e) {
+            Log::warning("Zapier webhook failed for form [{$form}]: {$e->getMessage()}");
+        }
     }
 }
