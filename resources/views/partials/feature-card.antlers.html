@@ -10,11 +10,11 @@
 #}}
 {{ card_class ?= "" }}
 {{ if tag == "a" }}
-<a href="{{ href }}" {{ if target }}target="{{ target }}"{{ /if }} class="flex-1 bg-white rounded-[10px] shadow-[0_20px_80px_0_rgba(61,127,49,0.19)] p-[50px] max-md:p-[30px] text-center animate-fade-in-up block group {{ card_class }}"{{ if delay }} style="animation-delay: {{ delay }}"{{ /if }}>
+<a href="{{ href }}" {{ if target }}target="{{ target }}"{{ /if }} class="flex-1 bg-white rounded-[10px] shadow-card p-[50px] max-md:p-[30px] text-center animate-fade-in-up block group {{ card_class }}"{{ if delay }} style="animation-delay: {{ delay }}"{{ /if }}>
     {{ slot }}
 </a>
 {{ else }}
-<div class="flex-1 bg-white rounded-[10px] shadow-[0_20px_80px_0_rgba(61,127,49,0.19)] p-[50px] max-md:p-[30px] text-center animate-fade-in-up {{ card_class }}"{{ if delay }} style="animation-delay: {{ delay }}"{{ /if }}>
+<div class="flex-1 bg-white rounded-[10px] shadow-card p-[50px] max-md:p-[30px] text-center animate-fade-in-up {{ card_class }}"{{ if delay }} style="animation-delay: {{ delay }}"{{ /if }}>
     {{ slot }}
 </div>
 {{ /if }}
