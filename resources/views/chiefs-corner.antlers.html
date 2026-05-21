@@ -9,9 +9,9 @@
              x-cloak
              :class="shown ? 'animate-fade-in-up' : 'opacity-0'">
 
-            <h2 class="font-display text-[34px] font-semibold uppercase leading-[65px] text-text-primary max-lg:text-[34px] max-lg:leading-[50px] max-lg:text-center max-md:text-[26px] max-md:leading-[36px] max-md:text-center">Jennifer Hartmann</h2>
+            <h2 class="font-display text-[34px] font-semibold uppercase leading-[65px] text-text-primary max-lg:text-[34px] max-lg:leading-[50px] max-lg:text-center max-md:text-[26px] max-md:leading-[36px] max-md:text-center">{{ chief_name }}</h2>
 
-            <h2 class="font-display text-[28px] font-semibold leading-[42px] text-brand-green -mt-[20px] max-lg:text-[34px] max-lg:leading-[50px] max-lg:text-center max-md:text-[22px] max-md:leading-[36px] max-md:text-center">Chief</h2>
+            <h2 class="font-display text-[28px] font-semibold leading-[42px] text-brand-green -mt-[20px] max-lg:text-[34px] max-lg:leading-[50px] max-lg:text-center max-md:text-[22px] max-md:leading-[36px] max-md:text-center">{{ chief_title }}</h2>
 
             <div class="w-[20%] border-t border-black my-5 max-md:mx-auto"></div>
 
@@ -24,8 +24,8 @@
              x-cloak
              :class="shown ? 'animate-fade-in-up [animation-delay:300ms]' : 'opacity-0'">
             <div class="group relative overflow-hidden rounded min-h-[900px] max-md:min-h-[278px]">
-                <img src="/assets/images/uploads/2026/01/2B0D9C6F-83DC-4763-B837-429FA3EBCC0E.jpg"
-                     alt="Chief Jennifer Hartmann"
+                <img src="{{ chief_photo }}"
+                     alt="{{ chief_photo_alt }}"
                      class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110">
             </div>
         </div>

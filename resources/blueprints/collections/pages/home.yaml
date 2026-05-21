@@ -1,0 +1,191 @@
+title: Home
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: template
+            field:
+              type: hidden
+              display: Template
+              default: home
+  hero:
+    display: Hero
+    sections:
+      -
+        display: Hero Section
+        fields:
+          -
+            handle: hero_image
+            field:
+              type: text
+              display: Hero Image Path
+              instructions: 'Path to the hero background image.'
+          -
+            handle: hero_welcome_text
+            field:
+              type: text
+              display: Welcome Text
+              default: 'Welcome to'
+          -
+            handle: hero_heading
+            field:
+              type: text
+              display: Hero Heading
+              default: 'Community Ambulance Company, Inc.'
+          -
+            handle: hero_award_line
+            field:
+              type: text
+              display: Award Line
+              instructions: 'Displayed below the heading, e.g. award recognition.'
+          -
+            handle: hero_description
+            field:
+              type: textarea
+              display: Hero Description
+  carousel:
+    display: Carousel
+    sections:
+      -
+        display: Image Carousel
+        fields:
+          -
+            handle: carousel_slides
+            field:
+              type: grid
+              display: Carousel Slides
+              instructions: 'Images shown in the rotating carousel below the hero.'
+              fields:
+                -
+                  handle: image_path
+                  field:
+                    type: text
+                    display: Image Path
+                -
+                  handle: alt_text
+                  field:
+                    type: text
+                    display: Alt Text
+  about:
+    display: About
+    sections:
+      -
+        display: About Section
+        fields:
+          -
+            handle: about_heading
+            field:
+              type: text
+              display: About Heading
+              default: 'About Us'
+          -
+            handle: about_paragraph_1
+            field:
+              type: textarea
+              display: About Paragraph 1
+          -
+            handle: about_paragraph_2
+            field:
+              type: textarea
+              display: About Paragraph 2
+          -
+            handle: about_image
+            field:
+              type: text
+              display: About Image Path
+  call_count:
+    display: Call Count
+    sections:
+      -
+        display: Call Count Section
+        fields:
+          -
+            handle: call_count_heading
+            field:
+              type: text
+              display: Call Count Heading
+              default: 'How Busy Are We?'
+          -
+            handle: call_count_description
+            field:
+              type: textarea
+              display: Call Count Description
+          -
+            handle: call_count_subheading
+            field:
+              type: text
+              display: Call Count Subheading
+              default: 'Call Count'
+          -
+            handle: call_count_summary
+            field:
+              type: text
+              display: Call Count Summary
+              instructions: 'e.g. "As of April 26th, 1,625 alarms have been answered for 2026."'
+          -
+            handle: call_count_image
+            field:
+              type: text
+              display: Call Count Image Path
+          -
+            handle: yearly_call_counts
+            field:
+              type: grid
+              display: Yearly Call Counts
+              fields:
+                -
+                  handle: year
+                  field:
+                    type: text
+                    display: Year
+                -
+                  handle: alarm_count
+                  field:
+                    type: text
+                    display: Alarm Count
+  donate:
+    display: Donate
+    sections:
+      -
+        display: Donation Section
+        fields:
+          -
+            handle: donate_heading
+            field:
+              type: text
+              display: Donate Heading
+              default: 'Donate to Community Ambulance Company'
+          -
+            handle: donate_text
+            field:
+              type: textarea
+              display: Donate Text
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: meta_description
+            field:
+              type: textarea
+              display: Meta Description
+              instructions: 'Override the default site description for this page. Recommended: 150-160 characters.'
+              character_limit: 160
+          -
+            handle: og_image
+            field:
+              type: assets
+              display: Social Share Image
+              instructions: 'Image shown when this page is shared on social media. Recommended: 1200x630px.'
+              container: assets
+              max_files: 1
