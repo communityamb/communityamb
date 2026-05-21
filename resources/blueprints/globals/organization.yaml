@@ -10,22 +10,27 @@ tabs:
             field:
               type: text
               display: Organization Name
+              required: true
           -
             handle: phone
             field:
               type: text
               display: Phone Number
+              required: true
+              instructions: 'Format: (631) 567-2586'
           -
             handle: email
             field:
               type: text
               display: Email
               input_type: email
+              required: true
           -
             handle: street_address
             field:
               type: text
               display: Street Address
+              required: true
           -
             handle: mailing_address
             field:
@@ -48,6 +53,32 @@ tabs:
               type: text
               display: Site URL
               instructions: 'Full site URL including https:// (e.g., https://communityamb.org). Used for canonical URLs and structured data.'
+          -
+            handle: city
+            field:
+              type: text
+              display: City
+          -
+            handle: state
+            field:
+              type: text
+              display: State
+          -
+            handle: zip_code
+            field:
+              type: text
+              display: ZIP Code
+          -
+            handle: founding_year
+            field:
+              type: text
+              display: Founding Year
+          -
+            handle: areas_served
+            field:
+              type: textarea
+              display: Areas Served
+              instructions: 'Comma-separated list of towns served.'
           -
             handle: default_og_image
             field:

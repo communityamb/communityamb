@@ -86,7 +86,7 @@ tabs:
           -
             handle: registration_url
             field:
-              type: text
+              type: link
               display: Registration URL
           -
             handle: race_results_note
@@ -124,7 +124,7 @@ tabs:
           -
             handle: series_registration_url
             field:
-              type: text
+              type: link
               display: Series Registration URL
           -
             handle: series_registration_note
@@ -158,13 +158,20 @@ tabs:
           -
             handle: results_provider_url
             field:
-              type: text
+              type: link
               display: Results Provider URL
   seo:
     display: SEO
     sections:
       -
         fields:
+          -
+            handle: meta_title
+            field:
+              type: text
+              display: Meta Title
+              instructions: 'Override the page title shown in browser tabs and search results. Leave blank to use the page title.'
+              character_limit: 70
           -
             handle: meta_description
             field:

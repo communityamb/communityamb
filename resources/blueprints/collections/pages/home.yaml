@@ -28,6 +28,7 @@ tabs:
             field:
               type: text
               display: Hero Image Path
+              required: true
               instructions: 'Path to the hero background image.'
           -
             handle: hero_welcome_text
@@ -40,6 +41,7 @@ tabs:
             field:
               type: text
               display: Hero Heading
+              required: true
               default: 'Community Ambulance Company, Inc.'
           -
             handle: hero_award_line
@@ -152,6 +154,13 @@ tabs:
     sections:
       -
         fields:
+          -
+            handle: meta_title
+            field:
+              type: text
+              display: Meta Title
+              instructions: 'Override the page title shown in browser tabs and search results. Leave blank to use the page title.'
+              character_limit: 70
           -
             handle: meta_description
             field:
