@@ -6,7 +6,7 @@
         <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5">
 
             {{# ── Contact Form ───────────────────────────────── #}}
-            <div>
+            <div x-data="{ submitting: false }" @submit="submitting = true">
                 {{ form:contact_us }}
                 <div class="space-y-[10px]">
                     {{# First Name + Last Name row #}}
@@ -42,8 +42,9 @@
 
                     {{# Submit button (full width) #}}
                     <div>
-                        <button type="submit" class="w-full bg-brand-green hover:bg-brand-green-dark text-white font-body font-medium text-base rounded px-[30px] py-[15px] min-h-[47px] transition">
-                            Send Message
+                        <button type="submit" :disabled="submitting" :class="{ 'opacity-50 cursor-not-allowed': submitting }" class="w-full bg-brand-green hover:bg-brand-green-dark text-white font-body font-medium text-base rounded px-[30px] py-[15px] min-h-[47px] transition">
+                            <span x-show="!submitting">Send Message</span>
+                            <span x-show="submitting" x-cloak>Sending...</span>
                         </button>
                     </div>
                 </div>
