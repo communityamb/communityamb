@@ -7,7 +7,7 @@
             <div class="lg:col-span-2">
                 {{ if image }}
                 <div class="rounded-lg overflow-hidden mb-8">
-                    <img src="{{ image }}" alt="{{ title }}" class="w-full h-auto" loading="lazy">
+                    <img src="{{ glide :src="image" preset="card" }}" alt="{{ title }}" class="w-full h-auto" loading="lazy">
                 </div>
                 {{ /if }}
 

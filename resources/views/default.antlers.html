@@ -54,7 +54,7 @@
     <div class="max-w-3xl mx-auto px-6 max-md:px-4 text-center">
         <h2 class="font-display text-heading max-md:text-sub font-semibold uppercase tracking-wide text-brand-navy mb-8">Message from our Chief</h2>
         {{ if chief_image }}
-        <img src="{{ chief_image }}" alt="Community Ambulance Company" class="h-24 mx-auto mb-6" loading="lazy">
+        <img src="{{ glide :src="chief_image" preset="logo" }}" alt="Community Ambulance Company" class="h-24 mx-auto mb-6" loading="lazy">
         {{ /if }}
         <p class="font-['Berkshire_Swash'] text-hero max-lg:text-heading max-md:text-sub leading-[1.4] text-brand-navy capitalize">{{ chief_quote }}</p>
         {{ collection:team_members role:is="Chief" limit="1" }}

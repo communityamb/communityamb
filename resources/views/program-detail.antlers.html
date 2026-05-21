@@ -7,7 +7,7 @@
         <!-- Image column (left) -->
         <div class="overflow-hidden rounded-btn group max-lg:px-[10px] max-md:px-[10px]">
             <div class="relative min-h-[550px] max-md:min-h-[300px] h-full overflow-hidden rounded-btn">
-                <img src="{{ program_image }}" alt="{{ title }}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110" loading="lazy">
+                <img src="{{ glide :src="program_image" preset="hero" }}" alt="{{ title }}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110" loading="lazy">
             </div>
         </div>
         <!-- Text column (right) -->
@@ -40,7 +40,7 @@
         <!-- Image column (right) -->
         <div class="overflow-hidden rounded-btn group max-lg:px-[10px] max-md:px-[10px]">
             <div class="relative min-h-[550px] max-md:min-h-[300px] h-full overflow-hidden rounded-btn">
-                <img src="{{ program_image }}" alt="{{ title }}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110" loading="lazy">
+                <img src="{{ glide :src="program_image" preset="hero" }}" alt="{{ title }}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110" loading="lazy">
             </div>
         </div>
         {{ /if }}

@@ -10,7 +10,8 @@
         <div class="flex flex-wrap border-b border-border-light mb-0">
             {{ albums }}
             <button
-                @click="activeTab = '{{ slug }}'"
+                data-slug="{{ slug }}"
+                @click="switchTab('{{ slug }}')"
                 :class="activeTab === '{{ slug }}'
                     ? 'text-brand-green border-b-[3px] border-brand-green font-semibold'
                     : 'text-text-secondary hover:text-brand-green border-b-[3px] border-transparent'"
@@ -21,30 +22,33 @@
             {{ /albums }}
         </div>
 
-        <!-- Tab Content Panels -->
+        <!-- Tab Content Panels (loaded on demand, persisted once loaded) -->
         {{ albums }}
-        <div x-show="activeTab === '{{ slug }}'"
-             x-transition:enter="transition ease-out duration-300"
-             x-transition:enter-start="opacity-0"
-             x-transition:enter-end="opacity-100"
-             data-album-id="{{ slug }}"
-             class="py-2.5">
+        <template x-if="loadedTabs.includes('{{ slug }}')">
+            <div x-show="activeTab === '{{ slug }}'"
+                 x-transition:enter="transition ease-out duration-300"
+                 x-transition:enter-start="opacity-0"
+                 x-transition:enter-end="opacity-100"
+                 data-album-id="{{ slug }}"
+                 class="py-2.5">
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[10px]">
-                {{ photos }}
-                <button
-                    @click="openFromEl($event)"
-                    class="aspect-[3/2] overflow-hidden cursor-pointer group relative">
-                    <img
-                        src="{{ url }}"
-                        alt="{{ alt ?? title }}"
-                        class="w-full h-full object-cover transition-transform duration-[800ms] group-hover:scale-110"
-                        loading="lazy">
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-[800ms]"></div>
-                </button>
-                {{ /photos }}
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[10px]">
+                    {{ photos }}
+                    <button
+                        @click="openFromEl($event)"
+                        class="aspect-[3/2] overflow-hidden cursor-pointer group relative">
+                        <img
+                            src="{{ glide :src="url" preset="gallery" }}"
+                            data-full-src="{{ url }}"
+                            alt="{{ alt ?? title }}"
+                            class="w-full h-full object-cover transition-transform duration-[800ms] group-hover:scale-110"
+                            loading="lazy">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-[800ms]"></div>
+                    </button>
+                    {{ /photos }}
+                </div>
             </div>
-        </div>
+        </template>
         {{ /albums }}
 
         {{ else }}
@@ -94,25 +98,31 @@
 function galleryApp() {
     return {
         activeTab: '',
+        loadedTabs: [],
         albums: {},
         lightbox: { open: false, src: '', alt: '', photos: [], index: 0 },
 
         init() {
-            this.$nextTick(() => {
-                const panels = this.$el.querySelectorAll('[data-album-id]');
-                panels.forEach(panel => {
-                    const id = panel.dataset.albumId;
-                    const imgs = Array.from(panel.querySelectorAll('img')).map(img => ({
-                        src: img.src,
-                        alt: img.alt || ''
-                    }));
-                    this.albums[id] = imgs;
-                });
-                // Activate the first tab
-                if (panels.length > 0) {
-                    this.activeTab = panels[0].dataset.albumId;
-                }
-            });
+            const firstBtn = this.$el.querySelector('button[data-slug]');
+            if (firstBtn) this.switchTab(firstBtn.dataset.slug);
+        },
+
+        switchTab(slug) {
+            if (!this.loadedTabs.includes(slug)) {
+                this.loadedTabs.push(slug);
+            }
+            this.activeTab = slug;
+            this.$nextTick(() => this.scanPanel(slug));
+        },
+
+        scanPanel(slug) {
+            if (this.albums[slug]) return;
+            const panel = this.$el.querySelector(`[data-album-id="${slug}"]`);
+            if (!panel) return;
+            this.albums[slug] = Array.from(panel.querySelectorAll('img')).map(img => ({
+                src: img.dataset.fullSrc || img.src,
+                alt: img.alt || ''
+            }));
         },
 
         openFromEl(event) {
@@ -120,8 +130,7 @@ function galleryApp() {
             const panel = btn.closest('[data-album-id]');
             const albumId = panel.dataset.albumId;
             const buttons = Array.from(panel.querySelectorAll('button'));
-            const photoIndex = buttons.indexOf(btn);
-            this.openLightbox(albumId, photoIndex);
+            this.openLightbox(albumId, buttons.indexOf(btn));
         },
 
         openLightbox(albumId, photoIndex) {
