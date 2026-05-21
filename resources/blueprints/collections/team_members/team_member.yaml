@@ -14,8 +14,28 @@ tabs:
           -
             handle: role
             field:
-              type: text
+              type: select
               display: Title/Position
+              required: true
+              options:
+                Chief: Chief
+                '1st Assistant Chief': '1st Assistant Chief'
+                '2nd Assistant Chief': '2nd Assistant Chief'
+                Captain: Captain
+                Lieutenant: Lieutenant
+                'Operational Secretary': 'Operational Secretary'
+                President: President
+                'Vice President': 'Vice President'
+                Treasurer: Treasurer
+                Secretary: Secretary
+                Director: Director
+                'Life Member': 'Life Member'
+                'Life Member, Ex-Chief, and Director, Board of Directors': 'Life Member, Ex-Chief, and Director, Board of Directors'
+                'Life Member, Ex-Chief, AEMT & Former Board of Director': 'Life Member, Ex-Chief, AEMT & Former Board of Director'
+                'Charter Member': 'Charter Member'
+                'Charter Member, Founder': 'Charter Member, Founder'
+                EMT: EMT
+              instructions: 'Select the member role. Template filtering depends on exact values.'
           -
             handle: photo
             field:
@@ -46,6 +66,7 @@ tabs:
               type: integer
               display: Sort Order
               default: 99
+              instructions: 'Lower numbers appear first. Default: 99.'
           -
             handle: years_of_service
             field:

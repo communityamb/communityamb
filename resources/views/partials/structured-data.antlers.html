@@ -9,14 +9,14 @@
     "email": "{{ organization:email }}",
     "address": {
         "@type": "PostalAddress",
-        "streetAddress": "420 Lakeland Ave",
-        "addressLocality": "Sayville",
-        "addressRegion": "NY",
-        "postalCode": "11782",
+        "streetAddress": "{{ organization:street_address }}",
+        "addressLocality": "{{ organization:city }}",
+        "addressRegion": "{{ organization:state }}",
+        "postalCode": "{{ organization:zip_code }}",
         "addressCountry": "US"
     },
-    "areaServed": ["Sayville, NY", "West Sayville, NY", "Oakdale, NY", "Bohemia, NY", "Bayport, NY"],
-    "foundingDate": "1950",
+    "areaServed": "{{ organization:areas_served }}",
+    "foundingDate": "{{ organization:founding_year }}",
     "nonprofitStatus": "501(c)(3)",
     "logo": "{{ config:app:url }}{{ organization:logo_url }}"{{ if social_links:facebook_url || social_links:instagram_url }},
     "sameAs": [{{ if social_links:facebook_url }}"{{ social_links:facebook_url }}"{{ /if }}{{ if social_links:facebook_url && social_links:instagram_url }}, {{ /if }}{{ if social_links:instagram_url }}"{{ social_links:instagram_url }}"{{ /if }}]{{ /if }}
