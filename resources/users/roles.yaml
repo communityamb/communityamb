@@ -2,3 +2,13 @@
 #   title: Administrator
 #   permissions:
 #     - super
+
+editor:
+  title: Editor
+  permissions:
+    - view entries
+    - edit entries
+    - create entries
+    - view assets
+    - upload assets
+    - view globals
