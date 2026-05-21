@@ -1,0 +1,196 @@
+title: 5K Run
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: template
+            field:
+              type: hidden
+              display: Template
+              default: 5k
+  event:
+    display: Event Details
+    sections:
+      -
+        display: Event Info
+        fields:
+          -
+            handle: event_date_display
+            field:
+              type: text
+              display: Event Date Display
+              instructions: 'Displayed prominently, e.g. "2025 Date - June 15th, 2025"'
+          -
+            handle: event_heading
+            field:
+              type: text
+              display: Event Heading
+              instructions: 'e.g. "Join us for the 15th annual community ambulance 5k run and walk"'
+          -
+            handle: event_image
+            field:
+              type: text
+              display: Event Image Path
+          -
+            handle: event_paragraphs
+            field:
+              type: grid
+              display: Event Description Paragraphs
+              fields:
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Paragraph
+  cards:
+    display: Info Cards
+    sections:
+      -
+        display: Info Cards
+        fields:
+          -
+            handle: sponsor_email
+            field:
+              type: text
+              display: Sponsor Contact Email
+          -
+            handle: sponsor_pdf
+            field:
+              type: text
+              display: Sponsorship Application Path
+              instructions: 'Path to the PDF file.'
+          -
+            handle: race_date
+            field:
+              type: text
+              display: Race Date
+          -
+            handle: race_time
+            field:
+              type: text
+              display: Race Time
+          -
+            handle: race_location
+            field:
+              type: text
+              display: Race Location
+          -
+            handle: registration_url
+            field:
+              type: text
+              display: Registration URL
+          -
+            handle: race_results_note
+            field:
+              type: textarea
+              display: Race Results Collection Note
+  series:
+    display: Series & Awards
+    sections:
+      -
+        display: Sayville Summer Series
+        fields:
+          -
+            handle: series_intro
+            field:
+              type: text
+              display: Series Introduction
+              instructions: 'e.g. "The Community Ambulance 5K is part of the Sayville Summer Series"'
+          -
+            handle: series_events
+            field:
+              type: grid
+              display: Series Events
+              fields:
+                -
+                  handle: event_name
+                  field:
+                    type: text
+                    display: Event Name
+                -
+                  handle: event_location
+                  field:
+                    type: text
+                    display: Location
+          -
+            handle: series_registration_url
+            field:
+              type: text
+              display: Series Registration URL
+          -
+            handle: series_registration_note
+            field:
+              type: text
+              display: Series Registration Note
+      -
+        display: Awards
+        fields:
+          -
+            handle: award_categories
+            field:
+              type: grid
+              display: Award Categories
+              instructions: 'Top-level categories (e.g. Overall Male, Overall Female, then age groups).'
+              fields:
+                -
+                  handle: category
+                  field:
+                    type: text
+                    display: Category
+      -
+        display: Race Results
+        fields:
+          -
+            handle: results_provider
+            field:
+              type: text
+              display: Results Provider Text
+              instructions: 'e.g. "Timing and results are managed by RunSignUp.com"'
+          -
+            handle: results_provider_url
+            field:
+              type: text
+              display: Results Provider URL
+          -
+            handle: past_results
+            field:
+              type: grid
+              display: Past Race Results
+              fields:
+                -
+                  handle: year
+                  field:
+                    type: text
+                    display: Year
+                -
+                  handle: url
+                  field:
+                    type: text
+                    display: Results URL
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: meta_description
+            field:
+              type: textarea
+              display: Meta Description
+              character_limit: 160
+          -
+            handle: og_image
+            field:
+              type: assets
+              display: Social Share Image
+              container: assets
+              max_files: 1

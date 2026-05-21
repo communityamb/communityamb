@@ -1,0 +1,149 @@
+title: Programs Index
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: template
+            field:
+              type: hidden
+              display: Template
+              default: programs-index
+  programs:
+    display: Programs
+    sections:
+      -
+        display: Program Listings
+        instructions: 'Programs alternate between full-width (text + image) and card-grid (3 per row) layouts.'
+        fields:
+          -
+            handle: programs
+            field:
+              type: replicator
+              display: Programs
+              collapse: accordion
+              sets:
+                full_width_program:
+                  display: 'Full-Width Program'
+                  instructions: 'Text on one side, large image on the other.'
+                  fields:
+                    -
+                      handle: program_title
+                      field:
+                        type: text
+                        display: Title
+                        required: true
+                    -
+                      handle: program_description
+                      field:
+                        type: textarea
+                        display: Description
+                        required: true
+                    -
+                      handle: program_schedule
+                      field:
+                        type: text
+                        display: Schedule
+                        instructions: 'e.g. "Annually April and October", "Biannually"'
+                    -
+                      handle: program_note
+                      field:
+                        type: textarea
+                        display: Additional Note
+                    -
+                      handle: program_image
+                      field:
+                        type: text
+                        display: Image Path
+                    -
+                      handle: program_image_alt
+                      field:
+                        type: text
+                        display: Image Alt Text
+                    -
+                      handle: image_position
+                      field:
+                        type: select
+                        display: Image Position
+                        options:
+                          right: Right
+                          left: Left
+                        default: right
+                program_card_row:
+                  display: 'Program Card Row'
+                  instructions: 'Up to 3 programs displayed as cards in a row.'
+                  fields:
+                    -
+                      handle: cards
+                      field:
+                        type: grid
+                        display: Cards
+                        fields:
+                          -
+                            handle: card_title
+                            field:
+                              type: text
+                              display: Title
+                              required: true
+                          -
+                            handle: card_description
+                            field:
+                              type: textarea
+                              display: Description
+                              required: true
+                          -
+                            handle: card_schedule
+                            field:
+                              type: text
+                              display: Schedule
+                          -
+                            handle: card_contact
+                            field:
+                              type: text
+                              display: Contact Info
+                              instructions: 'Optional contact line shown below description.'
+                          -
+                            handle: card_image
+                            field:
+                              type: text
+                              display: Image Path
+                          -
+                            handle: card_image_alt
+                            field:
+                              type: text
+                              display: Image Alt Text
+                          -
+                            handle: card_image_height
+                            field:
+                              type: select
+                              display: Image Height
+                              options:
+                                short: 'Short (190px)'
+                                tall: 'Tall (300px)'
+                              default: short
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: meta_description
+            field:
+              type: textarea
+              display: Meta Description
+              character_limit: 160
+          -
+            handle: og_image
+            field:
+              type: assets
+              display: Social Share Image
+              container: assets
+              max_files: 1
