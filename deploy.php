@@ -28,7 +28,8 @@ host('production')
     ->set('remote_user', getenv('DEPLOY_USER') ?: 'u000000000')
     ->set('hostname', getenv('DEPLOY_HOST') ?: '0.0.0.0')
     ->set('port', (int) (getenv('DEPLOY_PORT') ?: 22))
-    ->set('deploy_path', getenv('DEPLOY_PATH') ?: '~/communityamb');
+    ->set('deploy_path', getenv('DEPLOY_PATH') ?: '~/communityamb')
+    ->set('bin/php', '~/bin/php');
 
 task('deploy:build_upload', function () {
     $buildPath = get('release_path').'/public/build';
@@ -38,6 +39,13 @@ task('deploy:build_upload', function () {
 
 task('statamic:stache:warm', artisan('statamic:stache:warm'));
 
+task('deploy:symlink_public_html', function () {
+    $deployPath = get('deploy_path');
+    run("rm -rf ~/domains/communityamb.org/public_html");
+    run("ln -s {$deployPath}/current/public ~/domains/communityamb.org/public_html");
+})->desc('Symlink public_html to current release public/');
+
 after('deploy:vendors', 'deploy:build_upload');
 after('deploy:publish', 'statamic:stache:warm');
+after('deploy:symlink', 'deploy:symlink_public_html');
 after('deploy:failed', 'deploy:unlock');
