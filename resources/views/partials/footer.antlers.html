@@ -3,7 +3,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- About -->
             <div>
-                <img src="/assets/images/uploads/2023/09/community-ambulance-new-logo.png" alt="{{ organization:org_name }}" class="h-12 w-auto mb-4 brightness-0 invert">
+                <img src="{{ organization:logo_url }}" alt="{{ organization:org_name }}" class="h-12 w-auto mb-4 brightness-0 invert">
                 <p class="text-sm text-gray-300">{{ organization:description }}</p>
             </div>
 
@@ -49,11 +49,6 @@
                     </li>
                 </ul>
 
-                <!-- Email Signup Form -->
-                <form class="mt-4">
-                    <input type="email" placeholder="Email" class="w-full rounded border border-white/30 bg-white/10 px-3 py-2 text-sm text-white placeholder-white/60 focus:border-white focus:outline-none mb-2">
-                    <button type="submit" class="w-full bg-brand-green-dark hover:bg-brand-navy text-white text-sm font-semibold px-4 py-2 rounded uppercase tracking-wide transition">Submit</button>
-                </form>
             </div>
         </div>
     </div>

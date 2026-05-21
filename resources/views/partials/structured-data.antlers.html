@@ -18,7 +18,7 @@
     "areaServed": ["Sayville, NY", "West Sayville, NY", "Oakdale, NY", "Bohemia, NY", "Bayport, NY"],
     "foundingDate": "1950",
     "nonprofitStatus": "501(c)(3)",
-    "logo": "{{ config:app:url }}/assets/images/uploads/2023/09/community-ambulance-new-logo.png"{{ if social_links:facebook_url || social_links:instagram_url }},
+    "logo": "{{ config:app:url }}{{ organization:logo_url }}"{{ if social_links:facebook_url || social_links:instagram_url }},
     "sameAs": [{{ if social_links:facebook_url }}"{{ social_links:facebook_url }}"{{ /if }}{{ if social_links:facebook_url && social_links:instagram_url }}, {{ /if }}{{ if social_links:instagram_url }}"{{ social_links:instagram_url }}"{{ /if }}]{{ /if }}
 }
 </script>
