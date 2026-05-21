@@ -12,13 +12,11 @@
                     {{# First Name + Last Name row #}}
                     <div class="grid grid-cols-2 max-md:grid-cols-1 gap-[10px]">
                         <div>
-                            <label for="first_name" class="block font-body text-sm font-normal text-text-primary mb-1">First Name <span class="text-red-500">*</span></label>
-                            <input type="text" name="first_name" id="first_name" required placeholder="First Name" class="w-full rounded border border-[#69727d] bg-white px-4 py-[11px] text-base text-text-primary font-body focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none">
+                            {{ partial:partials/form-input type="text" name="first_name" label="First Name" required="true" placeholder="First Name" label_class="block font-body text-sm font-normal text-text-primary mb-1" input_class="w-full rounded border border-[#69727d] bg-white px-4 py-[11px] text-base text-text-primary font-body focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none" }}
                             {{ if error:first_name }}<p class="text-red-600 text-xs mt-1">{{ error:first_name }}</p>{{ /if }}
                         </div>
                         <div>
-                            <label for="last_name" class="block font-body text-sm font-normal text-text-primary mb-1">Last Name <span class="text-red-500">*</span></label>
-                            <input type="text" name="last_name" id="last_name" required placeholder="Last Name" class="w-full rounded border border-[#69727d] bg-white px-4 py-[11px] text-base text-text-primary font-body focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none">
+                            {{ partial:partials/form-input type="text" name="last_name" label="Last Name" required="true" placeholder="Last Name" label_class="block font-body text-sm font-normal text-text-primary mb-1" input_class="w-full rounded border border-[#69727d] bg-white px-4 py-[11px] text-base text-text-primary font-body focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none" }}
                             {{ if error:last_name }}<p class="text-red-600 text-xs mt-1">{{ error:last_name }}</p>{{ /if }}
                         </div>
                     </div>
@@ -26,13 +24,11 @@
                     {{# Email + Phone row #}}
                     <div class="grid grid-cols-2 max-md:grid-cols-1 gap-[10px]">
                         <div>
-                            <label for="email" class="block font-body text-sm font-normal text-text-primary mb-1">Email <span class="text-red-500">*</span></label>
-                            <input type="email" name="email" id="email" required placeholder="Email Address" class="w-full rounded border border-[#69727d] bg-white px-4 py-[11px] text-base text-text-primary font-body focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none">
+                            {{ partial:partials/form-input type="email" name="email" label="Email" required="true" placeholder="Email Address" label_class="block font-body text-sm font-normal text-text-primary mb-1" input_class="w-full rounded border border-[#69727d] bg-white px-4 py-[11px] text-base text-text-primary font-body focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none" }}
                             {{ if error:email }}<p class="text-red-600 text-xs mt-1">{{ error:email }}</p>{{ /if }}
                         </div>
                         <div>
-                            <label for="phone" class="block font-body text-sm font-normal text-text-primary mb-1">Phone <span class="text-red-500">*</span></label>
-                            <input type="tel" name="phone" id="phone" required placeholder="Phone Number" pattern="[0-9()#&+*\-=.]+" title="Only numbers and phone characters (#, -, *, etc) are accepted." class="w-full rounded border border-[#69727d] bg-white px-4 py-[11px] text-base text-text-primary font-body focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none">
+                            {{ partial:partials/form-input type="tel" name="phone" label="Phone" required="true" placeholder="Phone Number" pattern="[0-9()#&+*\-=.]+" title="Only numbers and phone characters (#, -, *, etc) are accepted." label_class="block font-body text-sm font-normal text-text-primary mb-1" input_class="w-full rounded border border-[#69727d] bg-white px-4 py-[11px] text-base text-text-primary font-body focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none" }}
                             {{ if error:phone }}<p class="text-red-600 text-xs mt-1">{{ error:phone }}</p>{{ /if }}
                         </div>
                     </div>
