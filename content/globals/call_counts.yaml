@@ -1,1 +1,39 @@
 title: 'Call Counts'
+current_year_summary: 'As of April 26th, 1,625 alarms have been answered for 2026.'
+yearly_call_counts:
+  -
+    year: '2025'
+    alarm_count: '5,637'
+  -
+    year: '2024'
+    alarm_count: '5,780'
+  -
+    year: '2023'
+    alarm_count: '5,612'
+  -
+    year: '2022'
+    alarm_count: '5,617'
+  -
+    year: '2021'
+    alarm_count: '5,219'
+  -
+    year: '2020'
+    alarm_count: '4,445'
+  -
+    year: '2019'
+    alarm_count: '5,268'
+  -
+    year: '2018'
+    alarm_count: '5,025'
+  -
+    year: '2017'
+    alarm_count: '4,841'
+  -
+    year: '2016'
+    alarm_count: '4,661'
+  -
+    year: '2015'
+    alarm_count: '4,510'
+  -
+    year: '2014'
+    alarm_count: '5,318'
