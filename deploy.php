@@ -9,6 +9,7 @@ set('repository', 'https://github.com/communityamb/communityamb.git');
 set('branch', 'main');
 set('keep_releases', 5);
 set('writable_mode', 'chmod');
+set('update_code_strategy', 'clone');
 
 add('shared_files', ['.env']);
 add('shared_dirs', ['storage']);
