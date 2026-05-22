@@ -38,6 +38,7 @@ task('deploy:build_upload', function () {
     upload('public/build/', $buildPath);
 })->desc('Upload locally-built Vite assets');
 
+task('statamic:cache:clear', artisan('cache:clear'));
 task('statamic:stache:warm', artisan('statamic:stache:warm'));
 
 task('deploy:symlink_public_html', function () {
@@ -47,6 +48,7 @@ task('deploy:symlink_public_html', function () {
 })->desc('Symlink public_html to current release public/');
 
 after('deploy:vendors', 'deploy:build_upload');
-after('deploy:publish', 'statamic:stache:warm');
+after('deploy:publish', 'statamic:cache:clear');
+after('statamic:cache:clear', 'statamic:stache:warm');
 after('deploy:symlink', 'deploy:symlink_public_html');
 after('deploy:failed', 'deploy:unlock');
