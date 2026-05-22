@@ -3,7 +3,7 @@ title: "Car Seat Inspection & Hands Only Child/Infant CPR"
 id: "ac7b53a6-52dd-46d6-991f-a873fdc18dda"
 template: program-detail
 blueprint: page
-program_image: /assets/images/uploads/2023/09/Childrens-Safety-12.jpg
+program_image: /assets/images/uploads/2023/09/Childrens-Safety-12.webp
 image_side: right
 ---
 

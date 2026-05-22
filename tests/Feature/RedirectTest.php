@@ -58,7 +58,7 @@ class RedirectTest extends TestCase
             ],
             'join youth squad' => [
                 '/join-youth-squad',
-                '/join-community/join-youth-squad',
+                '/our-team/youth-squad',
             ],
             'in memoriam' => [
                 '/in-memoriam',

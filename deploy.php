@@ -11,7 +11,7 @@ set('keep_releases', 5);
 set('writable_mode', 'chmod');
 
 add('shared_files', ['.env']);
-add('shared_dirs', ['storage', 'public/assets']);
+add('shared_dirs', ['storage']);
 add('writable_dirs', [
     'bootstrap/cache',
     'storage',

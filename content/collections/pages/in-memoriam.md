@@ -23,7 +23,7 @@ Beyond his volunteer work, Jamie was a formidable presence. After graduating fro
 
 Today, as we remember Jamie, we are reminded of the motto of Community Ambulance Company, which is “Neighbors Helping Neighbors.” Jamie was the epitome of service, kindness, courage, and strength. Even when he became ill, he did not let his life be defined by his disease. He continued to work just as hard as he always had before, still planned events, and he did not let his fight slow him down even a little bit. The ambulance that carries him today and tomorrow is dedicated to him, an honor from our company few are lucky to receive. On the side is inscribed “Dedicated to Jamie Atkinson for a lifetime of service to others”.  In the years that he was with us; he managed to accomplish more and give more back to others than most could in multiple lifetimes. His life was truly dedicated to selflessness and service to others, and his impact will live on forever. His legacy will continue to inspire and guide us all at Community Ambulance Company, and he will never, ever be forgotten.
 
-![](/assets/images/uploads/2023/09/timthumb-3.jpeg)
+![](/assets/images/uploads/2023/09/timthumb-3.webp)
 
 ##
 ## Timothy Gozaloff | Life Member
@@ -34,13 +34,13 @@ It is with heavy hearts we announce the passing of Timothy Gozaloff. Tim graduat
 
 Tim is survived by his wife of 39 years Diana, his son Timothy and his wife Stephanie, his daughter Jennifer Brady and her husband Ryan, his grandchildren Michael, Jonathan, Emma, and Ellie, his father Gerard of Sayville, his sister Barbara Gozaloff, his brothers Paul and his wife Jo-Ann, Michael and his wife Helen.
 
-![](/assets/images/uploads/2023/09/timthumb-3.jpeg)
+![](/assets/images/uploads/2023/09/timthumb-3.webp)
 
 ## Diana Ahlschlager | Life Member
 
 Diana joined Community Ambulance in May of 2004, and quickly became one of the department's most active members. From her many years as a top responder to countless Community Education events she spearheaded teaching children about EMS, Diana was the epitome of selflessness and compassion. Diana dedicated her life to serving others, both through her membership and outside of the company. When our residents needed help at their most dire moments, Diana was there to answer the call, and her passing marks the loss of a true local and Community Ambulance Company hero.
 
-![](/assets/images/uploads/2023/09/timthumb-3.jpeg)
+![](/assets/images/uploads/2023/09/timthumb-3.webp)
 
 ## William Fridrich Jr. | Charter Member
 
@@ -53,7 +53,7 @@ Back in the days before we had our own building, we housed vehicles and responde
 Back in our first building on Swayze Street in Sayville we had our antennas mounted on top of a large telephone pole in our front parking lot. The reason we had that at all was because of Bill. While working for LILCO, he was able to request a pole be put in place for safety reasons in front of our building to eventually have a street light mounted to it. Coincidentally, the pole went up, but the rest of the paperwork to have the street light placed was never processed, and that left the perfect spot to place our antennas.
 Everything we have at Community Ambulance is owed to people like Bill. Each time one of our ambulances responds to be at someone’s side in their darkest hour, that is a testament to Bill’s life, his selfless service, and the amazing organization he helped bring into existence.
 
-![](/assets/images/uploads/2023/09/timthumb-3.jpeg)
+![](/assets/images/uploads/2023/09/timthumb-3.webp)
 
 ##
 ## Barney Loughlin | Charter Member
@@ -62,7 +62,7 @@ Everything we have at Community Ambulance is owed to people like Bill. Each time
 
 Barney was one of the few to answer the call for help when the local communities cried out for the need of a local ambulance. In 1950, Barney became one of the heroes to found Community Ambulance and since holds an honorary spot amongst the local emergency services. Barney dedicated his entire life to serving others, from his time in the military to volunteering with both Community Ambulance Company and the Sayville Fire Department. Barney was a very community-oriented man later founding his own local vineyard in his retirement. On any given weekend, you could find Barney sitting in his chair at the vineyard with a crowd around him telling stories of years past. Our gratitude and thanks could not be enough for all Barney has done for our community over the years.
 
-![](/assets/images/uploads/2023/09/timthumb-1-1.jpeg)
+![](/assets/images/uploads/2023/09/timthumb-1-1.webp)
 
 ##
 ## EMT Modesto Vazquez | 3-28-325
@@ -71,7 +71,7 @@ Barney was one of the few to answer the call for help when the local communities
 
 EMT Modesto “Moe” Vazquez was an active member of Community Ambulance Company until he became sick.  He was a member for 6 and a half years and was a kind and gentle soul whose presence around the company brought joy to the other members.  He is survived by his wife, son, daughter, 3 brothers, a sister and his father.  He will be missed by all and our community has lost a kind and caring EMT.  Rest in Peace Moe.
 
-![](/assets/images/uploads/2023/09/timthumb-3.jpeg)
+![](/assets/images/uploads/2023/09/timthumb-3.webp)
 
 ## AEMT Michael Carroll | Life Member, Ex-Chief & Former Board of Director
 

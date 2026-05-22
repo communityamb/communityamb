@@ -6,7 +6,7 @@ blueprint: page
 meta_description: 'Learn about Community Ambulance Company — a volunteer EMS organization founded in 1950, serving over 50,000 residents across five Long Island communities.'
 show_call_counts: true
 chief_quote: "Be a volunteer!"
-chief_image: /assets/images/uploads/2023/09/community-ambulance-new-logo.png
+chief_image: /assets/images/uploads/2023/09/community-ambulance-new-logo.webp
 ---
 ## Who Are We?
 

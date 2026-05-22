@@ -6,7 +6,7 @@ blueprint: chiefs_corner
 meta_description: "A message from the Chief of Department at Community Ambulance Company about our mission, achievements, and commitment to community EMS service."
 chief_name: Jennifer Hartmann
 chief_title: Chief
-chief_photo: images/uploads/2026/01/2B0D9C6F-83DC-4763-B837-429FA3EBCC0E.jpg
+chief_photo: images/uploads/2026/01/2B0D9C6F-83DC-4763-B837-429FA3EBCC0E.webp
 chief_photo_alt: Chief Jennifer Hartmann
 ---
 

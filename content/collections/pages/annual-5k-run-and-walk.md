@@ -6,7 +6,7 @@ blueprint: five_k
 meta_description: 'Register for the annual Community Ambulance 5K Run and Walk at Islip Grange Park in Sayville, NY. Race results, age categories, and series information.'
 event_date_display: '2026 Date - June 21st, 2026'
 event_heading: Join us for the 16th annual community ambulance 5k run and walk
-event_image: images/uploads/2023/09/run.jpg
+event_image: images/uploads/2023/09/run.webp
 event_paragraphs:
   -
     text: 'The run begins at 9am at the Islip Grange Park in Sayville, NY. The course is a mix of some cross country running through the park and then transitions onto the road. The finish will be back inside the park.'

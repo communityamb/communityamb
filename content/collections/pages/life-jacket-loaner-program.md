@@ -3,7 +3,7 @@ title: Life Jacket Loaner Program
 id: "b22abe53-552f-452b-bd18-40255f137a3d"
 template: program-detail
 blueprint: page
-program_image: /assets/images/uploads/2023/09/IMG_3744-Copy.jpg
+program_image: /assets/images/uploads/2023/09/IMG_3744-Copy.webp
 image_side: right
 ---
 

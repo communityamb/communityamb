@@ -3,7 +3,7 @@ title: Community Education
 id: "422c8fb1-4532-49ae-84cd-a75cb9d9e315"
 template: program-detail
 blueprint: page
-program_image: /assets/images/uploads/2023/09/StudentspracticingCPRinaCPRclass.jpg
+program_image: /assets/images/uploads/2023/09/StudentspracticingCPRinaCPRclass.webp
 image_side: left
 ---
 

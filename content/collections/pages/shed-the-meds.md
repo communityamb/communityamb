@@ -3,7 +3,7 @@ title: Shed the Meds
 id: "b0e21015-8d77-46db-b465-72725e1201f9"
 template: program-detail
 blueprint: page
-program_image: /assets/images/uploads/2023/09/Medications.jpeg
+program_image: /assets/images/uploads/2023/09/Medications.webp
 image_side: right
 ---
 Shed the Meds allows residents, throughout Suffolk County, the opportunity to safely dispose of unwanted and unused medications and prescription drugs.

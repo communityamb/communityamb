@@ -3,7 +3,7 @@ title: Public AEDs
 id: "80a63bc7-6bcd-47b9-b683-43b422b73942"
 template: program-detail
 blueprint: page
-program_image: /assets/images/uploads/2023/09/aed-plus-in-school.jpg
+program_image: /assets/images/uploads/2023/09/aed-plus-in-school.webp
 image_side: left
 ---
 ## Publicly Distributed AED Program
