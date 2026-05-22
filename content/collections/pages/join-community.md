@@ -26,7 +26,7 @@ There's something truly special about lending a hand when someone needs it most,
 - Form lifelong friendships
 - An unmatched adrenaline rush: Imagine saving someone's life or delivering a baby
 
-![](/assets/images/uploads/2023/09/community-ambulance-new-logo.png)
+![](/assets/images/uploads/2023/09/community-ambulance-new-logo.webp)
 
 ## Regular Membership
 
@@ -34,7 +34,7 @@ There's something truly special about lending a hand when someone needs it most,
 - Required to ride a minimum of 6 hours of in-house standby each week.
 - Upon full membership have voting rights within the company and right to hold office
 
-![](/assets/images/uploads/2023/09/community-ambulance-new-logo.png)
+![](/assets/images/uploads/2023/09/community-ambulance-new-logo.webp)
 
 ## Associate Membership:
 

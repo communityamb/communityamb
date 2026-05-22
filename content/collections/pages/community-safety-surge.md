@@ -3,7 +3,7 @@ title: Community Safety Surge
 id: "c0798d06-7a03-4af4-b83b-5de2105152a8"
 template: program-detail
 blueprint: page
-program_image: /assets/images/uploads/2023/09/image2.jpg
+program_image: /assets/images/uploads/2023/09/image2.webp
 image_side: right
 ---
 

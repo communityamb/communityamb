@@ -3,7 +3,7 @@ title: Public Narcan Trainings
 id: "7371c129-9489-43f6-928b-2f5480b4a1bf"
 template: program-detail
 blueprint: page
-program_image: /assets/images/uploads/2023/09/8191282091_0708ba0a0a_b-1024x683-2.jpg
+program_image: /assets/images/uploads/2023/09/8191282091_0708ba0a0a_b-1024x683-2.webp
 image_side: left
 ---
 

@@ -3,7 +3,7 @@ title: "Shred Day & Identify Theft Prevention"
 id: "e6d987bb-31a7-439c-8942-88f961cd5480"
 template: program-detail
 blueprint: page
-program_image: /assets/images/uploads/2023/09/Shredding-flyer-banner.jpg
+program_image: /assets/images/uploads/2023/09/Shredding-flyer-banner.webp
 image_side: left
 ---
 
