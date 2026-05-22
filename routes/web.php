@@ -49,7 +49,8 @@ $redirects = [
     '/cac-events' => '/events',
     '/cac-events/list' => '/events',
     '/annual-5k-run-and-walk' => '/events/annual-5k-run-and-walk',
-    '/join-youth-squad' => '/join-community/join-youth-squad',
+    '/join-youth-squad' => '/our-team/youth-squad',
+    '/join-community/join-youth-squad' => '/our-team/youth-squad',
 ];
 
 foreach ($redirects as $old => $new) {
