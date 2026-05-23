@@ -26,11 +26,11 @@ add('writable_dirs', [
 ]);
 
 host('production')
-    ->set('remote_user', getenv('DEPLOY_USER') ?: 'u000000000')
+    ->set('remote_user', getenv('DEPLOY_USER') ?: 'deploy')
     ->set('hostname', getenv('DEPLOY_HOST') ?: '0.0.0.0')
     ->set('port', (int) (getenv('DEPLOY_PORT') ?: 22))
-    ->set('deploy_path', getenv('DEPLOY_PATH') ?: '~/communityamb')
-    ->set('bin/php', '/opt/alt/php84/usr/bin/php')
+    ->set('deploy_path', getenv('DEPLOY_PATH') ?: '/var/www/communityamb')
+    ->set('bin/php', '/usr/bin/php')
     ->set('shell', 'bash -s');
 
 task('deploy:build_upload', function () {
@@ -43,14 +43,13 @@ task('statamic:cache:clear', artisan('cache:clear'));
 task('statamic:glide:clear', artisan('statamic:glide:clear'));
 task('statamic:stache:warm', artisan('statamic:stache:warm'));
 
-task('deploy:symlink_public_html', function () {
-    $deployPath = get('deploy_path');
-    run("ln -sfn {$deployPath}/current/public ~/domains/communityamb.org/public_html");
-})->desc('Atomically swap public_html to current release public/');
+task('deploy:reload_php_fpm', function () {
+    run('sudo systemctl reload php8.4-fpm');
+})->desc('Reload PHP-FPM to pick up OPcache changes');
 
 after('deploy:vendors', 'deploy:build_upload');
 after('deploy:publish', 'statamic:cache:clear');
 after('statamic:cache:clear', 'statamic:glide:clear');
 after('statamic:glide:clear', 'statamic:stache:warm');
-after('deploy:symlink', 'deploy:symlink_public_html');
+after('deploy:symlink', 'deploy:reload_php_fpm');
 after('deploy:failed', 'deploy:unlock');
