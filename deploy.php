@@ -10,7 +10,7 @@ set('branch', 'main');
 set('keep_releases', 5);
 set('writable_mode', 'chmod');
 set('writable_chmod_mode', '0775');
-set('writable_use_sudo', true);
+set('writable_use_sudo', false);
 set('update_code_strategy', 'clone');
 
 add('shared_files', ['.env']);
@@ -63,3 +63,19 @@ task('deploy:fix_permissions', function () {
 after('deploy:symlink', 'deploy:fix_permissions');
 after('deploy:fix_permissions', 'deploy:reload_php_fpm');
 after('deploy:failed', 'deploy:unlock');
+
+// Disable built-in writable task — deploy:fix_permissions handles permissions
+// with sudo after symlink, which is required for www-data-owned files in shared storage.
+task('deploy:writable', function () {})->desc('Skipped: handled by deploy:fix_permissions');
+
+// Override cleanup to use sudo — old releases contain Glide images owned by www-data.
+task('deploy:cleanup', function () {
+    $releases = get('releases_list');
+    $keep = get('keep_releases');
+    if ($keep > 0) {
+        $old = array_slice($releases, $keep);
+        foreach ($old as $release) {
+            run("sudo rm -rf {{deploy_path}}/releases/{$release}");
+        }
+    }
+})->desc('Clean up old releases (with sudo for www-data files)');
