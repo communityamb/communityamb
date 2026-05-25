@@ -46,19 +46,19 @@ task('statamic:glide:clear', artisan('statamic:glide:clear'));
 task('statamic:stache:warm', artisan('statamic:stache:warm'));
 
 task('deploy:reload_php_fpm', function () {
-    run('sudo -n systemctl reload php8.4-fpm || true');
-})->desc('Reload PHP-FPM to pick up OPcache changes (non-fatal)');
+    run('sudo systemctl reload php8.4-fpm');
+})->desc('Reload PHP-FPM to pick up OPcache changes');
 
 after('deploy:vendors', 'deploy:build_upload');
 after('deploy:publish', 'statamic:cache:clear');
 after('statamic:cache:clear', 'statamic:glide:clear');
 after('statamic:glide:clear', 'statamic:stache:warm');
 task('deploy:fix_permissions', function () {
-    run('sudo -n chown -R deploy:www-data {{deploy_path}}/shared/storage || true');
-    run('sudo -n chmod -R 775 {{deploy_path}}/shared/storage || true');
-    run('sudo -n chown -R deploy:www-data {{release_path}}/bootstrap/cache || true');
-    run('sudo -n chmod -R 775 {{release_path}}/bootstrap/cache || true');
-})->desc('Fix storage/cache ownership for www-data PHP-FPM (non-fatal)');
+    run('sudo chown -R deploy:www-data {{deploy_path}}/shared/storage');
+    run('sudo chmod -R 775 {{deploy_path}}/shared/storage');
+    run('sudo chown -R deploy:www-data {{release_path}}/bootstrap/cache');
+    run('sudo chmod -R 775 {{release_path}}/bootstrap/cache');
+})->desc('Fix storage/cache ownership for www-data PHP-FPM');
 
 after('deploy:symlink', 'deploy:fix_permissions');
 after('deploy:fix_permissions', 'deploy:reload_php_fpm');
