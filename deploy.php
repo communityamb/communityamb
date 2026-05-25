@@ -58,7 +58,9 @@ task('deploy:fix_permissions', function () {
     run('sudo chmod -R 775 {{deploy_path}}/shared/storage');
     run('sudo chown -R deploy:www-data {{release_path}}/bootstrap/cache');
     run('sudo chmod -R 775 {{release_path}}/bootstrap/cache');
-})->desc('Fix storage/cache ownership for www-data PHP-FPM');
+    run('sudo chown -R deploy:www-data {{release_path}}/public/img');
+    run('sudo chmod -R 775 {{release_path}}/public/img');
+})->desc('Fix storage/cache/img ownership for www-data PHP-FPM');
 
 after('statamic:stache:warm', 'deploy:fix_permissions');
 after('deploy:fix_permissions', 'deploy:reload_php_fpm');
