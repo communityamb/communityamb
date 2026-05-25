@@ -42,6 +42,7 @@ task('deploy:build_upload', function () {
 })->desc('Upload locally-built Vite assets');
 
 task('statamic:cache:clear', artisan('cache:clear'));
+task('statamic:assets:meta', artisan('statamic:assets:meta'));
 task('statamic:glide:clear', artisan('statamic:glide:clear'));
 task('statamic:stache:warm', artisan('statamic:stache:warm'));
 
@@ -51,7 +52,8 @@ task('deploy:reload_php_fpm', function () {
 
 after('deploy:vendors', 'deploy:build_upload');
 after('deploy:publish', 'statamic:cache:clear');
-after('statamic:cache:clear', 'statamic:glide:clear');
+after('statamic:cache:clear', 'statamic:assets:meta');
+after('statamic:assets:meta', 'statamic:glide:clear');
 after('statamic:glide:clear', 'statamic:stache:warm');
 task('deploy:fix_permissions', function () {
     run('sudo chown -R deploy:www-data {{deploy_path}}/shared/storage');
@@ -60,7 +62,9 @@ task('deploy:fix_permissions', function () {
     run('sudo chmod -R 775 {{release_path}}/bootstrap/cache');
     run('sudo chown -R deploy:www-data {{release_path}}/public/img');
     run('sudo chmod -R 775 {{release_path}}/public/img');
-})->desc('Fix storage/cache/img ownership for www-data PHP-FPM');
+    run('sudo chown -R deploy:www-data {{release_path}}/public/assets');
+    run('sudo chmod -R 775 {{release_path}}/public/assets');
+})->desc('Fix ownership for www-data PHP-FPM');
 
 after('statamic:stache:warm', 'deploy:fix_permissions');
 after('deploy:fix_permissions', 'deploy:reload_php_fpm');
