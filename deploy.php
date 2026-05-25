@@ -63,3 +63,7 @@ task('deploy:fix_permissions', function () {
 after('deploy:symlink', 'deploy:fix_permissions');
 after('deploy:fix_permissions', 'deploy:reload_php_fpm');
 after('deploy:failed', 'deploy:unlock');
+
+// Disable built-in writable task — deploy:fix_permissions handles permissions
+// with sudo after symlink, which is required for www-data-owned files in shared storage.
+task('deploy:writable', function () {})->desc('Skipped: handled by deploy:fix_permissions');
