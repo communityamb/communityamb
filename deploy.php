@@ -51,11 +51,23 @@ task('deploy:reload_php_fpm', function () {
 })->desc('Reload PHP-FPM to pick up OPcache changes');
 
 after('deploy:vendors', 'deploy:build_upload');
-after('deploy:publish', 'statamic:cache:clear');
+
+// Fix shared storage permissions before artisan tasks (runtime files may be www-data:644)
+task('deploy:fix_permissions', function () {
+    run('sudo chown -R deploy:www-data {{deploy_path}}/shared/storage');
+    run('sudo chmod -R 775 {{deploy_path}}/shared/storage');
+    run('sudo chown -R deploy:www-data {{release_path}}/bootstrap/cache');
+    run('sudo chmod -R 775 {{release_path}}/bootstrap/cache');
+})->desc('Fix shared storage/cache ownership before artisan tasks');
+
+after('deploy:publish', 'deploy:fix_permissions');
+after('deploy:fix_permissions', 'statamic:cache:clear');
 after('statamic:cache:clear', 'statamic:assets:meta');
 after('statamic:assets:meta', 'statamic:glide:clear');
 after('statamic:glide:clear', 'statamic:stache:warm');
-task('deploy:fix_permissions', function () {
+
+// Final permissions pass after stache:warm creates files as deploy:deploy
+task('deploy:fix_permissions_final', function () {
     run('sudo chown -R deploy:www-data {{deploy_path}}/shared/storage');
     run('sudo chmod -R 775 {{deploy_path}}/shared/storage');
     run('sudo chown -R deploy:www-data {{release_path}}/bootstrap/cache');
@@ -64,10 +76,10 @@ task('deploy:fix_permissions', function () {
     run('sudo chmod -R 775 {{release_path}}/public/img');
     run('sudo chown -R deploy:www-data {{release_path}}/public/assets');
     run('sudo chmod -R 775 {{release_path}}/public/assets');
-})->desc('Fix ownership for www-data PHP-FPM');
+})->desc('Final permission fix after all artisan tasks');
 
-after('statamic:stache:warm', 'deploy:fix_permissions');
-after('deploy:fix_permissions', 'deploy:reload_php_fpm');
+after('statamic:stache:warm', 'deploy:fix_permissions_final');
+after('deploy:fix_permissions_final', 'deploy:reload_php_fpm');
 after('deploy:failed', 'deploy:unlock');
 
 // Disable built-in writable task — deploy:fix_permissions handles permissions
