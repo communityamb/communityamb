@@ -12,8 +12,8 @@ cta_secondary_text: "Contact us to schedule group training"
 cta_secondary_link: 'mailto:secretary@communityamb.org'
 ---
 
-Community Ambulance Company offers a **free** training on how to recognize and respond to an opioid overdose by using intra-nasal Naloxone (Narcan). Narcan is a prescription medication that is used to reverse an opioid overdose. Unfortunately, the opiate drug problem has been increasing in recent years, and having this training can potentially save someone’s life. In an effort to help prevent fatal opioid overdoses, Community Ambulance Company trains local residents in the administration of Narcan and teaching a course in hands-only CPR.
+Community Ambulance Company offers a **FREE** training on how to recognize and respond to an opioid overdose by using intra-nasal Naloxone (Narcan). Narcan is a prescription medication that is used to reverse an opioid overdose. Unfortunately, the opiate drug problem has been increasing in recent years, and having this training can potentially save someone’s life. In an effort to help prevent fatal opioid overdoses, Community Ambulance Company trains local residents in the administration of Narcan and teaching a course in hands-only CPR.
 
-**Event Occurs: Bi-Annually**
+**Event Occurs: Twice per year**
 
 Community Ambulance also runs [Shed the Meds](/shed-the-meds) — a safe medication disposal program held twice a year.

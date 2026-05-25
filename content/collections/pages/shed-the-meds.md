@@ -13,7 +13,7 @@ Shed the Meds allows residents, throughout Suffolk County, the opportunity to sa
 
 Non-medical use of prescription and over-the-counter medicines remains a significant part of the drug problem here on Long Island. The members of the Community Ambulance Company have seen the effects of overdoses and accidental poisonings by prescription medications firsthand. Now, they spearheaded programs, like Shed the Meds, in an attempt to curb the drug problem in our local community. Members of the Suffolk County Sheriff’s Department are available to assist and answer any questions residents may have.
 
-**Event Occurs: Bi-annually in April / October**
+**Event Occurs: Twice per year in April / October**
 
 If you missed us, remember you can always safely discard of unused medications anonymously at each of the Suffolk County’s seven police precincts 24/7.
 
