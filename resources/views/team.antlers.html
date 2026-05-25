@@ -46,7 +46,7 @@
             {{ collection:team_members category:is="in-memoriam" sort="sort_order:asc" }}
 
             <div class="rounded-card p-[30px] max-md:p-[20px] bg-memorial-bg"
-                 x-data="{ shown: false }"
+                 x-data="{ shown: false, expanded: false }"
                  x-intersect.once="shown = true"
                  x-cloak
                  :class="shown ? 'animate-fade-in-up' : 'opacity-0'">
@@ -61,7 +61,16 @@
                     {{ /if }}
                 </div>
                 {{ if bio }}
-                <div class="font-display text-base leading-[26px] text-text-secondary mt-4 text-center whitespace-pre-line max-md:text-sm max-md:leading-[24px]">{{ bio }}</div>
+                <div class="relative">
+                    <div class="font-display text-base leading-[26px] text-text-secondary mt-4 text-center whitespace-pre-line max-md:text-sm max-md:leading-[24px]"
+                         :class="expanded ? '' : 'max-h-[200px] overflow-hidden'"
+                         :style="expanded ? '' : '-webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%)'">{{ bio }}</div>
+                    <button
+                        @click="expanded = !expanded"
+                        class="mt-2 mx-auto block text-sm font-display font-semibold text-brand-green hover:text-brand-green-dark transition"
+                        x-text="expanded ? 'Read less' : 'Read more'">
+                    </button>
+                </div>
                 {{ /if }}
             </div>
 

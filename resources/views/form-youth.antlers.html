@@ -134,37 +134,65 @@
 {{ if applications_closed }}
 <section class="bg-surface-offwhite py-section-sm">
     <div class="max-w-7xl mx-auto px-4">
-        <h2 class="font-display text-hero font-medium uppercase leading-[45px] text-center text-brand-green-accent max-lg:leading-[50px] max-md:text-mid max-md:leading-[36px] max-md:tracking-[0.5px]">
-            <a href="/assets/images/uploads/2023/09/Youth-Squad-Membership-Application-Packet.pdf" target="_blank" class="text-brand-green-accent hover:text-brand-green-dark transition">
-                Youth Squad Membership Application Packet
+        {{# Application & Contact card #}}
+        <div class="max-w-2xl mx-auto bg-white rounded-card shadow-card p-[50px] max-md:p-[30px] text-center">
+            <div class="flex justify-center mb-5">
+                <div class="w-[70px] h-[70px] rounded-full border-[3px] border-brand-green flex items-center justify-center">
+                    <svg class="w-[35px] h-[35px] text-brand-green" fill="currentColor" viewBox="0 0 384 512"><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z"/></svg>
+                </div>
+            </div>
+            <h2 class="font-display text-display font-semibold leading-[44px] text-brand-green-accent mb-4 max-lg:text-2xl max-lg:leading-[40px] max-md:text-sub max-md:leading-[36px]">
+                Youth Squad Application Packet
+            </h2>
+            <p class="font-display text-base leading-[28px] text-text-primary mb-6 max-md:text-base max-md:leading-[26px]">
+                Download the membership application packet. Completed applications can be mailed to P.O. Box 450, Sayville NY 11782 or brought in on the first day.
+            </p>
+            <a href="/assets/images/uploads/2023/09/Youth-Squad-Membership-Application-Packet.pdf" target="_blank" class="inline-flex items-center gap-2 bg-brand-green text-white font-display font-semibold px-8 py-3 rounded-btn hover:bg-brand-navy transition">
+                Download Application
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V3"/></svg>
             </a>
-        </h2>
-        <div class="flex justify-center mt-8">
-            <a href="/assets/images/uploads/2023/09/Youth-Squad-Membership-Application-Packet.pdf" target="_blank" class="block max-w-md">
-                <img src="{{ glide src="/assets/images/uploads/2023/09/image0-15.webp" preset="card" }}" alt="Youth Squad members of Community Ambulance" class="w-full rounded hover:scale-105 transition-transform duration-300" loading="lazy" width="505" height="640">
-            </a>
+            <div class="w-[10%] h-px bg-border-medium mx-auto my-8"></div>
+            <p class="font-display text-lg font-semibold text-brand-green-accent mb-3 max-md:text-base">Questions?</p>
+            <p class="font-display text-base leading-[28px] text-text-primary max-md:leading-[26px]">
+                Email <a href="mailto:youthsqd@communityamb.org" class="text-link underline hover:text-link-hover transition">youthsqd@communityamb.org</a>
+                or call <a href="tel:6315672586" class="text-link underline hover:text-link-hover transition">(631) 567-2586 x117</a>
+            </p>
         </div>
     </div>
 </section>
 {{ else }}
 <section class="bg-surface-offwhite py-section-sm">
     <div class="max-w-7xl mx-auto px-4">
-        <h2 class="font-display text-hero font-medium uppercase leading-[45px] text-center text-brand-green-accent max-lg:leading-[50px] max-md:text-mid max-md:leading-[36px] max-md:tracking-[0.5px]">
-            <a href="/assets/images/uploads/2023/09/Youth-Squad-Membership-Application-Packet.pdf" target="_blank" class="text-brand-green-accent hover:text-brand-green-dark transition">
-                Youth Squad Membership Application Packet
-            </a>
-        </h2>
-
-        <div class="flex flex-row max-lg:flex-col gap-[30px] max-md:gap-[5px] mt-8">
-            {{# Application image card #}}
-            <div class="flex-1 bg-surface-offwhite rounded-btn p-[50px] max-md:p-2.5 max-md:m-2.5">
-                <a href="/assets/images/uploads/2023/09/Youth-Squad-Membership-Application-Packet.pdf" target="_blank" class="block pt-[125px] max-md:pt-0">
-                    <img src="{{ glide src="/assets/images/uploads/2023/09/image0-15.webp" preset="card" }}" alt="Youth Squad members of Community Ambulance" class="w-full rounded hover:scale-105 transition-transform duration-300" loading="lazy" width="505" height="640">
-                </a>
+        <div class="flex flex-row max-lg:flex-col gap-[30px] max-md:gap-[15px]">
+            {{# Application & Contact card (replaces scanned flyer image) #}}
+            <div class="flex-1 bg-white rounded-card shadow-card p-[50px] max-md:p-[30px] flex flex-col justify-center text-center">
+                <div class="flex justify-center mb-5">
+                    <div class="w-[70px] h-[70px] rounded-full border-[3px] border-brand-green flex items-center justify-center">
+                        <svg class="w-[35px] h-[35px] text-brand-green" fill="currentColor" viewBox="0 0 384 512"><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z"/></svg>
+                    </div>
+                </div>
+                <h2 class="font-display text-display font-semibold leading-[44px] text-brand-green-accent mb-4 max-lg:text-2xl max-lg:leading-[40px] max-md:text-sub max-md:leading-[36px]">
+                    Youth Squad Application Packet
+                </h2>
+                <p class="font-display text-base leading-[28px] text-text-primary mb-6 max-md:text-base max-md:leading-[26px]">
+                    Download the membership application packet. Completed applications can be mailed to P.O. Box 450, Sayville NY 11782 or brought in on the first day.
+                </p>
+                <div class="mb-8">
+                    <a href="/assets/images/uploads/2023/09/Youth-Squad-Membership-Application-Packet.pdf" target="_blank" class="inline-flex items-center gap-2 bg-brand-green text-white font-display font-semibold px-8 py-3 rounded-btn hover:bg-brand-navy transition">
+                        Download Application
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V3"/></svg>
+                    </a>
+                </div>
+                <div class="w-[10%] h-px bg-border-medium mx-auto mb-6"></div>
+                <p class="font-display text-lg font-semibold text-brand-green-accent mb-3 max-md:text-base">Questions?</p>
+                <p class="font-display text-base leading-[28px] text-text-primary max-md:leading-[26px]">
+                    Email <a href="mailto:youthsqd@communityamb.org" class="text-link underline hover:text-link-hover transition">youthsqd@communityamb.org</a>
+                    or call <a href="tel:6315672586" class="text-link underline hover:text-link-hover transition">(631) 567-2586 x117</a>
+                </p>
             </div>
 
             {{# Interest form #}}
-            <div class="flex-1 bg-white rounded-btn p-[40px] max-md:p-[20px] flex flex-col justify-center" x-data="{ submitting: false }" @submit="submitting = true">
+            <div class="flex-1 bg-white rounded-card shadow-card p-[40px] max-md:p-[20px] flex flex-col justify-center" x-data="{ submitting: false }" @submit="submitting = true">
                 {{ form:youth_squad }}
                 <div class="space-y-5">
                     <div class="grid grid-cols-2 max-md:grid-cols-1 gap-4">
@@ -263,7 +291,7 @@
             Applications for the {{ closed_school_year ?? '' }} school year have closed. We will begin accepting applications for the next semester.
         </p>
         <p class="text-text-primary text-base leading-[1.6] mb-3 font-body">
-            Questions? Contact us at <a href="mailto:youthsqd@communityamb.org" class="text-brand-green underline hover:text-brand-navy">youthsqd@communityamb.org</a> or call <a href="tel:6315672586" class="text-brand-green underline hover:text-brand-navy">(631) 567-2586 x117</a>.
+            Questions? Contact us at <a href="mailto:youthsqd@communityamb.org" class="text-link underline hover:text-link-hover">youthsqd@communityamb.org</a> or call <a href="tel:6315672586" class="text-link underline hover:text-link-hover">(631) 567-2586 x117</a>.
         </p>
         <button @click="open = false" class="inline-block mt-5 px-10 py-3 bg-brand-green text-white border-none rounded font-semibold text-base cursor-pointer hover:bg-brand-navy transition-colors duration-300">
             I Understand

@@ -5,6 +5,11 @@ template: program-detail
 blueprint: page
 program_image: /assets/images/uploads/2023/09/Childrens-Safety-12.webp
 image_side: right
+cta_text: "This event happens annually in May. Bring your car seat — no appointment needed."
+cta_button_label: "View Upcoming Events"
+cta_link: /events
+cta_secondary_text: "Questions? Email our secretary"
+cta_secondary_link: 'mailto:secretary@communityamb.org'
 ---
 
 ## Car Seat Inspections & IDs

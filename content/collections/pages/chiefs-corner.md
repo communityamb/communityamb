@@ -26,4 +26,4 @@ Volunteering with Community Ambulance is more than providing emergency medical c
 
 Thank you for your continued trust and support. We are proud to serve our community and remain committed to being there when you need us most.
 
-[Click here to join today!](/join-community/)
+[Join our volunteer team today](/join-community/)

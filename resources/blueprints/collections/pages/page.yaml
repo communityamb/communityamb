@@ -151,3 +151,43 @@ tabs:
               display: CTA Button Link
               if:
                 show_cta: 'equals true'
+      -
+        display: 'Program Detail CTA'
+        instructions: 'CTA fields for program detail pages. These appear as a full-width section at the bottom of the page.'
+        fields:
+          -
+            handle: cta_text
+            field:
+              type: text
+              display: CTA Text
+              instructions: 'Descriptive text above the button'
+              if:
+                template: 'equals program-detail'
+          -
+            handle: cta_button_label
+            field:
+              type: text
+              display: Button Label
+              if:
+                template: 'equals program-detail'
+          -
+            handle: cta_link
+            field:
+              type: text
+              display: Button Link
+              if:
+                template: 'equals program-detail'
+          -
+            handle: cta_secondary_text
+            field:
+              type: text
+              display: Secondary Link Text
+              if:
+                template: 'equals program-detail'
+          -
+            handle: cta_secondary_link
+            field:
+              type: text
+              display: Secondary Link URL
+              if:
+                template: 'equals program-detail'

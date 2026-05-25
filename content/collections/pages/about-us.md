@@ -41,4 +41,4 @@ There are a few things in life that offer the same level of satisfaction as help
 - Form lifelong friendships
 - An unmatched adrenaline rush: Imagine saving someone's life or delivering a baby
 
-The Community Ambulance Company of Sayville has been providing emergency medical services to the residents of Sayville, West Sayville, Bayport, Bohemia, and Oakdale for the past 69 years. Community Ambulance Company is an independent ambulance company and is not affiliated with any fire department. If you are interested in joining our team and want to help your community, please [click here](/join-community/).
+The Community Ambulance Company of Sayville has been providing emergency medical services to the residents of Sayville, West Sayville, Bayport, Bohemia, and Oakdale for the past 69 years. Community Ambulance Company is an independent ambulance company and is not affiliated with any fire department. If you are interested in joining our team and want to help your community, please [start your membership application](/join-community/).
