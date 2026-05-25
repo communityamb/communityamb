@@ -47,6 +47,13 @@
                         {{ partial:icon name="mailing-address" class="w-4 h-4 mt-0.5 flex-shrink-0" }}
                         {{ organization:mailing_address }}
                     </li>
+                    <li class="flex items-start gap-2 pt-2 border-t border-white/20 mt-2">
+                        {{ partial:icon name="venmo" class="w-4 h-4 mt-0.5 flex-shrink-0" }}
+                        <a href="{{ social_links:venmo_url }}" target="_blank" rel="noopener"
+                           class="hover:text-white font-semibold">
+                            Donate via Venmo
+                        </a>
+                    </li>
                 </ul>
 
             </div>
@@ -60,7 +67,7 @@
                     Copyright &copy; {{ now format="Y" }} {{ organization:org_name }} &ndash; Sayville, NY
                 </p>
                 <div class="flex items-center gap-3">
-                    {{ partial:social-links link_class="w-8 h-8 rounded-full border border-white/50 flex items-center justify-center text-white hover:bg-white/10 transition" }}
+                    {{ partial:social-links link_class="w-8 h-8 rounded-full border border-white/50 flex items-center justify-center text-white hover:bg-white/10 transition" show_venmo="true" }}
                 </div>
             </div>
         </div>
