@@ -1,5 +1,12 @@
 {{ partial:partials/page-header }}
 
+<div class="max-w-container mx-auto px-4 pt-4">
+    <a href="/prevention-programs" class="inline-flex items-center gap-2 text-sm font-display text-brand-green hover:text-brand-green-dark transition">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Back to Prevention Programs
+    </a>
+</div>
+
 {{ if program_image }}
 <section class="py-section max-md:py-[20px] bg-white">
     <div class="max-w-container mx-auto px-4 grid md:grid-cols-2 gap-[10px] items-stretch max-lg:grid-cols-1">
@@ -43,6 +50,26 @@
                 <img src="{{ glide :src="program_image" preset="hero" }}" alt="{{ title }}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110" loading="lazy">
             </div>
         </div>
+        {{ /if }}
+    </div>
+</section>
+{{ /if }}
+
+{{ if cta_text || cta_button_label }}
+<section class="py-12 bg-surface-offwhite border-t border-border-light">
+    <div class="max-w-container mx-auto px-4 text-center">
+        {{ if cta_text }}
+        <p class="font-display text-xl text-text-secondary mb-4">{{ cta_text }}</p>
+        {{ /if }}
+        {{ if cta_button_label && cta_link }}
+        <a href="{{ cta_link }}" class="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green-dark text-white font-display font-semibold px-8 py-3 rounded-btn transition">
+            {{ cta_button_label }}
+        </a>
+        {{ /if }}
+        {{ if cta_secondary_text && cta_secondary_link }}
+        <p class="mt-4 font-display text-text-secondary">
+            <a href="{{ cta_secondary_link }}" class="text-link hover:text-link-hover underline">{{ cta_secondary_text }}</a>
+        </p>
         {{ /if }}
     </div>
 </section>
