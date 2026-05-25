@@ -10,7 +10,7 @@ set('branch', 'main');
 set('keep_releases', 5);
 set('writable_mode', 'chmod');
 set('writable_chmod_mode', '0775');
-set('writable_use_sudo', true);
+set('writable_use_sudo', false);
 set('update_code_strategy', 'clone');
 
 add('shared_files', ['.env']);
