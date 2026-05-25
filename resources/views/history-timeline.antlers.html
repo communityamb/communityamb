@@ -9,6 +9,32 @@
     </div>
 </section>
 
+<!-- Decade Jump Nav -->
+<nav class="bg-white pb-6" aria-label="Jump to decade"
+     x-data="{
+        decades: [],
+        init() {
+            const seen = new Set();
+            document.querySelectorAll('[data-timeline-year]').forEach(el => {
+                const year = el.dataset.timelineYear;
+                const decade = year.slice(0, -1) + '0s';
+                if (!seen.has(decade)) {
+                    seen.add(decade);
+                    this.decades.push({ label: decade, id: el.id });
+                }
+            });
+        }
+     }">
+    <div class="max-w-narrow mx-auto px-4 flex flex-wrap gap-2 justify-center">
+        <template x-for="d in decades" :key="d.id">
+            <a :href="'#' + d.id"
+               x-text="d.label"
+               class="text-sm font-display font-medium text-brand-green hover:text-brand-green-dark border border-brand-green/30 px-3 py-1 rounded-full hover:bg-brand-green/5 transition">
+            </a>
+        </template>
+    </div>
+</nav>
+
 <!-- Timeline Section -->
 <section class="bg-white pb-16">
     <div class="max-w-narrow mx-auto px-4 max-md:pr-[10px]">
@@ -16,10 +42,10 @@
 
             {{ timeline_entries }}
             {{ unless last }}
-            <div class="relative pb-8 lg:pb-16">
+            <div class="relative pb-8 lg:pb-16 scroll-mt-28" id="year-{{ year | slugify }}" data-timeline-year="{{ year | regex_replace('/[^0-9]/','') }}">
                 <div class="absolute top-[25px] left-[18px] lg:left-1/2 h-full w-[4px] -translate-x-1/2 bg-timeline-line z-0"></div>
             {{ else }}
-            <div class="relative pb-8 lg:pb-16">
+            <div class="relative pb-8 lg:pb-16 scroll-mt-28" id="year-{{ year | slugify }}" data-timeline-year="{{ year | regex_replace('/[^0-9]/','') }}">
             {{ /unless }}
                 <div class="absolute top-[20px] left-0 lg:left-1/2 lg:-translate-x-1/2 w-[40px] h-[40px] rounded-full bg-timeline-dot border-[6px] border-surface-offwhite shadow-timeline-dot flex items-center justify-center z-10">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-[14px] h-[14px] fill-white"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>
@@ -56,3 +82,18 @@
         </div>
     </div>
 </section>
+
+<!-- Back to Top Button -->
+<button
+    x-data="{ show: false }"
+    x-on:scroll.window="show = window.scrollY > 400"
+    x-show="show"
+    x-transition
+    x-cloak
+    @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    class="fixed bottom-6 right-6 z-50 w-12 h-12 bg-brand-green text-white rounded-full shadow-lg flex items-center justify-center hover:bg-brand-green-dark transition cursor-pointer"
+    aria-label="Back to top">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+    </svg>
+</button>
