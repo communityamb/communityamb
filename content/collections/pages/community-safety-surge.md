@@ -5,6 +5,9 @@ template: program-detail
 blueprint: page
 program_image: /assets/images/uploads/2023/09/image2.webp
 image_side: right
+cta_text: "Share this program with parents in your community and help us reward safe behavior."
+cta_button_label: "See All Programs"
+cta_link: /prevention-programs
 ---
 
 Community Safety Surge is an annual program developed to reward positive safe behavior in children and provide free safety equipment. Ambulances and Police cars drive around designated towns. If a child is seen on a bike/skateboard/roller-blades and is wearing safety gear or doing a good deed they will be handed a voucher for free ice cream. If the child is observed not wearing safety gear they will be handed a certificate for a free bike helmet with safety educational material.

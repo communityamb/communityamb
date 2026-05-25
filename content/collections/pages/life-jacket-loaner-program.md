@@ -5,6 +5,9 @@ template: program-detail
 blueprint: page
 program_image: /assets/images/uploads/2023/09/IMG_3744-Copy.webp
 image_side: right
+cta_text: "Need a life jacket? Call us at (631) 567-2586 Ext 117 to schedule a pickup."
+cta_button_label: "Contact Us"
+cta_link: /contact-us
 ---
 
 Community Ambulance has teamed up with Atlantic Coast Veterinary Specialists and Suffolk County Police Department to provide a loaner life jacket program at no charge!

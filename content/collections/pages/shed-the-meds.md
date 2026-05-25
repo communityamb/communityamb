@@ -5,6 +5,9 @@ template: program-detail
 blueprint: page
 program_image: /assets/images/uploads/2023/09/Medications.webp
 image_side: right
+cta_text: "Can't make the event? Drop off medications anytime at any Suffolk County police precinct."
+cta_button_label: "View Upcoming Events"
+cta_link: /events
 ---
 Shed the Meds allows residents, throughout Suffolk County, the opportunity to safely dispose of unwanted and unused medications and prescription drugs.
 
@@ -13,3 +16,5 @@ Non-medical use of prescription and over-the-counter medicines remains a signifi
 **Event Occurs: Bi-annually in April / October**
 
 If you missed us, remember you can always safely discard of unused medications anonymously at each of the Suffolk County’s seven police precincts 24/7.
+
+Learn to administer Narcan at our [free Narcan training sessions](/public-narcan-trainings).

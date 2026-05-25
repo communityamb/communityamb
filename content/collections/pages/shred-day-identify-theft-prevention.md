@@ -5,6 +5,9 @@ template: program-detail
 blueprint: page
 program_image: /assets/images/uploads/2023/09/Shredding-flyer-banner.webp
 image_side: left
+cta_text: "Happens every April — bring up to 3 boxes or bags. No appointment needed."
+cta_button_label: "View Upcoming Events"
+cta_link: /events
 ---
 
 Community Ambulance Company partnering with Suffolk County Sheriff Errol D. Toulon Jr., US Postal Inspectors Service and the Great South Bay Coalition to host a mobile paper shredding event to allow you to safely and securely destroy unwanted personal documents.
